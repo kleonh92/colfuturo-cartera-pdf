@@ -12,6 +12,50 @@
             color: rgba(0, 0, 0, 0.87);
         }
 
+        /* Fonts Family*/
+
+            .font-roboto{
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .font-roboto-mono{
+                font-family: 'Roboto Mono', "monospace", sans-serif;
+            }
+
+        /* End Fonts-Family */
+            .text-xs {
+                font-size: 12px;
+            }
+
+            .text-sm {
+                font-size: 14px;
+            }
+
+            .text-base {
+                font-size: 16px;
+            }
+
+            .text-lg {
+                font-size: 18px;
+            }
+
+            .text-xl {
+                font-size: 20px;
+            }
+
+            .text-2xl {
+                font-size: 24px;
+            }
+
+            .text-3xl {
+                font-size: 30px;
+            }
+        
+        /* Text Sizes */
+
+        /* End Text Sizes */
+
+        
         /* Page
     ========================================================================== */
 
@@ -251,6 +295,7 @@
     </footer>
 
     <main>
+        <!-- Inicio de 1 página, Tabla de contenido -->
         <div class="page" style="page-break-after: always;">
             <table class="tableOfContent" style="font-size:9px;">
                 <tr>
@@ -369,6 +414,8 @@
                 </tr>
             </table>
         </div>
+        <!-- Fin de 1 página, Tabla de contenido -->
+
         <div class="page" style="page-break-after: avoid;">
             <table style="font-size:11px;">
                 <tr>
