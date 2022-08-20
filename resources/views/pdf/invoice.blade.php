@@ -23,6 +23,8 @@
             }
 
         /* End Fonts-Family */
+
+         /* Text Sizes */
             .text-xs {
                 font-size: 12px;
             }
@@ -50,12 +52,422 @@
             .text-3xl {
                 font-size: 30px;
             }
-        
-        /* Text Sizes */
-
         /* End Text Sizes */
-
         
+        /* Fonts weight names */
+            
+            .font-thin {
+                font-weight: 100; 
+            }
+
+            .font-extra-light {
+                font-weight: 200;
+            }
+
+            .font-light {
+                font-weight: 300;
+            }
+
+            .font-normal {
+                font-weight: 400;
+            }
+
+            .font-medium {
+                font-weight: 500;
+            }
+
+            .font-semi-bold{
+                font-weight: 600;
+            }
+
+            .font-bold {
+                font-weight: 700;
+            }
+
+            .font-extra-bold {
+                font-weight: 800;
+            }
+
+            .font-heavy {
+                font-weight: 900;
+            }
+
+        /* End fonts weights names */
+
+        /* Texts colors  */
+            /* Primary texts colors */
+                .text-color-primary {
+                    color: #DC0000;
+                }
+
+                .text-color-primary-surface {
+                    color: #F8CCCC;
+                }
+
+                .text-color-primary-border {
+                    color: #E85555;
+                }
+
+                .text-color-primary-hover {
+                    color: #930000;
+                }
+
+                .text-color-primary-pressed {
+                    color: #490000;
+                }
+            /* End primary texts colors */
+
+            /* Secondary texts colors */
+                .text-secondary-main {
+                    color: #00AA1A;
+                }
+
+                .text-secondary-surface {
+                    color: #CCEED1;
+                }
+
+                .text-secondary-border {
+                    color: #55C666;
+                }
+
+                .text-secondary-hover {
+                    color: #00550D;
+                }
+
+                .text-secondary-pressed {
+                    color: #002205;
+                }
+            /* End secondary texts colors */
+            
+            /* Third texts colors */
+
+                .text-third-main {
+                    color: #00A5E6;
+                }
+
+                .text-third-surface {
+                    color: #CCEDFA;
+                }
+
+                .text-third-border {
+                    color: #55C3EE;
+                }
+
+                .text-third-hover {
+                    color: #005373;
+                }
+
+                .text-third-pressed {
+                    color: #00212E;
+                }
+
+            /* End third texts colors */
+
+            /* Neutral texts colors */
+                
+                .text-neutral-10 {
+                    color: #FFFFFF;
+                }
+                
+                .text-neutral-20 {
+                    color: #F9F9F9;
+                }
+                
+                .text-neutral-30 {
+                    color: #F4F4F4;
+                }
+                
+                .text-neutral-40 {
+                    color: #EFEFEF;
+                }
+                
+                .text-neutral-50 {
+                    color: #E5E5E5;
+                }
+                
+                .text-neutral-60 {
+                    color: #DDDDDD;
+                }
+                
+                .text-neutral-70 {
+                    color: #CCCCCC;
+                }
+                
+                .text-neutral-80 {
+                    color: #808080;
+                }
+                
+                .text-neutral-90 {
+                    color: rgba(0, 0, 0, 0.87);
+                }
+                
+                .text-neutral-100 {
+                    color: #000000;
+                }
+            /* End Neutral texts colors */
+
+            /* Red texts colors */
+
+                .text-red-50 {
+                    color: #FDF2F2;
+                }
+
+                .text-red-100 {
+                    color: #FDE8E8;
+                }
+                
+                .text-red-200 {
+                    color: #FBD5D5;
+                }
+                
+                .text-red-300 {
+                    color: #F8B4B4;
+                }
+
+                .text-red-400 {
+                    color: #F98080;
+                }
+
+                .text-red-500 {
+                    color: #F05252;
+                }
+
+                .text-red-600 {
+                    color: #C81E1E;
+                }
+
+                .text-red-700 {
+                    color: #C81E1E;
+                }
+                .text-red-800 {
+                    color: #9B1C1C;
+                }
+
+                .text-red-900 {
+                    color: #771D1D;
+                }
+            /* End Red texts colors */
+
+            /* Green texts colors */
+                
+                .text-green-50 {
+                    color: #F3FAF7;
+                }
+
+                .text-green-100 {
+                    color: #DEF7EC;
+                }
+
+                .text-green-200 {
+                    color: #BCF0DA;
+                }
+
+                .text-green-300 {
+                    color: #84E1BC;
+                }
+
+                .text-green-400 {
+                    color: #31C48D;
+                }
+
+                .text-green-500 {
+                    color: #0E9F6E;
+                }
+
+                .text-green-600 {
+                    color: #057A55;
+                }
+
+                .text-green-700 {
+                    color: #046C4E;
+                }
+
+                .text-green-800 {
+                    color: #03543F;
+                }
+
+                .text-green-900 {
+                    color: #014737;
+                }
+            /* End Green texts colors */
+
+            /* Gray texts colors */
+                
+                .text-gray-50 {
+                    color: #F9FAFB;
+                }
+
+                .text-gray-100 {
+                    color: #F3F4F6;
+                }
+
+                .text-gray-200 {
+                    color: #E5E7EB;
+                }
+                .text-gray-300 {
+                    color: #D1D5DB;
+                }
+                .text-gray-400 {
+                    color: #9CA3AF;
+                }
+
+                .text-gray-500 {
+                    color: #6B7280;
+                }
+
+                .text-gray-600 {
+                    color: #4B5563;
+                }
+
+                .text-gray-700 {
+                    color: #374151;
+                }
+                .text-gray-800 {
+                    color: #1F2A37;
+                }
+
+                .text-gray-900 {
+                    color: #111928;
+                }
+                
+            /* End Gray texts colors */
+
+            /* Orante textes colors */
+
+                .text-orange-50 {
+                    color: #FFF8F1;
+                }
+
+                .text-orange-100 {
+                    color: #FEECDC;
+                }
+
+                .text-orange-200 {
+                    color: #FCD9BD;
+                }
+
+                .text-orange-300 {
+                    color: #FDBA8C;
+                }
+
+                .text-orange-400 {
+                    color: #FF8A4C;
+                }
+
+                .text-orange-500 {
+                    color: #FF5A1F;
+                }
+
+                .text-orange-600 {
+                    color: #D03801;
+                }
+
+                .text-orange-700 {
+                    color: #B43403;
+                }
+
+                .text-orange-800 {
+                    color: #8A2C0D;
+                }
+
+                .text-orange-900 {
+                    color: #771D1D;
+                }
+
+            /* End Orante texts colors */
+
+            /* Yellow texts colors */
+                
+                .text-yellow-50 {
+                    color: #FDFDEA;
+                }
+
+                .text-yellow-100 {
+                    color: #FDF6B2;
+                }
+
+                .text-yellow-200 {
+                    color: #FCE96A;
+                }
+
+                .text-yellow-300 {
+                    color: #FACA15;
+                }
+
+                .text-yellow-400 {
+                    color: #E3A008;
+                }
+
+                .text-yellow-500 {
+                    color: #C27803;
+                }
+
+                .text-yellow-600 {
+                    color: #9F580A;
+                }
+
+                .text-yellow-700 {
+                    color: #8E4B10;
+                }
+
+                .text-yellow-800 {
+                    color: #723B13;
+                }
+
+                .text-yellow-900 {
+                    color: #633112;
+                }
+
+            /* End Yellow texts colors */
+
+            /* Blue texts colors */
+
+                .text-blue-50 {
+                    color: #F9FAFB;
+                }
+
+                .text-blue-100 {
+                    color: #E1EFFE;
+                }
+
+                .text-blue-200 {
+                    color: #C3DDFD;
+                }
+
+                .text-blue-300 {
+                    color: #A4CAFE;
+                }
+                
+                .text-blue-400 {
+                    color: #76A9FA;
+                }
+
+                .text-blue-500 {
+                    color: #3F83F8;
+                }
+
+                .text-blue-600 {
+                    color: #1C64F2;
+                }
+
+                .text-blue-700 {
+                    color: #1A56DB;
+                }
+
+                .text-blue-800 {
+                    color: #1E429F;
+                }
+
+                .text-blue-900 {
+                    color: #233876;
+                }
+
+            /* End Blue texts colors */
+
+        /* End texts colors */
+        
+
+
         /* Page
     ========================================================================== */
 
