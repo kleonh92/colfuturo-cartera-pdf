@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+    <!-- Font Roboto, Roboto Monospace, Roboto Condensed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -20,6 +25,10 @@
 
             .font-roboto-mono{
                 font-family: 'Roboto Mono', "monospace", sans-serif;
+            }
+
+            .font-roboto-condensed {
+                font-family: 'Roboto Condensed', sans-serif;
             }
 
         /* End Fonts-Family */
@@ -832,7 +841,7 @@
             <table style="font-size:11px;">
                 <tr>
                     <td>
-                        <h4 style="color: #dc0000;" class="p-0 m-0">Extracto programa Crédito Beca</h4>
+                        <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-color-primary">Extracto programa Crédito Beca</h4>
                     </td>
                 </tr>
                 <tr style="vertical-align: top;">
