@@ -477,53 +477,43 @@
         
 
         /* Utilities */
-                .list-style-none {
-                    list-style: none;
-                }
-
-                .border-top {
-                    border-top: 1px solid rgba(0, 0, 0, 0.87);
-                }
-
-                .m-0 {
-                    margin: 0 !important;
-                }
-
-                .p-0 {
-                    padding: 0 !important;
-                }
-
-                .pr-20 {
-                    padding-right: 20px !important;
-                }
-
-                .pl-20 {
-                    padding-left: 20px !important;
-                }
-
-                .my-5 {
-                    margin-top: 5px !important;
-                    margin-bottom: 5px !important;
-                }
-
-                .point {
-                    width: 13px;
-                    height: 13px;
-                    display: inline-block;
-                    margin-right: 5px;
-                }
-
-                .text-left {
-                    text-align: left !important;
-                }
-
-                .text-center {
-                    text-align: center !important;
-                }
-
-                .text-right {
-                    text-align: right !important;
-                }
+            .list-style-none {
+                list-style: none;
+            }
+            .border-top {
+                border-top: 1px solid rgba(0, 0, 0, 0.87);
+            }
+            .m-0 {
+                margin: 0 !important;
+            }
+            .p-0 {
+                padding: 0 !important;
+            }
+            .pr-20 {
+                padding-right: 20px !important;
+            }
+            .pl-20 {
+                padding-left: 20px !important;
+            }
+            .my-5 {
+                margin-top: 5px !important;
+                margin-bottom: 5px !important;
+            }
+            .point {
+                width: 13px;
+                height: 13px;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            .text-left {
+                text-align: left !important;
+            }
+            .text-center {
+                text-align: center !important;
+            }
+            .text-right {
+                text-align: right !important;
+            }
 
         /* End Utilities */
 
@@ -737,27 +727,70 @@
     <main>
         <!-- Inicio de 1 página, Tabla de contenido -->
         <div class="page" style="page-break-after: always;">
-            <table class="tableOfContent" style="font-size:9px;">
+            <table class="tableOfContent">
                 <tr>
                     <td>
-                        <h4 style="color: #dc0000;" class="p-0 m-0">Tabla de contenido</h4>
-                        <ul style="list-style:none; margin-top:30px;">
+                        <h4 class="font-roboto font-medium text-2xl text-color-primary p-0 m-0">Tabla de contenido</h4>
+                        <ul style="list-style:none; margin-top:5px;">
                             <li>
-                                <h4 class="m-0">Extracto programa Crédito Beca</h4>
-                                <ul style="list-style:none; margin-top:15px;" class="toc-list">
-                                    <li class="my-5"><span class="title">Resumen general<span class="leaders"
-                                                aria-hidden="true">.................................................</span></span><span
-                                            class="number">01</span></li>
-                                    <li class="my-5"><span>Estado Crédito<span class="leaders"
+                                <h4 class="font-roboto font-medium text-2xl text-neutral-90 m-0">Extracto programa Crédito Beca</h4>
+                                <ul style="list-style:none; margin-top:10px;" class="toc-list">
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen general<span class="leaders"
+                                                aria-hidden="true"> .................................................</span></span><span
+                                            class="font-roboto-mono font-normal text-base">01</span></li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Estado Crédito<span class="leaders"
                                                 aria-hidden="true">.....................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Próximo pago Crédito<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Próximo pago Crédito<span class="leaders"
                                                 aria-hidden="true">..........................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Requisitos para mantener mi estatus<span class="leaders"
-                                                aria-hidden="true">..................</span></span> <span>01</span>
+                                    <li ><span class="font-roboto font-normal text-lg text-neutral-90">Requisitos para mantener mi estatus<span class="leaders"
+                                                aria-hidden="true">..................</span></span> <span class="font-roboto-mono font-normal text text-lg">01</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul style="list-style:none;">
+                            <li>
+                                <h4 class="font-roboto font-medium text-2xl text-blue-500 m-0">Extracto Crédito</h4>
+                                <ul style="list-style:none; margin-top:5px;">
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen<span class="leaders"
+                                                aria-hidden="true">..............................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
+                                                aria-hidden="true">................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
+                                                aria-hidden="true">.....................................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Desembolsos<span class="leaders"
+                                                aria-hidden="true">.......................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Cuotas pagadas<span class="leaders"
+                                                aria-hidden="true">...................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
+                                                aria-hidden="true">..............................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Pagos realizados<span class="leaders"
+                                                aria-hidden="true">..................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                    </li>
+                                    <li ><span class="font-roboto font-normal text-lg text-neutral-90">Plan de pagos<span class="leaders"
+                                                aria-hidden="true">.......................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                 </ul>
                             </li>
@@ -769,83 +802,39 @@
 
                         <ul style="list-style:none;">
                             <li>
-                                <h4 style="color: #3F83F8;" class="m-0">Extracto Crédito</h4>
-                                <ul style="list-style:none; margin-top:15px;">
-                                    <li class="my-5"><span>Resumen<span class="leaders"
+                                <h4 class="font-roboto font-medium text-2xl text-yellow-400 m-0">Extracto Beca</h4>
+                                <ul style="list-style:none; margin-top:5px;">
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen<span class="leaders"
                                                 aria-hidden="true">..............................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Intereses y seguro<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
                                                 aria-hidden="true">................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Mora<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
                                                 aria-hidden="true">.....................................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Desembolsos<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Desembolsos<span class="leaders"
                                                 aria-hidden="true">.......................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Cuotas pagadas<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Cuotas pagadas<span class="leaders"
                                                 aria-hidden="true">...................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Apoyos de terceras entidades<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
                                                 aria-hidden="true">..............................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Pagos realizados<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Pagos realizados<span class="leaders"
                                                 aria-hidden="true">..................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span>Plan de pagos<span class="leaders"
+                                    <li><span class="font-roboto font-normal text-lg text-neutral-90">Plan de pagos<span class="leaders"
                                                 aria-hidden="true">.......................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-
-                        <ul style="list-style:none;">
-                            <li>
-                                <h4 style="color: #E3A008;"class="m-0">Extracto Beca</h4>
-                                <ul style="list-style:none; margin-top:15px;">
-                                    <li class="my-5"><span>Resumen<span class="leaders"
-                                                aria-hidden="true">..............................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Intereses y seguro<span class="leaders"
-                                                aria-hidden="true">................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Mora<span class="leaders"
-                                                aria-hidden="true">.....................................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Desembolsos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Cuotas pagadas<span class="leaders"
-                                                aria-hidden="true">...................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Apoyos de terceras entidades<span class="leaders"
-                                                aria-hidden="true">..............................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Pagos realizados<span class="leaders"
-                                                aria-hidden="true">..................................................</span></span>
-                                        <span>01</span>
-                                    </li>
-                                    <li class="my-5"><span>Plan de pagos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span>
-                                        <span>01</span>
+                                        <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                 </ul>
                             </li>
