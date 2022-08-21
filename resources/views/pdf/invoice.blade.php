@@ -476,6 +476,57 @@
         /* End texts colors */
         
 
+        /* Utilities */
+                .list-style-none {
+                    list-style: none;
+                }
+
+                .border-top {
+                    border-top: 1px solid rgba(0, 0, 0, 0.87);
+                }
+
+                .m-0 {
+                    margin: 0 !important;
+                }
+
+                .p-0 {
+                    padding: 0 !important;
+                }
+
+                .pr-20 {
+                    padding-right: 20px !important;
+                }
+
+                .pl-20 {
+                    padding-left: 20px !important;
+                }
+
+                .my-5 {
+                    margin-top: 5px !important;
+                    margin-bottom: 5px !important;
+                }
+
+                .point {
+                    width: 13px;
+                    height: 13px;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+
+                .text-left {
+                    text-align: left !important;
+                }
+
+                .text-center {
+                    text-align: center !important;
+                }
+
+                .text-right {
+                    text-align: right !important;
+                }
+
+        /* End Utilities */
+
 
         /* Page
     ========================================================================== */
@@ -539,26 +590,6 @@
             color: rgba(0, 0, 0, 0.87);
         }
 
-        .point {
-            width: 6px;
-            height: 6px;
-            display: inline-block;
-            margin-right: 5px;
-
-        }
-
-        .text-left {
-            text-align: left !important;
-        }
-
-        .text-center {
-            text-align: center !important;
-        }
-
-        .text-right {
-            text-align: right !important;
-        }
-
         .footer {
             font-size: 10px;
             font-family: "Roboto Mono", "monospace", sans-serif;
@@ -576,26 +607,7 @@
         /* Page #1
     ========================================================================== */
 
-        .m-0 {
-            margin: 0 !important;
-        }
-
-        .p-0 {
-            padding: 0 !important;
-        }
-
-        .pr-20 {
-            padding-right: 20px !important;
-        }
-
-        .pl-20 {
-            padding-left: 20px !important;
-        }
-
-        .my-5 {
-            margin-top: 5px !important;
-            margin-bottom: 5px !important;
-        }
+        
 
         .table-resumen th,
         .table-resumen td {
@@ -663,41 +675,48 @@
                 <td class="header_logo" width="10%">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo-Logo.svg" alt="Logo" />
                 </td>
-                <td class="header_list" width="35%">
-                    <ul>
-                        <li><small class="text-primary">Paloma Geraldine David Velásquez de la Santísima
+                <td width="35%">
+                    <ul class="list-style-none">
+                        <li><small class="font-roboto font-medium text-color-primary text-base">Paloma Geraldine David Velásquez de la Santísima
                                 Trinidad</small></li>
-                        <li><small class="text-normal">Maestría/Teacher Education and Learning Sciences of Social Arts
+                        <li><small class="font-roboto font-normal text-sm text-neutral-90">Maestría/Teacher Education and Learning Sciences of Social Arts
                                 and Europe</small></li>
-                        <li><small class="text-normal">Universiteit van Amsterdam - Uva Amsterdam, Noord-Holland /
+                        <li><small class="font-roboto font-normal text-sm text-neutral-90">Universiteit van Amsterdam - Uva Amsterdam, Noord-Holland /
                                 Holanda</small></li>
                     </ul>
                 </td>
-                <td class="header_list" width="35%">
-                    <ul>
-                        <li><small class="text-normal">CC: <span style="font-weight: 500;">1.018.473.865 </span>
+                <td width="35%">
+                    <ul class="list-style-none">
+                        <li><small class="font-roboto font-normal text-sm text-neutral-80">CC: <span class="font-medium text-neutral-90">1.018.473.865 </span>
                             </small> </li>
-                        <li><small class="text-normal">Código: <span style="font-weight: 500;">201.806.121
+                        <li><small class="font-roboto font-normal text-sm text-neutral-80">Código: <span class="font-medium text-neutral-90">201.806.121
                                 </span></small></li>
-                        <li><small class="text-normal">Estado: <span style="font-weight: 500;">PAEC(Periodo Amortización
+                        <li><small class="font-roboto font-normal text-sm text-neutral-80">Estado: <span class="font-medium text-neutral-90">PAEC(Periodo Amortización
                                     Exterior con
                                     Condonación)</span></small></li>
                     </ul>
                 </td>
-                <td class="header_list" width="20%">
-                    <ul>
-                        <li style=" vertical-align: middle; display:block;  margin-bottom:0px;"><small
-                                class="text-normal" style="color: #000000"><span class="point"
-                                    style="background: #000000"></span> Ir a
-                                inicio</small> </li>
-                        <li style=" vertical-align: middle; display:block;  margin-bottom:0px;"><small
-                                class="text-normal" style="color: #3f83f8"><span class="point"
-                                    style="background: #3f83f8"></span> Ir a
-                                extracto Crédito</small> </li>
-                        <li style=" vertical-align: middle; display:block; margin-bottom:0px;"><small
-                                class="text-normal" style="color: #c27803"><span class="point"
-                                    style="background: #c27803"></span> Ir a
-                                extracto Beca</small> </li>
+                <td width="20%">
+                    <ul class="list-style-none">
+                        
+                        <li style="vertical-align: middle; display:block;  margin-bottom:0px;">
+                            <small class="font-roboto-condensed font-normal text-sm" style="color: #000000">
+                                <span class="point" style="background: #000000"></span>Contenido
+                            </small>
+                        </li>
+                        
+                        <li style="vertical-align: middle; display:block;  margin-bottom:0px;">
+                            <small class="font-roboto-condensed font-normal text-sm" style="color: #3f83f8">
+                                <span class="point" style="background: #3f83f8"></span>Extracto Crédito
+                            </small>
+                        </li>
+
+                        <li style="vertical-align: middle; display:block; margin-bottom:0px;">
+                            <small class="font-roboto-condensed font-normal text-sm" style="color: #c27803">
+                                <span class="point" style="background: #c27803"></span>Extracto Beca
+                            </small>
+                        </li>
+                    
                     </ul>
                 </td>
             </tr>
@@ -705,12 +724,12 @@
     </header>
 
     <!-- FOOTER -->
-    <footer>
-        <table class="footer">
+    <footer class="border-top">
+        <table>
             <tr>
-                <td width="40%">Extracto Crédito Beca COLFUTURO. Corte al 07 jul 2022.</td>
-                <td width="20%" class="text-center"><b class="page-count"></b></td>
-                <td width="40%" class="text-right">Generado el 07 jul 2022, 17:54</td>
+                <td width="40%" class="font-roboto-mono text-base font-normal">Extracto Crédito Beca COLFUTURO. Corte al 07 jul 2022.</td>
+                <td width="20%" class="font-roboto-mono text-base font-normal text-center"><b class="page-count"></b></td>
+                <td width="40%" class="font-roboto-mono text-base font-normal text-right">Generado el 07 jul 2022, 17:54</td>
             </tr>
         </table>
     </footer>
@@ -846,10 +865,11 @@
                 </tr>
                 <tr style="vertical-align: top;">
                     <td width="50%" class="pr-20">
-                        <h4
-                            style="font-family: 'Roboto';font-style: normal;font-weight: 500; color: rgba(0, 0, 0, 0.87);">
-                            Resumen general<span style="color: #dc0000;">*</span></h4>
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90 ">
+                            Resumen general <span class="text-color-primary">*</span>
+                        </h4>
                         <hr style="color:#F4F4F4;">
+                        
                         <table class="table-resumen" style="with:280px !important">
                             <tr>
                                 <th  height="18px" width="80px" class="bg-gray">
@@ -945,7 +965,7 @@
                             con la inflación</small>
                     </td>
                     <td width="50%" class="pl-20">
-                        <h4>Estado Crédito</h4>
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90">Estado Crédito</h4>
                         <hr style="color:#F4F4F4;">
                         <b>Crédito <span style="color:#00aa1a;">al día</span> </b>
 
