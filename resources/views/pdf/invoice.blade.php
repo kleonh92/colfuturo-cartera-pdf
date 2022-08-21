@@ -919,10 +919,10 @@
                                 <td></td>
                             </tr>
                             <tr class="font-roboto-condensed font-normal">
-                                <td class="pl-1">Desembolsos</td>
-                                <td class="font-roboto-mono text-center">29.743</td>
-                                <td class="font-roboto-mono text-center">20.000</td>
-                                <td class="font-roboto-mono text-center">63.261.923</td>
+                                <td style="width:162px;"    class="pl-1">Desembolsos</td>
+                                <td style="width:92px;"     class="font-roboto-mono text-center">29.743</td>
+                                <td style="width:90px;"     class="font-roboto-mono text-center">20.000</td>
+                                <td style="width:137px;"    class="font-roboto-mono text-center">63.261.923</td>
                                 <td class="bg-white"></td>
                             </tr>
                             <tr class="font-roboto-condensed font-normal">
@@ -979,14 +979,11 @@
 
                         <!-- Inicio Info Adicional Tabla Resumen General -->
                         
-                        <small style="color: #808080;"><span style="color: #dc0000;">* </span> Este resumen no muestra
-                            decimales pero los
-                            cálculos los consideran todos</small>
+                        <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">* </span> Este resumen no muestradecimales pero los cálculos los consideran todos</small>
                         <br>
-                        <small style="color: #808080;"><span style="color: #dc0000;">**</span> Intereses calculados
-                            con la inflación</small>
+                        <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">**</span> Intereses calculados con la inflación</small>
                         
-                            <!-- Fin Info Adicional Tabla Resumen General -->
+                        <!-- Fin Info Adicional Tabla Resumen General -->
                     </td>
 
                     <td width="50%" class="pl-20">
