@@ -489,30 +489,73 @@
             .p-0 {
                 padding: 0 !important;
             }
+
+            .p-1 {
+                padding: 5px;
+            }
+
+            .pl-1 {
+                padding: 8px;
+            }
+
             .pr-20 {
                 padding-right: 20px !important;
             }
+
             .pl-20 {
                 padding-left: 20px !important;
             }
+
             .my-5 {
                 margin-top: 5px !important;
                 margin-bottom: 5px !important;
             }
+
             .point {
                 width: 13px;
                 height: 13px;
                 display: inline-block;
                 margin-right: 5px;
             }
+
             .text-left {
                 text-align: left !important;
             }
+
             .text-center {
                 text-align: center !important;
             }
+
             .text-right {
                 text-align: right !important;
+            }
+
+            .bg-gray {
+                background-color: #FFFFFF;
+            }
+
+            .bg-white{
+                background-color: white;
+            }
+
+            .border-separate {
+                border-collapse: separate;
+            }
+
+            .border-collapse {
+                border-collapse: collapse;
+            }
+
+            .border-spacing-1 {
+                border-spacing: 4px;
+            }
+
+            table.table-stripped tr:nth-child(odd) {
+                background-color: #E5E5E5;
+            }
+
+            .border-bottom-red {
+                border-bottom: 1px solid #DC0000;
             }
 
         /* End Utilities */
@@ -596,8 +639,6 @@
 
         /* Page #1
     ========================================================================== */
-
-        
 
         .table-resumen th,
         .table-resumen td {
@@ -845,114 +886,109 @@
         </div>
         <!-- Fin de 1 página, Tabla de contenido -->
 
+        <!-- Página 2 -->
         <div class="page" style="page-break-after: avoid;">
-            <table style="font-size:11px;">
+            <table>
+                <!-- Título Página 2 -->
                 <tr>
                     <td>
                         <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-color-primary">Extracto programa Crédito Beca</h4>
                     </td>
                 </tr>
+
                 <tr style="vertical-align: top;">
+                    <!-- Página 2 - Arriba Izquierda - Tabla Resumen General -->
                     <td width="50%" class="pr-20">
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90 ">
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90">
                             Resumen general <span class="text-color-primary">*</span>
                         </h4>
                         <hr style="color:#F4F4F4;">
                         
-                        <table class="table-resumen" style="with:280px !important">
-                            <tr>
-                                <th  height="18px" width="80px" class="bg-gray">
-                                </th>
-                                <th width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;" height="18px"
-                                    width="18%"class="bg-gray">Crédito</th>
-                                <th style="border-right: 1px solid #FFF;" height="18px"
-                                    width="42%"class="bg-gray" colspan="2"
-                                    style="border-bottom: 1px solid #dc0000;">Beca</th>
-                                <th height="18px" width="6%"></th>
+                        <!-- Inicio de table Resumen General Página 2 -->
+                        <table class="table-stripped text-base border-separate border-spacing-1">
+                            <tr class="font-roboto-condensed font-medium">
+                                <th></th>
+                                <th>Crédito</th>
+                                <th colspan="2" class="border-bottom-red p-1">Beca</th>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px"></td>
-                                <td width="50px" height="18px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;">
-                                    USD</td>
-                                <td height="18px">USD</td>
-                                <td height="18px">COP</td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal text-center">
+                                <td></td>
+                                <td>USD</td>
+                                <td>USD</td>
+                                <td>COP</td>
+                                <td></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px"class="text-left bg-light-gray">Desembolsos</td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;"
-                                    height="18px"class="bg-light-gray">29.743</td>
-                                <td style="border-right: 1px solid #FFF;" height="18px"class="bg-light-gray">20.000
-                                </td>
-                                <td height="18px"class="bg-light-gray">63.261.923</td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Desembolsos</td>
+                                <td class="font-roboto-mono text-center">29.743</td>
+                                <td class="font-roboto-mono text-center">20.000</td>
+                                <td class="font-roboto-mono text-center">63.261.923</td>
+                                <td class="bg-white"></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px"class="text-left">Intereses</td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;" height="18px">
-                                    4.865</td>
-                                <td style="border-right: 1px solid #FFF;" height="18px"></td>
-                                <td height="18px">9.630.690</td>
-                                <td height="18px" class="text-left" style="color: #dc0000;">**</td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Intereses</td>
+                                <td class="font-roboto-mono text-center">4.865</td>
+                                <td class="font-roboto-mono text-center"></td>
+                                <td class="font-roboto-mono text-center">9.630.690</td>
+                                <td class="bg-white text-color-primary">**</td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px" class="text-left bg-light-gray">Seguro deudores
-                                </td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;" height="18px"
-                                    class="bg-light-gray">189</td>
-                                <td style="border-right: 1px solid #FFF;" height="18px" class="bg-light-gray"></td>
-                                <td height="18px" class="bg-light-gray"></td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Seguro deudores</td>
+                                <td class="font-roboto-mono text-center">189</td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-white"></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px"class="text-left">Mora</td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;" height="18px">
-                                    29</td>
-                                <td style="border-right: 1px solid #FFF;" height="18px"></td>
-                                <td height="18px"></td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Mora</td>
+                                <td class="font-roboto-mono text-center">29</td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-white"></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px" class="text-left bg-light-gray">Pagos</td>
-                                <td  width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF; color: #dc0000;"
-                                    height="18px" class="bg-light-gray">(1.800)</td>
-                                <td style="border-right: 1px solid #FFF;" height="18px"class="bg-light-gray"></td>
-                                <td height="18px"class="bg-light-gray" style="color: #dc0000;">(8.506.908)</td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Pagos</td>
+                                <td class="font-roboto-mono text-center text-color-primary">(1.800)</td>
+                                <td></td>
+                                <td class="font-roboto-mono text-center text-color-primary">(8.506.908)</td>
+                                <td class="bg-white"></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px" class="text-left">Condonación estimada</td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;" height="18px">
-                                </td>
-                                <td style="border-right: 1px solid #FFF;" height="18px"></td>
-                                <td height="18px" style="color: #dc0000;">(10.698.900)</td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Condonación estimada</td>
+                                <td></td>
+                                <td></td>
+                                <td class="font-roboto-mono text-center text-color-primary">(10.698.900)</td>
+                                <td class="bg-white"></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px" class="text-left bg-light-gray">Apoyos entregados</td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF; color: #dc0000;"
-                                    height="18px" class="bg-light-gray">(4.519)</td>
-                                <td style="border-right: 1px solid #FFF;" height="18px" class="bg-light-gray"></td>
-                                <td height="18px" class="bg-light-gray"></td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal">
+                                <td class="pl-1">Apoyos entregados</td>
+                                <td class="font-roboto-mono text-center text-color-primary">(4.519)</td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-white"></td>
                             </tr>
-                            <tr>
-                                <td height="18px" width="80px" class="text-left bg-gray"><b>TOTAL</b></td>
-                                <td width="50px" style="border-right: 3px solid #FFF; border-left: 3px solid #FFF;" height="18px"
-                                    class="bg-gray"><b>33.025</b></td>
-                                <td style="border-right: 1px solid #FFF;" height="18px" class="bg-gray">
-                                    <b>33.025</b></td>
-                                <td height="18px" class="bg-gray"><b>53.686.805</b></td>
-                                <td height="18px"></td>
+                            <tr class="font-roboto-condensed font-normal bg-gray">
+                                <td class="pl-1"><b>TOTAL</b></td>
+                                <td class="font-roboto-mono text-center"><b>33.025</b></td>
+                                <td class="font-roboto-mono text-center"><b>33.025</b></td>
+                                <td class="font-roboto-mono text-center"><b>53.686.805</b></td>
+                                <td class="bg-white"></td>
                             </tr>
                         </table>
+                        <!-- Fin de tabla Resumen General Página 2 -->  
+
+                        <!-- Inicio Info Adicional Tabla Resumen General -->
+                        
                         <small style="color: #808080;"><span style="color: #dc0000;">* </span> Este resumen no muestra
                             decimales pero los
                             cálculos los consideran todos</small>
                         <br>
                         <small style="color: #808080;"><span style="color: #dc0000;">**</span> Intereses calculados
                             con la inflación</small>
+                        
+                            <!-- Fin Info Adicional Tabla Resumen General -->
                     </td>
+
                     <td width="50%" class="pl-20">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Estado Crédito</h4>
                         <hr style="color:#F4F4F4;">
@@ -974,7 +1010,7 @@
                 </tr>
                 <tr style="vertical-align: top;">
                     <td width="50%" class="pr-20">
-                        <h4>Fechas del Crédito</h4>
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90">Fechas del Crédito</h4>
                         <hr style="color:#F4F4F4;">
                         <table class="table-date" style="font-size:10px;">
                             <tr>
@@ -1010,7 +1046,7 @@
                         </table>
                     </td>
                     <td width="50%" class="pl-20">
-                        <h4>Requisitos para mantener mi estatus</h4>
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90">Requisitos para mantener mi estatus</h4>
                         <hr style="color:#F4F4F4;">
                         <table class="table-requisitos">
                             <tr>
