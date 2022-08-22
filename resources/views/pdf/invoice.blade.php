@@ -491,11 +491,23 @@
             }
 
             .p-1 {
-                padding: 5px;
+                padding: 4px 8px;
+            }
+
+            .pt-1 {
+                padding-top: 4px;
+            }
+
+            .pb-1 {
+                padding-bottom: 4px;
             }
 
             .pl-1 {
-                padding: 8px;
+                padding-left: 8px;
+            }
+
+            .pr-1 {
+                padding-right: 8px;
             }
 
             .pr-20 {
@@ -556,6 +568,10 @@
 
             .border-bottom-red {
                 border-bottom: 1px solid #DC0000;
+            }
+
+            .border-bottom-gray {
+                border-bottom: 1px solid #CCCCCC;
             }
 
         /* End Utilities */
@@ -895,7 +911,6 @@
                         <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-color-primary">Extracto programa Crédito Beca</h4>
                     </td>
                 </tr>
-
                 <tr style="vertical-align: top;">
                     <!-- Página 2 - Arriba Izquierda - Tabla Resumen General -->
                     <td width="50%" class="pr-20">
@@ -986,83 +1001,126 @@
                         <!-- Fin Info Adicional Tabla Resumen General -->
                     </td>
 
-                    <td width="50%" class="pl-20">
+                    <td>
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Estado Crédito</h4>
-                        <hr style="color:#F4F4F4;">
-                        <b>Crédito <span style="color:#00aa1a;">al día</span> </b>
+                        <hr class="text-neutral-30">
+                        <!-- OJOOO: Estos textos son condicionales, aparecen dependiendo el estado del pago, esté en mora o al día. -->
+                        <div class="font-roboto font-medium text-base">Crédito <span class="text-secondary-main">al día</span></div>
+                        <div class="font-roboto font-medium text-base">Crédito <span class="text-color-primary">en mora</span></d>
 
-                        <h4 style="margin-top:50px;">Próximo pago Crédito</h4>
-                        <hr style="color:#F4F4F4;">
-                        <table class="table-proximo">
-                            <tr>
-                                <td height="18px" class="bg-light-gray">Fecha próximo pago</td>
-                                <td height="18px" class="bg-gray">12 dic 2022</td>
+                        <!-- Incio Tabla de días vencidos por pago en Mora: OJO!! Esta tabla solo debe aparecer si el crédito está en mora -->
+                        <table style="width:auto; padding-top:10px;" class="table-stripped font-roboto-condensed font-normal text-base">
+                                <tr>
+                                    <td style="width:121px;"  class="text-center">Días vencidos</td>
+                                    <td style="width:104px;" class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">78</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">Cuotas vencidas</td>
+                                    <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center font-bold">Monto en mora</td>
+                                    <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">USD 1.229</td>
+                                </tr>
+                        </table>
+                        <!-- Fin de tabla de días vencidos por pago en mora! -->
+
+                        <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg">Próximo pago Crédito</h4>
+                        <hr class="text-neutral-30">
+                        <table style="width:auto;" class="font-roboto-condensed font-normal text-base">
+                            <tr class="bg-gray">
+                                <td style="width:144px;" class="pl-1 pt-1 pb-1 ">Fecha próximo pago</td>
+                                <td style="width:121px;" class="pl-1 pt-1 pb-1 ">12 dic 2022</td>
                             </tr>
-                            <tr>
-                                <td height="18px" class="bg-light-gray"><b>Pago sugerido</b></td>
-                                <td height="18px" class="bg-gray"><b>USD 1.229</b></td>
+                            <tr class="bg-gray">
+                                <td class="pl-1 pt-1 pb-1 "><b>Pago sugerido</b></td>
+                                <td class="pl-1 pt-1 pb-1 "><b>USD 1.229</b></td>
                             </tr>
                         </table>
                     </td>
                 </tr>
                 <tr style="vertical-align: top;">
-                    <td width="50%" class="pr-20">
+                    <td class="pr-20">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Fechas del Crédito</h4>
-                        <hr style="color:#F4F4F4;">
-                        <table class="table-date" style="font-size:10px;">
-                            <tr>
-                                <td height="18px" style="color: #808080;">Inicio financiación</td>
-                                <td height="18px" class="text-right"><b>01 sep 2018</b></td>
-                                <td height="18px"></td>
-                            </tr>
-                            <tr>
-                                <td height="18px"style="color: #808080;">Fin financiación</td>
-                                <td height="18px" class="text-right"><b>01 sep 2018
-                                        <hr style="color:#CCCCCC;"> 24 meses
-                                    </b></td>
-                                <td height="18px"></td>
-                            </tr>
-                            <tr>
-                                <td height="18px" style="color: #808080;">Fin de estudios</td>
-                                <td height="18px" class="text-right"><b>29 ene 2021</b></td>
-                                <td height="18px"></td>
-                            </tr>
-                            <tr>
-                                <td height="18px" style="color: #808080; margin-botton:5px;">Fin financiación</td>
-                                <td height="18px" style=" margin-top:5px;" class="text-right"><b>21 ago 2020 <br> +
-                                        72 meses
-                                        <hr style="color:#CCCCCC;">
-                                    </b></td>
-                                <td height="18px"></td>
-                            </tr>
-                            <tr>
-                                <td height="18px" style="color: #808080;">Fecha permanencia</td>
-                                <td height="18px" class="text-right"><b>31 ago 2026</b></td>
-                                <td height="18px">(Fecha máxima para cumplir permanencia)</td>
-                            </tr>
+                        <hr class="text-neutral-30">
+                        
+                        <table class="font-roboto-condensed text-xs">
+                            <tbody>
+                                <tr>
+                                    <td class="text-neutral-80 font-normal">Inicio financiación</td>
+                                    <td class="font-roboto-mono font-medium">01 sep 2018</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-neutral-80 font-normal">Fin financiación</td>
+                                    <td class="border-bottom-gray font-roboto-mono font-medium">21 ago 2020</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="font-roboto-mono font-medium">24 meses</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-neutral-80 font-normal">Fin de estudios</td>
+                                    <td class="font-roboto-mono font-medium">29 ene 2021</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-neutral-80 font-normal">Fin financiación</td>
+                                    <td class="font-roboto-mono font-medium">21 ago 2020</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="font-roboto-mono font-medium">+ 72 meses</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-neutral-80 font-normal">Fecha permanencia</td>
+                                    <td class="font-roboto-mono font-medium">31 ago 2026</td>
+                                    <td class="font-normal">(Fecha máxima para cumplir permanencia)</td>
+                                </tr>
+                            </tbody>
                         </table>
+                    
                     </td>
-                    <td width="50%" class="pl-20">
+                    <td width="50%">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Requisitos para mantener mi estatus</h4>
-                        <hr style="color:#F4F4F4;">
-                        <table class="table-requisitos">
+                        <hr class="text-neutral-30">
+                        <table style="width:auto" class="table-stripped font-roboto-condensed text-base">
                             <tr>
-                                <th height="18px" class="bg-gray">Requisitos</th>
-                                <th height="18px"class="bg-gray">Desde</th>
-                                <th height="18px"class="bg-gray">Hasta</th>
-                                <th height="18px"class="bg-gray">Estado</th>
+                                <th style="width:272px;">Requisitos</th>
+                                <th style="width:122px;">Desde</th>
+                                <th style="width:122px;">Hasta</th>
+                                <th style="width:60px;">Estado</th>
                             </tr>
                             <tr>
-                                <td height="18px">Paz y salvo financiero de la universidad</td>
-                                <td height="18px">12 dic 2022</td>
-                                <td height="18px">Permanente</td>
-                                <td height="18px" class="text-center" style="color:#33c481;">[-]</td>
+                                <td class="pl-1 pt-1 pb-1">Paz y salvo financiero de la universidad</td>
+                                <td class="font-roboto-mono text-center">12 dic 2022</td>
+                                <td class="pl-1 pt-1 pb-1">Permanente</td>
+                                <td class="text-secondary-main text-center">[-]</td>
                             </tr>
                             <tr>
-                                <td height="18px" class="bg-light-gray">Certificado laboral</td>
-                                <td height="18px" class="bg-light-gray">12 dic 2022</td>
-                                <td height="18px" class="bg-light-gray">12 dic 2022</td>
-                                <td height="18px" class="bg-light-gray text-center" style="color:#fb3449;">[-]</td>
+                                <td class="pl-1 pt-1 pb-1">Certificado laboral</td>
+                                <td class="font-roboto-mono text-center">12 dic 2022</td>
+                                <td class="font-roboto-mono text-center">12 dic 2022</td>
+                                <td class="text-color-primary text-center">[-]</td>
                             </tr>
                         </table>
                     </td>
