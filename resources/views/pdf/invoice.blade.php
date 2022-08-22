@@ -486,6 +486,15 @@
             .m-0 {
                 margin: 0 !important;
             }
+
+            .ml-20{
+                margin-left: 20px;
+            }
+
+            .mt-20 {
+                margin-top: 20px;
+            }
+
             .p-0 {
                 padding: 0 !important;
             }
@@ -544,6 +553,10 @@
 
             .bg-gray {
                 background-color: #FFFFFF;
+            }
+
+            .bg-gray-2{
+                background-color: #F4F4F4;
             }
 
             .bg-white{
@@ -904,6 +917,7 @@
 
         <!-- Página 2 -->
         <div class="page" style="page-break-after: avoid;">
+           
             <table>
                 <!-- Título Página 2 -->
                 <tr>
@@ -1100,6 +1114,7 @@
                         </table>
                     
                     </td>
+                     <!-- Tabla Página 2 - Requisitos para mantener mi estatus -->
                     <td width="50%">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Requisitos para mantener mi estatus</h4>
                         <hr class="text-neutral-30">
@@ -1124,9 +1139,214 @@
                             </tr>
                         </table>
                     </td>
+                    <!-- Fin tabla pagina 2 - Requisitos para mantener mi estatus -->
                 </tr>
             </table>
+            
         </div>
+
+        <!-- Inicio Pagina 3 -->
+        <div class="page" style="page-break-before: always;">
+            <!-- Main Layout Table Page 3 -->
+            <table>
+                <tr>
+                    <td>
+                        <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-blue-500">Extracto Crédito </h4>
+                    </td>
+                </tr>
+                <!-- Main Layout -->
+                <tr style="vertical-align:top">
+                    <!-- Extracto Crédito P3: Resumen -->
+                    <td width="40%" height="50%" class="pr-20">
+                        <h4 class="font-roboto font-medium text-lg text-blue-500">Resumen</h4>
+                        <hr class="text-neutral-30">
+
+                        <!-- Tabla 1 , Pag 3, Resumen -->
+                        <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
+                            <tbody>
+                                <tr>
+                                    <td style="width:75px;" class="font-bold p-1">Tasas</td>
+                                    <td style="width:84px;" class="font-bold p-1">EA <span class="text-color-primary">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Interés</td>
+                                    <td class="p-1 font-roboto-mono">9,00 %</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Mora</td>
+                                    <td class="p-1 font-roboto-mono">25,00 %</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Seguro</td>
+                                    <td class="p-1 font-roboto-mono">0,29 %</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> EA = Tasa Efectiva Anual.</div>
+                        <!-- Fin Tabla 1 , Pag 3, Resumen -->
+                        
+                        <!--  Tabla 2, Pag 3, Resumen-->
+                        <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
+                            <tbody>
+                                <tr>
+                                    <td style="width:131px;" class="bg-gray p-1 font-bold">Inicio pago</td>
+                                    <td style="width:122px;" class="bg-gray2 p-1 font-roboto-mono">01 sep 2021</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray p-1 font-bold">Estimado fin pago</td>
+                                    <td class="bg-gray2 p-1 font-roboto-mono">31 jul 2027</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 2, Pag 3, Resumen-->
+
+                        <!-- Inicio Tabla 3, Pag 3, Resumen -->
+                        <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped text-base">
+                            <tbody>
+                                <tr>
+                                    <td style="width:172px;" class="text-center font-bold p-1">Cuotas</td>
+                                    <td style="width:36px;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Pagadas</td>
+                                    <td class="p-1 font-roboto-mono text-right">6</td>
+                                </tr>
+                                <tr class="bg-gray-2">
+                                    <td class="p-1">Estimadas pendientes</td>
+                                    <td class="p-1 font-roboto-mono text-right">65</td>
+                                </tr>
+                                <tr class="bg-gray">
+                                    <td class="p-1 font-bold text-right">TOTAL</td>
+                                    <td class="p-1 font-roboto-mono font-medium text-right">71</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 3, Pag 3, Resumen -->
+
+                        <!-- Inicio Tabla 4, Pag 3, Resumen -->
+                        <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
+                            <tbody>
+                                <tr>
+                                    <td style="width:105px;" class="bg-gray-2 p-1 font-bold">Saldo al corte</td>
+                                    <td style="width:113px;" class="bg-gray p-1 font-roboto-mono text-color-primary">USD 28.506</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 4, Pag 3, Resumen -->
+
+                    </td>
+                    <!-- End Extracto Crédito P3: Resumen  -->
+
+                    <!-- Inicio - Pag 3 - Ingresos y seguros -->
+                    <td width="60%" height="50%">
+                        <h4 class="font-roboto font-medium text-lg text-blue-500">Intereses y seguro</h4>
+                        <hr class="text-neutral-30">
+
+                        <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
+                        <table style="width:auto" class="font-roboto-condensed text-base table-stripped">
+                            <tbody>
+                                <tr class="font-bold">
+                                    <td style="width:138px;"    class="p-1">Inicio</td>
+                                    <td style="width:80px;"    class="p-1">Fin</td>
+                                    <td style="width:270px;"    class="p-1">Estatus</td>
+                                    <td style="width:45px;"     class="p-1">EA <span class="text-color-primary">*</span></td>
+                                    <td style="width:58px;"     class="p-1">Meses</td>
+                                    <td style="width:106px;"    class="p-1">Intereses USD</td>
+                                    <td style="width:92px;"     class="p-1">Seguro USD</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">Periodo Amortizacion Ordinario (PAO)</td>
+                                    <td class="p-1 font-normal">9 %</td>
+                                    <td class="p-1 font-normal">60</td>
+                                    <td class="p-1 font-normal">1.292</td>
+                                    <td class="p-1 font-normal">41</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">Perido Gracia Ordinario (PGO)</td>
+                                    <td class="p-1 font-normal">9 %</td>
+                                    <td class="p-1 font-normal">16</td>
+                                    <td class="p-1 font-normal">1.292</td>
+                                    <td class="p-1 font-normal">41</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">Periodo Gracia Fuera (PGF)</td>
+                                    <td class="p-1 font-normal">9 %</td>
+                                    <td class="p-1 font-normal">6</td>
+                                    <td class="p-1 font-normal">1.292</td>
+                                    <td class="p-1 font-normal">7</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">Periodo Extraordinario de Estudios (PEE)</td>
+                                    <td class="p-1 font-normal">7 %</td>
+                                    <td class="p-1 font-normal">1</td>
+                                    <td class="p-1 font-normal">1.292</td>
+                                    <td class="p-1 font-normal">36</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal">Periodo Ordinario de Estudios(POE)</td>
+                                    <td class="p-1 font-normal">9 %</td>
+                                    <td class="p-1 font-normal">24</td>
+                                    <td class="p-1 font-normal">1.292</td>
+                                    <td class="p-1 font-normal">64</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-normal"></td>
+                                    <td class="p-1 font-normal"></td>
+                                    <td class="p-1 font-normal"></td>
+                                    <td class="p-1 font-normal"></td>
+                                    <td class="p-1 font-normal font-bold">TOTAL</td>
+                                    <td class="p-1 font-normal font-bold">4.865</td>
+                                    <td class="p-1 font-normal font-bold">189</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> EA = Tasa Efectiva Anual.</div>
+                        <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
+                    </td>
+                    <!-- Fin - Pag 3 - Ingresos y seguros -->
+                </tr>
+                <!-- Inicio - Pag 3 - Mora -->
+                <tr>
+                    <td>
+                        <h4 class="font-roboto font-medium text-lg text-blue-500">Mora</h4>
+                        <hr class="text-neutral-30">
+
+                        <!-- Inicio Tabla 1 - Pag 3 , Mora -->
+                        <table style="width:auto" class="font-roboto-condensed">
+                            <tbody>
+                                <tr class="bg-gray text-center font-bold">
+                                    <td style="width:148px;"    class="p-1">Inicio</td>
+                                    <td style="width:122px;"    class="p-1">Fin</td>
+                                    <td style="width:100px;"    class="p-1">Días en mora</td>
+                                    <td style="width:74px;"     class="p-1">USD</td>
+                                </tr>
+                                <tr class="bg-gray-2 font-roboto-mono">
+                                    <td class="p-1 text-center">01 sept 2018</td>
+                                    <td class="p-1 text-center">28 feb 2022</td>
+                                    <td class="p-1 text-right">48</td>
+                                    <td class="p-1 text-center">31.105</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 1 - Pag 3, Mora -->
+                    </td>
+                </tr>
+                <!-- Fin - Pag 3 - Mora -->
+                <!-- End Main Layout -->
+            </table>
+            <!-- End Main Layout Table Page 3 -->
+        </div>
+        <!-- Fin Página 3 -->
     </main>
 
 </body>
