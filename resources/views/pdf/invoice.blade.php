@@ -487,8 +487,20 @@
                 margin: 0 !important;
             }
 
+            .ml-10{
+                margin-left: 10px;
+            }
+
             .ml-20{
                 margin-left: 20px;
+            }
+
+            .mr-20 {
+                margin-right: 20px;
+            }
+
+            .mr-40 {
+                margin-right: 40px;
             }
 
             .mt-20 {
@@ -549,6 +561,10 @@
 
             .text-right {
                 text-align: right !important;
+            }
+
+            .bg-neutral-50 {
+                background-color: #E5E5E5;
             }
 
             .bg-gray {
@@ -669,54 +685,6 @@
         /* Page #1
     ========================================================================== */
 
-        .table-resumen th,
-        .table-resumen td {
-            width: 25%;
-            font-size: 8px;
-            text-align: center;
-            vertical-align: middle;
-            padding: 4px;
-        }
-
-        .table-resumen td {
-            height: 20px;
-        }
-
-        .table-resumen th {
-            text-align: center;
-        }
-
-        .table-proximo {
-            width: 40%;
-        }
-
-        .table-proximo th,
-        .table-proximo td {
-            padding: 4px;
-        }
-
-        .table-date th,
-        .table-date td {
-            vertical-align: top;
-            padding: 4px;
-        }
-
-        .table-requisitos {
-            width: 80%;
-        }
-
-        .table-requisitos th {
-            text-align: center;
-        }
-
-        .bg-gray {
-            background-color: #E5E5E5;
-        }
-
-        .bg-light-gray {
-            background-color: #F4F4F4;
-        }
-
         .header_list li {
             margin-bottom: 10px;
         }
@@ -729,7 +697,7 @@
 
 <body>
     <!-- HEADER -->
-    <header>
+    <header style="margin-left: 70px; margin-right:70px">
         <table class="header">
             <tr>
                 <td class="header_logo" width="10%">
@@ -784,7 +752,7 @@
     </header>
 
     <!-- FOOTER -->
-    <footer class="border-top">
+    <footer style="margin-left:70px; margin-right:70px;" class="border-top">
         <table>
             <tr>
                 <td width="40%" class="font-roboto-mono text-base font-normal">Extracto Crédito Beca COLFUTURO. Corte al 07 jul 2022.</td>
@@ -794,7 +762,7 @@
         </table>
     </footer>
 
-    <main>
+    <main style="margin-left:70px; margin-right:70px;">
         <!-- Inicio de 1 página, Tabla de contenido -->
         <div class="page" style="page-break-after: always;">
             <table class="tableOfContent">
@@ -917,7 +885,7 @@
 
         <!-- Página 2 -->
         <div class="page" style="page-break-after: avoid;">
-           
+        
             <table>
                 <!-- Título Página 2 -->
                 <tr>
@@ -1058,7 +1026,7 @@
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Fechas del Crédito</h4>
                         <hr class="text-neutral-30">
                         
-                        <table class="font-roboto-condensed text-xs">
+                        <table style="width:auto" class="font-roboto-condensed border-separate border-spacing-1 text-sm">
                             <tbody>
                                 <tr>
                                     <td class="text-neutral-80 font-normal">Inicio financiación</td>
@@ -1107,7 +1075,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-neutral-80 font-normal">Fecha permanencia</td>
-                                    <td class="font-roboto-mono font-medium">31 ago 2026</td>
+                                    <td style="width:106px;" class="font-roboto-mono font-medium">31 ago 2026</td>
                                     <td class="font-normal">(Fecha máxima para cumplir permanencia)</td>
                                 </tr>
                             </tbody>
@@ -1164,21 +1132,21 @@
                         <!-- Tabla 1 , Pag 3, Resumen -->
                         <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
                             <tbody>
-                                <tr>
+                                <tr class="text-center">
                                     <td style="width:75px;" class="font-bold p-1">Tasas</td>
                                     <td style="width:84px;" class="font-bold p-1">EA <span class="text-color-primary">*</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-1">Interés</td>
-                                    <td class="p-1 font-roboto-mono">9,00 %</td>
+                                    <td class="p-1 font-roboto-mono text-center">9,00 %</td>
                                 </tr>
                                 <tr>
                                     <td class="p-1">Mora</td>
-                                    <td class="p-1 font-roboto-mono">25,00 %</td>
+                                    <td class="p-1 font-roboto-mono text-center">25,00 %</td>
                                 </tr>
                                 <tr>
                                     <td class="p-1">Seguro</td>
-                                    <td class="p-1 font-roboto-mono">0,29 %</td>
+                                    <td class="p-1 font-roboto-mono text-center">0,29 %</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1189,12 +1157,12 @@
                         <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
                             <tbody>
                                 <tr>
-                                    <td style="width:131px;" class="bg-gray p-1 font-bold">Inicio pago</td>
-                                    <td style="width:122px;" class="bg-gray2 p-1 font-roboto-mono">01 sep 2021</td>
+                                    <td style="width:131px;" class="p-1 font-bold bg-neutral-50">Inicio pago</td>
+                                    <td style="width:122px;" class="p-1 font-roboto-mono bg-gray-2">01 sep 2021</td>
                                 </tr>
                                 <tr>
-                                    <td class="bg-gray p-1 font-bold">Estimado fin pago</td>
-                                    <td class="bg-gray2 p-1 font-roboto-mono">31 jul 2027</td>
+                                    <td class="p-1 font-bold bg-neutral-50">Estimado fin pago</td>
+                                    <td class="p-1 font-roboto-mono bg-gray-2">31 jul 2027</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1204,7 +1172,7 @@
                         <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped text-base">
                             <tbody>
                                 <tr>
-                                    <td style="width:172px;" class="text-center font-bold p-1">Cuotas</td>
+                                    <td style="width:152px;" class="text-center font-bold p-1">Cuotas</td>
                                     <td style="width:36px;"></td>
                                 </tr>
                                 <tr>
@@ -1215,7 +1183,7 @@
                                     <td class="p-1">Estimadas pendientes</td>
                                     <td class="p-1 font-roboto-mono text-right">65</td>
                                 </tr>
-                                <tr class="bg-gray">
+                                <tr class="bg-neutral-50">
                                     <td class="p-1 font-bold text-right">TOTAL</td>
                                     <td class="p-1 font-roboto-mono font-medium text-right">71</td>
                                 </tr>
@@ -1227,8 +1195,8 @@
                         <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
                             <tbody>
                                 <tr>
-                                    <td style="width:105px;" class="bg-gray-2 p-1 font-bold">Saldo al corte</td>
-                                    <td style="width:113px;" class="bg-gray p-1 font-roboto-mono text-color-primary">USD 28.506</td>
+                                    <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
+                                    <td style="width:113px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">USD 28.506</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1245,68 +1213,68 @@
                         <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
                         <table style="width:auto" class="font-roboto-condensed text-base table-stripped">
                             <tbody>
-                                <tr class="font-bold">
-                                    <td style="width:138px;"    class="p-1">Inicio</td>
-                                    <td style="width:80px;"    class="p-1">Fin</td>
+                                <tr class="font-bold text-center">
+                                    <td style="width:110px;"    class="p-1">Inicio</td>
+                                    <td style="width:120px;"     class="p-1">Fin</td>
                                     <td style="width:270px;"    class="p-1">Estatus</td>
-                                    <td style="width:45px;"     class="p-1">EA <span class="text-color-primary">*</span></td>
-                                    <td style="width:58px;"     class="p-1">Meses</td>
-                                    <td style="width:106px;"    class="p-1">Intereses USD</td>
-                                    <td style="width:92px;"     class="p-1">Seguro USD</td>
+                                    <td style="width:45px;"     class="p-1 text-right">EA <span class="text-color-primary">*</span></td>
+                                    <td style="width:58px;"     class="p-1 text-right">Meses</td>
+                                    <td style="width:106px;"    class="p-1 text-right">Intereses USD</td>
+                                    <td style="width:92px;"     class="p-1 text-right">Seguro USD</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
                                     <td class="p-1 font-normal">Periodo Amortizacion Ordinario (PAO)</td>
-                                    <td class="p-1 font-normal">9 %</td>
-                                    <td class="p-1 font-normal">60</td>
-                                    <td class="p-1 font-normal">1.292</td>
-                                    <td class="p-1 font-normal">41</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">60</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">41</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
                                     <td class="p-1 font-normal">Perido Gracia Ordinario (PGO)</td>
-                                    <td class="p-1 font-normal">9 %</td>
-                                    <td class="p-1 font-normal">16</td>
-                                    <td class="p-1 font-normal">1.292</td>
-                                    <td class="p-1 font-normal">41</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">16</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">41</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
                                     <td class="p-1 font-normal">Periodo Gracia Fuera (PGF)</td>
-                                    <td class="p-1 font-normal">9 %</td>
-                                    <td class="p-1 font-normal">6</td>
-                                    <td class="p-1 font-normal">1.292</td>
-                                    <td class="p-1 font-normal">7</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">6</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">7</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
                                     <td class="p-1 font-normal">Periodo Extraordinario de Estudios (PEE)</td>
-                                    <td class="p-1 font-normal">7 %</td>
-                                    <td class="p-1 font-normal">1</td>
-                                    <td class="p-1 font-normal">1.292</td>
-                                    <td class="p-1 font-normal">36</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">7 %</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">1</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">36</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
-                                    <td class="p-1 font-normal">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
                                     <td class="p-1 font-normal">Periodo Ordinario de Estudios(POE)</td>
-                                    <td class="p-1 font-normal">9 %</td>
-                                    <td class="p-1 font-normal">24</td>
-                                    <td class="p-1 font-normal">1.292</td>
-                                    <td class="p-1 font-normal">64</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">24</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="p-1 font-normal font-roboto-mono text-right">64</td>
                                 </tr>
                                 <tr>
                                     <td class="p-1 font-normal"></td>
                                     <td class="p-1 font-normal"></td>
                                     <td class="p-1 font-normal"></td>
                                     <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal font-bold">TOTAL</td>
-                                    <td class="p-1 font-normal font-bold">4.865</td>
-                                    <td class="p-1 font-normal font-bold">189</td>
+                                    <td class="p-1 font-normal font-bold text-right">TOTAL</td>
+                                    <td class="p-1 font-normal font-bold font-roboto-mono text-right">4.865</td>
+                                    <td class="p-1 font-normal font-bold font-roboto-mono text-right">189</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1324,7 +1292,7 @@
                         <!-- Inicio Tabla 1 - Pag 3 , Mora -->
                         <table style="width:auto" class="font-roboto-condensed">
                             <tbody>
-                                <tr class="bg-gray text-center font-bold">
+                                <tr class="bg-neutral-50 text-center font-bold">
                                     <td style="width:148px;"    class="p-1">Inicio</td>
                                     <td style="width:122px;"    class="p-1">Fin</td>
                                     <td style="width:100px;"    class="p-1">Días en mora</td>
@@ -1347,6 +1315,310 @@
             <!-- End Main Layout Table Page 3 -->
         </div>
         <!-- Fin Página 3 -->
+
+        <!-- Inicio Página 4 -->
+        <div class="page" style="page-break-before: always;">
+            <!-- Main Layout Pag 4 -->
+            <table>
+                
+                <tr>
+                    <td>
+                        <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-blue-500">Extracto Crédito </h4>
+                    </td>
+                </tr>
+
+                <!-- Tabla Desembolsos - Pag 4 -->
+                <tr style="vertical-align:top">
+                    <td>
+                        <h4 class="p-0 mt-20 font-roboto font-medium text-lg text-blue-500">Desembolsos</h4>
+                        <hr class="text-neutral-30">
+
+                        <table style="width:auto;">
+                            <tr style="vertical-align: top;">
+                                <!-- Inicio Tabla 1 Desembolsos -->
+                                <td>
+                                    <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
+                                        <tbody>
+                                            <tr class="font-bold text-center">
+                                                <td style="width:41px;"     class="p-1">#</td>
+                                                <td style="width:138px;"    class="p-1">Fecha</td>
+                                                <td style="width:107px;"    class="p-1">Concepto</td>
+                                                <td style="width:50px;"     class="p-1">USD</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">1</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">2</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">3</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">4</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">5</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1 ">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">6</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <!-- Fin Tabla 1 Desembolsos -->
+                                
+                                <td>
+                                    <table style="width:auto;" class="ml-10 table-stripped font-roboto-condensed text-base">
+                                        <tbody>
+                                            <tr class="font-bold text-center">
+                                                <td style="width:41px;"     class="p-1">#</td>
+                                                <td style="width:138px;"    class="p-1">Fecha</td>
+                                                <td style="width:107px;"    class="p-1">Concepto</td>
+                                                <td style="width:50px;"     class="p-1">USD</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">7</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">8</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">9</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">10</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">11</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1 ">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">12</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                
+                                <td>
+                                <table style="width:auto;" class="ml-10 table-stripped font-roboto-condensed text-base">
+                                        <tbody>
+                                            <tr class="font-bold text-center">
+                                                <td style="width:41px;"     class="p-1">#</td>
+                                                <td style="width:138px;"    class="p-1">Fecha</td>
+                                                <td style="width:107px;"    class="p-1">Concepto</td>
+                                                <td style="width:50px;"     class="p-1">USD</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">1</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">2</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">3</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">4</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">5</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1 ">Matrícula</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-1 font-roboto-mono text-right">6</td>
+                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                                <td class="p-1">Sostenimiento</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                            <tr class="bg-neutral-50">
+                                                <td colspan="3" class="p-1 text-right font-bold">Total</td>
+                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- End Tabla Desembolsos - Pag 4 -->
+
+                <!-- Tabla Cuotas pagadas - Pag 4 -->
+                <tr>
+                    <td>
+                        <h4 class="p-0 mt-20 font-roboto font-medium text-lg text-blue-500">Cuotas pagadas</h4>
+                        <hr class="text-neutral-30">
+
+                        <table style="width:auto" class="ml-20 font-roboto-condensed">
+                            <tbody>
+                                <tr class="font-bold bg-neutral-50">
+                                    <td></td>
+                                    <td style="82px;"   class="p-1 text-center">Inicio</td>
+                                    <td style="122px;"  class="p-1 text-center">Fin</td>
+                                    <td style="122px;"  class="p-1 text-center">Pagadas</td>
+                                    <td style="88px;"   class="p-1 text-center">Pendientes</td>
+                                    <td style="63px;"   class="p-1 text-center">Totales</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-normal p-1">Normales</td>
+                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal p-1 font-roboto-mono text-right">60</td>
+                                    <td class="font-normal p-1 font-roboto-mono text-right">60</td>
+                                    <td class="font-normal p-1 font-roboto-mono text-right">66</td>
+                                </tr>
+                                <tr class="bg-gray-2">
+                                    <td class="font-normal p-1 ">Reducidas</td>
+                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal p-1 font-roboto-mono text-right">-</td>
+                                    <td class="font-normal p-1 font-roboto-mono text-right">6</td>
+                                    <td class="font-normal p-1 font-roboto-mono text-right">6</td>
+                                </tr>
+                                <tr class="bg-neutral-50">
+                                    <td colspan="2"></td>
+                                    <td class="font-bold p-1 text-right">TOTAL</td>
+                                    <td class="font-bold p-1 text-right">6</td>
+                                    <td class="font-bold p-1 text-right">66</td>
+                                    <td class="font-bold p-1 text-right">72</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- End tabla Cuotas pagadas - Pag 4 -->
+
+                <!-- Tabla Apoyo a terceras entidades - Pag 4 -->
+                <tr>
+                    <td>
+                        <h4 class="p-0 mt-20 font-roboto font-medium text-lg text-blue-500">Apoyos de terceras entidades</h4>
+                        <hr class="text-neutral-30">
+
+                        <table style="width:auto;" class="ml-20 font-roboto-condensed text-base">
+                            <tbody>
+                                <tr class="text-center font-bold p-1 bg-neutral-50">
+                                    <td colspan="5" class="border-bottom-red">Apoyos</td>
+                                    <td colspan="5" class="border-bottom-red">Abonos en USD</td>
+                                </tr>
+                                <tr class="text-center font-bold p-1 bg-neutral-50">
+                                    <td style="width:130px;"    class="p-1">Fecha</td>
+                                    <td style="width:77px;"     class="p-1 text-left">Concepto</td>
+                                    <td style="width:65px;"     class="p-1">USD</td>
+                                    <td style="width:66px;"     class="p-1 text-right">TRM <span class="text-color-primary">*</span></td>
+                                    <td style="width:103px;"    class="p-1">COP</td>
+                                    <td style="width:97px;"     class="p-1">Interes mora</td>
+                                    <td style="width:76px;"     class="p-1">Intereses</td>
+                                    <td style="width:61px;"     class="p-1">Capital</td>
+                                    <td style="width:124px;"    class="p-1">Cuota anticipada</td>
+                                    <td style="width:65px;"     class="p-1">Total</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                    <td class="p-1">CEA</td>
+                                    <td class="p-1 font-roboto-mono text-right">300</td>
+                                    <td class="p-1 font-roboto-mono text-right">3.781</td>
+                                    <td class="p-1 font-roboto-mono text-right text-secondary-main">1.134.255</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">300</td>
+                                    <td class="p-1 font-roboto-mono text-right">300</td>
+                                </tr>
+                                <tr class="bg-gray-2">
+                                    <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                    <td class="p-1">CEF</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">62</td>
+                                    <td class="p-1 font-roboto-mono text-right">238</td>
+                                    <td class="p-1 font-roboto-mono text-right text-color-primary">(300)</td>
+                                    <td class="p-1 font-roboto-mono text-right">300</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
+                                    <td class="p-1">Rev CEA</td>
+                                    <td class="p-1 font-roboto-mono text-right">60</td>
+                                    <td class="p-1 font-roboto-mono text-right">3.781</td>
+                                    <td class="p-1 font-roboto-mono text-right text-secondary-main">1.134.255</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">100</td>
+                                    <td class="p-1 font-roboto-mono text-right">93</td>
+                                    <td class="p-1 font-roboto-mono text-right">300</td>
+                                    <td class="p-1 font-roboto-mono text-right">300</td>
+                                </tr>
+                                <tr class="bg-neutral-50 font-bold text-right">
+                                    <td class="p-1"></td>
+                                    <td class="p-1">TOTAL</td>
+                                    <td class="p-1 font-roboto-mono text-right">1.800</td>
+                                    <td class="p-1 font-roboto-mono text-right"></td>
+                                    <td class="p-1 font-roboto-mono text-right">6.987.986</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">1.099</td>
+                                    <td class="p-1 font-roboto-mono text-right">710</td>
+                                    <td class="p-1 font-roboto-mono text-right">-</td>
+                                    <td class="p-1 font-roboto-mono text-right">1.800</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- End Tabla Apoyo a terceras entidades - Pag 4 -->
+            </table>
+            <!-- End Main Layout Pag 4 -->
+        </div>
+        <!-- Fin Página 4 -->
     </main>
 
 </body>
