@@ -487,6 +487,10 @@
                 margin: 0 !important;
             }
 
+            .mt-6 {
+                margin-top: 6px;
+            }
+
             .ml-10{
                 margin-left: 10px;
             }
@@ -593,6 +597,10 @@
 
             table.table-stripped tr:nth-child(odd) {
                 background-color: #E5E5E5;
+            }
+
+            table.table-p-1 tbody tr td {
+                padding: 4px 8px;
             }
 
             .border-bottom-red {
@@ -1026,7 +1034,7 @@
                         <h4 class="font-roboto font-medium text-lg text-neutral-90">Fechas del Crédito</h4>
                         <hr class="text-neutral-30">
                         
-                        <table style="width:auto" class="font-roboto-condensed border-separate border-spacing-1 text-sm">
+                        <table style="width:auto" class="font-roboto-condensed border-separate border-spacing-1 text-base">
                             <tbody>
                                 <tr>
                                     <td class="text-neutral-80 font-normal">Inicio financiación</td>
@@ -1387,7 +1395,7 @@
                                 <!-- Fin Tabla 1 Desembolsos -->
                                 
                                 <td>
-                                    <table style="width:auto;" class="ml-10 table-stripped font-roboto-condensed text-base">
+                                    <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
                                             <tr class="font-bold text-center">
                                                 <td style="width:41px;"     class="p-1">#</td>
@@ -1436,7 +1444,7 @@
                                 </td>
                                 
                                 <td>
-                                <table style="width:auto;" class="ml-10 table-stripped font-roboto-condensed text-base">
+                                <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
                                             <tr class="font-bold text-center">
                                                 <td style="width:41px;"     class="p-1">#</td>
@@ -1612,6 +1620,9 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="ml-20 mt-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM= Tasa Representativa del Mercado.</div>
+                        <div class="ml-20 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en 0 absoluto se muestran con "-". Los valores "0" contienen decimales.</div>
+                        <div class="ml-20 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en verde corresponden a la moneda en la que se hizo el abono.</div>
                     </td>
                 </tr>
                 <!-- End Tabla Apoyo a terceras entidades - Pag 4 -->
@@ -1619,6 +1630,295 @@
             <!-- End Main Layout Pag 4 -->
         </div>
         <!-- Fin Página 4 -->
+
+        <!-- Inicio Página 5 -->
+        <div class="page" style="page-break-before: always;">
+            <!-- Main Layout Pag 5 -->
+            <table>
+                <tr>
+                    <td>
+                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Pagos realizados</h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Inicio Tabla Pagos Realizados, Pag 6 -->
+                    <table style="width:auto" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                        <tbody>
+                            <tr class="bg-neutral-50 text-center font-bold">
+                                <td style="width:527px;" colspan="6" class="border-bottom-red">Pagos</td>
+                                <td style="width:417px;" colspan="5" class="border-bottom-red">Abonos en USD</td>
+                            </tr>
+                            <tr class="bg-neutral-50 font-bold text-center">
+                                <td style="width:36px;">#</td>
+                                <td>Fecha</td>
+                                <td>Observación</td>
+                                <td>USD</td>
+                                <td class="text-right">TRM <span class="text-color-primary">*</span></td>
+                                <td>COP</td>
+                                <td>Interes mora</td>
+                                <td>Intereses</td>
+                                <td>Capital</td>
+                                <td>Cuota anticipada</td>
+                                <td>Total</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">1</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">2</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">62</td>
+                                <td class="font-roboto-mono text-right">238</td>
+                                <td class="font-roboto-mono text-right text-color-primary">(300)</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">3</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">93</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">4</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">5</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">6</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">7</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">0</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">8</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">9</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right text-color-primary">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">10</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">11</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right text-color-primary">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">12</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">13</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right text-color-primary">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">14</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">15</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right text-color-primary">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">16</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">17</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Pago</td>
+                                <td class="font-roboto-mono text-right">60</td>
+                                <td class="font-roboto-mono text-right">3.781</td>
+                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right text-color-primary">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr>
+                                <td class="font-roboto-mono text-right">18</td>
+                                <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                <td>Cuota anticipada</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">1.134.255</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">100</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">300</td>
+                            </tr>
+                            <tr class="font-bold">
+                                <td></td>
+                                <td></td>
+                                <td class="text-right">TOTAL</td>
+                                <td class="font-roboto-mono text-right">1800</td>
+                                <td></td>
+                                <td class="font-roboto-mono text-right">6.987.986</td>
+                                <td class="text-right">-</td>
+                                <td class="font-roboto-mono text-right">1.099</td>
+                                <td class="font-roboto-mono text-right">710</td>
+                                <td class="font-roboto-mono text-right">-</td>
+                                <td class="font-roboto-mono text-right">1800</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM= Tasa Representativa del Mercado.</div>
+                    <!-- Fin Tabla Pagos Realizados, Pag 6 -->
+                </tr>
+
+            </table>
+            <!-- End Main Layout Pag 5 -->
+        </div>
+        <!-- Fin Página 5 -->
     </main>
 
 </body>
