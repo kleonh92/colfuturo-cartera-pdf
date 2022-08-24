@@ -491,6 +491,10 @@
                 margin-top: 6px;
             }
 
+            .mt-10 {
+                margin-top: 10px;
+            }
+
             .ml-10{
                 margin-left: 10px;
             }
@@ -509,6 +513,10 @@
 
             .mt-20 {
                 margin-top: 20px;
+            }
+
+            .mt-70 {
+                margin-top: 70px;
             }
 
             .p-0 {
@@ -595,8 +603,6 @@
                 background-color: #CCEED1 !important;
             }
 
-
-
             .border-separate {
                 border-collapse: separate;
             }
@@ -610,6 +616,10 @@
             }
 
             table.table-stripped tr:nth-child(odd) {
+                background-color: #E5E5E5;
+            }
+
+            table.table-stripped-2 tr:nth-child(even) {
                 background-color: #E5E5E5;
             }
 
@@ -2660,7 +2670,74 @@
         </div>
         <!-- Fin Página 7 -->
 
-        
+        <!-- Inicio Página 8 -->
+        <div class="page" style="page-break-before: always;">
+            <table>
+                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Cuotas en mora</h4>
+
+                <!-- Inicio Tabla Página 8 -->
+                <table style="width:auto;" class="table-stripped-2 table-p-1 font-roboto-condensed text-base">
+                    <tbody>
+                        <tr class="text-center font-bold bg-neutral-50">
+                            <td class="bg-transparent"></td>
+                            <td class="bg-transparent"></td>
+                            <td class="bg-transparent"></td>
+                            <td colspan="4" class="border-bottom-red">USD</td>
+                        </tr>
+                        <tr class="text-center font-bold bg-neutral-50">
+                            <td style="width:34px;">#</td>
+                            <td style="width:121px;">Fecha</td>
+                            <td style="width:63px;">Dias en<br />mora</td>
+                            <td style="width:68px;">Interés<br />de mora</td>
+                            <td style="width:81px;">Intereses<br />corrientes</td>
+                            <td style="width:61px;">Capital</td>
+                            <td style="width:65px;">Total</td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>1</td>
+                            <td>12 dic 2021</td>
+                            <td>90</td>
+                            <td>4</td>
+                            <td>190</td>
+                            <td>204</td>
+                            <td>397</td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>2</td>
+                            <td>12 dic 2021</td>
+                            <td>60</td>
+                            <td>11</td>
+                            <td>202</td>
+                            <td>191</td>
+                            <td>404</td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>3</td>
+                            <td>12 dic 2021</td>
+                            <td>30</td>
+                            <td>15</td>
+                            <td>201</td>
+                            <td>193</td>
+                            <td>408</td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right font-bold">
+                            <td></td>
+                            <td></td>
+                            <td>TOTAL</td>
+                            <td>29</td>
+                            <td>593</td>
+                            <td>583</td>
+                            <td>1.210</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-10 font-roboto font-light">En síntesis para ponerse al día debe cancelar <span class="font-medium">USD 1.210</span></div>
+                
+                <h4 class="mt-70 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Fin extracto crédito</h4>
+                <!-- Fin Tabla Página 8 -->
+            </table>
+        </div>
+        <!-- Inicio Página 8 -->
 
     </main>
 
