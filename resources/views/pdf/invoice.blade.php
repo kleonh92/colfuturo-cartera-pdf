@@ -2739,6 +2739,218 @@
         </div>
         <!-- Inicio Página 8 -->
 
+        <!-- Inicio Página 9 -->
+        <div class="page" style="page-break-before: always;">
+            <table>
+                <tr>
+                    <td>
+                        <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-yellow-400">Extracto Beca </h4>
+                    </td>
+                </tr>
+                <!-- Main Layout  -->
+                <table>
+                    <tr>
+                        <td style="vertical-align:top;" class="pr-20">
+                            
+                            <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Resumen</h4>
+                            <!-- Inicio Tabla 1 - Resumen, Pag 9 -->
+                            <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
+                                <tbody>
+                                    <tr class="text-center">
+                                        <td style="width:100px;" class="font-bold p-1">Interés</td>
+                                        <td style="width:84px;" class="font-bold p-1">EA <span class="text-color-primary">*</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-1">Interés actual</td>
+                                        <td class="p-1 font-roboto font-normal text-center">IPC <span class="text-color-primary">**</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-1">Mora</td>
+                                        <td class="p-1 font-roboto-mono text-center">25 %</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Fin Tabla 1 - Resumen, Pag 9 -->
+                            <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> EA = Tasa Efectiva Anual.</div>
+                            <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">** </span> IPC= Índice de precios al consumidor, corresponde a la inflación del mes anterior.</div>
+
+                            <!-- Inicio Tabla 2 - Resumen, Pag 9 -->
+                            <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:209px;" class="p-1 font-bold bg-neutral-50">Inicio pago parte condonable</td>
+                                        <td style="width:122px;" class="p-1 font-roboto-mono bg-gray-2">10 sep 2018</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-1 font-bold bg-neutral-50">Estimado fin pago condonable</td>
+                                        <td class="p-1 font-roboto-mono bg-gray-2">31 jul 2027</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Fin Tabla 2 - Resumen, Pag 9 -->
+
+                            <!-- Inicio Tabla 3, Resumen, pag 9 -->
+                            <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped text-base">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:152px;" class="text-center font-bold p-1">Cuotas</td>
+                                        <td style="width:36px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-1">Pagadas</td>
+                                        <td class="p-1 font-roboto-mono text-right">6</td>
+                                    </tr>
+                                    <tr class="bg-gray-2">
+                                        <td class="p-1">Estimadas pendientes</td>
+                                        <td class="p-1 font-roboto-mono text-right">30</td>
+                                    </tr>
+                                    <tr class="bg-neutral-50">
+                                        <td class="p-1 font-bold text-right">TOTAL</td>
+                                        <td class="p-1 font-roboto-mono font-medium text-right">36</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Fin Tabla 3, Resumen, Pag 9 -->
+
+                            <!-- Inicio Tabla 4, Resumen, pag 9 -->
+                            <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
+                                        <td style="width:151px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">COP 53.717.910</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Fin Tabla 4, Resumen, pag 9 -->
+                        
+                        </td>    
+                        
+                        <td style="vertical-align:top;">
+                            <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Intereses</h4>
+                            <!-- Inicio Tabla 1, Intereses, Pag 9 -->
+                            <table style="width:auto;" class="table-stripped font-roboto-condensed text-base table-p-1">
+                                <tbody>
+                                    <tr class="font-bold text-center">
+                                        <td style="width:140px;">Inicio</td>
+                                        <td style="width:132px;">Fin</td>
+                                        <td style="width:367px;">Estatus</td>
+                                        <td style="width:58px;">Meses</td>
+                                        <td style="width:103px;">COP</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-roboto-mono">01 sept 2018</td>
+                                        <td class="font-roboto-mono">28 feb 2022</td>
+                                        <td >Periodo Amortización Especial Sin Condonación (PAES)</td>
+                                        <td class="font-roboto-mono text-right">48</td>
+                                        <td class="font-roboto-mono text-right">31.105</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-roboto-mono">01 sept 2018</td>
+                                        <td class="font-roboto-mono">01 sept 2022</td>
+                                        <td >Periodo Amortización Especial Provisional (PAEP)</td>
+                                        <td class="font-roboto-mono text-right">48</td>
+                                        <td class="font-roboto-mono text-right">31.105</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="font-roboto-mono">01 sept 2018</td>
+                                        <td class="font-roboto-mono">28 feb 2022</td>
+                                        <td >Periodo Amortización Especial Sin Condonación (PAES)</td>
+                                        <td class="font-roboto-mono text-right">48</td>
+                                        <td class="font-roboto-mono text-right">31.105</td>
+                                    </tr>
+                                    <tr class="font-roboto mono text-right font-medium">
+                                        <td colspan="3">TOTAL</td>
+                                        <td></td>
+                                        <td>3.596.225</td>
+                                        <td class="bg-transparent"><span class="text-color-primary">*</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="font-roboto font-normal text-neutral-80 text-sm">Los intereses del apoyo Minciencias se calculan con la inflación reportada por el DANE del mes anterior.</div>
+                            <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>Estos intereses pueden ser totalmente condonados si se cumplen los requisitos de retorno y permanencia establecidos.</div>
+
+                            <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Mora</h4>
+
+                            <!-- Inicio Tabla 2 - Pag 9 , Mora -->
+                            <table style="width:auto" class="font-roboto-condensed">
+                                <tbody>
+                                    <tr class="bg-neutral-50 text-center font-bold">
+                                        <td style="width:148px;"    class="p-1">Inicio</td>
+                                        <td style="width:122px;"    class="p-1">Fin</td>
+                                        <td style="width:100px;"    class="p-1">Días en mora</td>
+                                        <td style="width:74px;"     class="p-1">COP</td>
+                                    </tr>
+                                    <tr class="bg-gray-2 font-roboto-mono">
+                                        <td class="p-1 text-center">01 sept 2018</td>
+                                        <td class="p-1 text-center">28 feb 2022</td>
+                                        <td class="p-1 text-right">48</td>
+                                        <td class="p-1 text-center">31.105</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Fin Tabla 2 - Pag 9, Mora -->
+                        
+                        </td>    
+                    </tr>
+                </table>
+                <!-- Inicio Desembolsos, Pag 9 -->
+                <tr>
+                    <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Desembolsos</h4>
+                        <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
+                        <table style="width:auto;" class="font-roboto-condensed table-stripped table-p-1 text-base">
+                            <tbody>
+                                <tr class="text-center font-bold">
+                                    <td style="width:33px;">#</td>
+                                    <td style="width:122px;">Fecha</td>
+                                    <td style="width:125px;">Concepto de giro</td>
+                                    <td style="width:65px;">USD</td>
+                                    <td style="width:65px;">TRM <span class="text-color-primary">*</span></td>
+                                    <td style="width:113px;">COP</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-roboto-mono text-right">1</td>
+                                    <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                    <td>Matrícula</td>
+                                    <td class="font-roboto-mono text-right">1.746</td>
+                                    <td class="font-roboto-mono text-right">1.746</td>
+                                    <td class="font-roboto-mono text-right">5.836.440</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-roboto-mono text-right">2</td>
+                                    <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                    <td>Sostenimiento</td>
+                                    <td class="font-roboto-mono text-right">1.746</td>
+                                    <td class="font-roboto-mono text-right">1.746</td>
+                                    <td class="font-roboto-mono text-right">12.350.920</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-roboto-mono text-right">3</td>
+                                    <td class="font-roboto-mono text-right">12 dic 2022</td>
+                                    <td>Matrícula</td>
+                                    <td class="font-roboto-mono text-right">1.746</td>
+                                    <td class="font-roboto-mono text-right">1.746</td>
+                                    <td class="font-roboto-mono text-right">9.022.498</td>
+                                </tr>
+                                <tr class="font-roboto-mono font-medium text-right">
+                                    <td></td>
+                                    <td></td>
+                                    <td>Total</td>
+                                    <td>9.822</td>
+                                    <td>9.822</td>
+                                    <td>20.000.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
+                        <div class="mt-6 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>TRM = Tasa Representativa del Mercado.</div>
+                </tr>
+                <!-- Fin Desembolsos, Pag 9 -->
+                
+                <!-- Fin Main Layout -->
+            </table>
+        </div>
+        <!-- FinPágina 9 -->
+
     </main>
 
 </body>
