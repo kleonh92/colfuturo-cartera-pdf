@@ -583,6 +583,16 @@
                 background-color: white;
             }
 
+            .bg-transparent {
+                background-color: transparent;
+            }
+
+            .bg-blue-200 {
+                background-color: #C3DDFD !important;
+            }
+
+            
+
             .border-separate {
                 border-collapse: separate;
             }
@@ -782,18 +792,16 @@
                                 <h4 class="font-roboto font-medium text-2xl text-neutral-90 m-0">Extracto programa Crédito Beca</h4>
                                 <ul style="list-style:none; margin-top:10px;" class="toc-list">
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen general<span class="leaders"
-                                                aria-hidden="true"> .................................................</span></span><span
+                                                aria-hidden="true">...................................................</span></span><span
                                             class="font-roboto-mono font-normal text-base">01</span></li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Estado Crédito<span class="leaders"
-                                                aria-hidden="true">.....................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">.......................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Próximo pago Crédito<span class="leaders"
-                                                aria-hidden="true">..........................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">...........................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li ><span class="font-roboto font-normal text-lg text-neutral-90">Requisitos para mantener mi estatus<span class="leaders"
-                                                aria-hidden="true">..................</span></span> <span class="font-roboto-mono font-normal text text-lg">01</span>
+                                                aria-hidden="true">..................</span></span><span class="font-roboto-mono font-normal text text-base">01</span>
                                     </li>
                                 </ul>
                             </li>
@@ -811,20 +819,17 @@
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
-                                                aria-hidden="true">................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
                                                 aria-hidden="true">.....................................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Desembolsos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">.......................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Cuotas pagadas<span class="leaders"
-                                                aria-hidden="true">...................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">...................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
                                                 aria-hidden="true">..............................</span></span>
@@ -904,10 +909,7 @@
                 <tr style="vertical-align: top;">
                     <!-- Página 2 - Arriba Izquierda - Tabla Resumen General -->
                     <td width="50%" class="pr-20">
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90">
-                            Resumen general <span class="text-color-primary">*</span>
-                        </h4>
-                        <hr style="color:#F4F4F4;">
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Resumen general <span class="text-color-primary">*</span></h4>
                         
                         <!-- Inicio de table Resumen General Página 2 -->
                         <table class="table-stripped text-base border-separate border-spacing-1">
@@ -992,8 +994,7 @@
                     </td>
 
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90">Estado Crédito</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Estado Crédito</h4>
                         <!-- OJOOO: Estos textos son condicionales, aparecen dependiendo el estado del pago, esté en mora o al día. -->
                         <div class="font-roboto font-medium text-base">Crédito <span class="text-secondary-main">al día</span></div>
                         <div class="font-roboto font-medium text-base">Crédito <span class="text-color-primary">en mora</span></d>
@@ -1015,8 +1016,7 @@
                         </table>
                         <!-- Fin de tabla de días vencidos por pago en mora! -->
 
-                        <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg">Próximo pago Crédito</h4>
-                        <hr class="text-neutral-30">
+                        <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg pb-1 border-bottom-gray">Próximo pago Crédito</h4>
                         <table style="width:auto;" class="font-roboto-condensed font-normal text-base">
                             <tr class="bg-gray">
                                 <td style="width:144px;" class="pl-1 pt-1 pb-1 ">Fecha próximo pago</td>
@@ -1029,11 +1029,11 @@
                         </table>
                     </td>
                 </tr>
+                
                 <tr style="vertical-align: top;">
                     <td class="pr-20">
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90">Fechas del Crédito</h4>
-                        <hr class="text-neutral-30">
-                        
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Fechas del Crédito</h4>
+
                         <table style="width:auto" class="font-roboto-condensed border-separate border-spacing-1 text-base">
                             <tbody>
                                 <tr>
@@ -1090,10 +1090,10 @@
                         </table>
                     
                     </td>
-                     <!-- Tabla Página 2 - Requisitos para mantener mi estatus -->
+                    <!-- Tabla Página 2 - Requisitos para mantener mi estatus -->
                     <td width="50%">
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90">Requisitos para mantener mi estatus</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Requisitos para mantener mi estatus</h4>
+
                         <table style="width:auto" class="table-stripped font-roboto-condensed text-base">
                             <tr>
                                 <th style="width:272px;">Requisitos</th>
@@ -1134,9 +1134,8 @@
                 <tr style="vertical-align:top">
                     <!-- Extracto Crédito P3: Resumen -->
                     <td width="40%" height="50%" class="pr-20">
-                        <h4 class="font-roboto font-medium text-lg text-blue-500">Resumen</h4>
-                        <hr class="text-neutral-30">
-
+                        <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Resumen</h4>
+        
                         <!-- Tabla 1 , Pag 3, Resumen -->
                         <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
                             <tbody>
@@ -1215,8 +1214,7 @@
 
                     <!-- Inicio - Pag 3 - Ingresos y seguros -->
                     <td width="60%" height="50%">
-                        <h4 class="font-roboto font-medium text-lg text-blue-500">Intereses y seguro</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Intereses y seguro</h4>
 
                         <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
                         <table style="width:auto" class="font-roboto-condensed text-base table-stripped">
@@ -1294,8 +1292,7 @@
                 <!-- Inicio - Pag 3 - Mora -->
                 <tr>
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-blue-500">Mora</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Mora</h4>
 
                         <!-- Inicio Tabla 1 - Pag 3 , Mora -->
                         <table style="width:auto" class="font-roboto-condensed">
@@ -1328,18 +1325,10 @@
         <div class="page" style="page-break-before: always;">
             <!-- Main Layout Pag 4 -->
             <table>
-                
-                <tr>
-                    <td>
-                        <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-blue-500">Extracto Crédito </h4>
-                    </td>
-                </tr>
-
                 <!-- Tabla Desembolsos - Pag 4 -->
                 <tr style="vertical-align:top">
                     <td>
-                        <h4 class="p-0 mt-20 font-roboto font-medium text-lg text-blue-500">Desembolsos</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Desembolsos</h4>
 
                         <table style="width:auto;">
                             <tr style="vertical-align: top;">
@@ -1504,8 +1493,7 @@
                 <!-- Tabla Cuotas pagadas - Pag 4 -->
                 <tr>
                     <td>
-                        <h4 class="p-0 mt-20 font-roboto font-medium text-lg text-blue-500">Cuotas pagadas</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Cuotas pagadas</h4>
 
                         <table style="width:auto" class="ml-20 font-roboto-condensed">
                             <tbody>
@@ -1549,8 +1537,7 @@
                 <!-- Tabla Apoyo a terceras entidades - Pag 4 -->
                 <tr>
                     <td>
-                        <h4 class="p-0 mt-20 font-roboto font-medium text-lg text-blue-500">Apoyos de terceras entidades</h4>
-                        <hr class="text-neutral-30">
+                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Apoyos de terceras entidades</h4>
 
                         <table style="width:auto;" class="ml-20 font-roboto-condensed text-base">
                             <tbody>
@@ -1919,6 +1906,531 @@
             <!-- End Main Layout Pag 5 -->
         </div>
         <!-- Fin Página 5 -->
+
+        <!-- Inicio Página 6 -->
+        <div class="page" style="page-break-before: always;">
+            <table>
+                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos refinanciado</h4>
+
+                <!-- Inicio Tabla Página 6 -->
+                <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                    <tbody>
+                        <tr class="font-bold text-center">
+                            <td class="bg-transparent"></td>
+                            <td class="bg-transparent"></td>
+                            <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
+                            <td colspan="4" class="border-bottom-red">Saldos acumulados</td>
+                            <td colspan="2" class="border-bottom-red">Saldos deuda</td>
+                        </tr>
+                        <tr class="font-bold text-center bg-neutral-50">
+                            <td>#</td>
+                            <td>Fecha</td>
+                            <td>Cuota</td>
+                            <td>A seguro</td>
+                            <td>A interés</td>
+                            <td>A capital</td>
+                            <td>A interés <br />acumulado</td>
+                            <td>Interés del mes</td>
+                            <td>Pendiente <br />interés mes</td>
+                            <td>Acum. pend.<br />interés mes</td>
+                            <td>Sin interés</td>
+                            <td>Con interés</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="bg-blue-200 font-roboto-mono text-right ">
+                            <td>1</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
+                        </tr>
+                        <tr class="bg-blue-200 font-roboto-mono text-right ">
+                            <td>2</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>80</td>
+                            <td>28.341</td>
+                            <td>28.341</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="bg-blue-200 font-roboto-mono text-right">
+                            <td>3</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>121</td>
+                            <td>28.331</td>
+                            <td>28.331</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>4</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>161</td>
+                            <td>28.321</td>
+                            <td>28.321</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>5</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>201</td>
+                            <td>28.311</td>
+                            <td>28.311</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>6</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>240</td>
+                            <td>28.301</td>
+                            <td>28.301</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>7</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>28.291</td>
+                            <td>28.291</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>8</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.900</td>
+                            <td>27.900</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>9</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.506</td>
+                            <td>27.506</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>10</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>11</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>12</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>13</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>14</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right font-medium">
+                            <td></td>
+                            <td>TOTAL</td>
+                            <td>36.539</td>
+                            <td>257</td>
+                            <td>7.576</td>
+                            <td>28.279</td>
+                            <td>-</td>
+                            <td>7.816</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Fin Tabla Página 6 -->
+            </table>
+        </div>
+        <!--  Fin Página 6-->
+
+        <!-- Inicio Página 7 -->
+        <div class="page" style="page-break-before: always;">
+        <table>
+                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos cuota anticipada</h4>
+
+                <!-- Inicio Tabla Página 6 -->
+                <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                    <tbody>
+                        <tr class="font-bold text-center">
+                            <td class="bg-transparent"></td>
+                            <td class="bg-transparent"></td>
+                            <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
+                            <td colspan="4" class="border-bottom-red">Saldos acumulados</td>
+                            <td colspan="2" class="border-bottom-red">Saldos deuda</td>
+                        </tr>
+                        <tr class="font-bold text-center bg-neutral-50">
+                            <td>#</td>
+                            <td>Fecha</td>
+                            <td>Cuota</td>
+                            <td>A seguro</td>
+                            <td>A interés</td>
+                            <td>A capital</td>
+                            <td>A interés <br />acumulado</td>
+                            <td>Interés del mes</td>
+                            <td>Pendiente <br />interés mes</td>
+                            <td>Acum. pend.<br />interés mes</td>
+                            <td>Sin interés</td>
+                            <td>Con interés</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="bg-blue-200 font-roboto-mono text-right ">
+                            <td>1</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
+                        </tr>
+                        <tr class="bg-blue-200 font-roboto-mono text-right ">
+                            <td>2</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>80</td>
+                            <td>28.341</td>
+                            <td>28.341</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="bg-blue-200 font-roboto-mono text-right">
+                            <td>3</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>121</td>
+                            <td>28.331</td>
+                            <td>28.331</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>4</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>161</td>
+                            <td>28.321</td>
+                            <td>28.321</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>5</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>201</td>
+                            <td>28.311</td>
+                            <td>28.311</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>6</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>40</td>
+                            <td>240</td>
+                            <td>28.301</td>
+                            <td>28.301</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right" >
+                            <td>7</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>28.291</td>
+                            <td>28.291</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>8</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.900</td>
+                            <td>27.900</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>9</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>7</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.506</td>
+                            <td>27.506</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>10</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>11</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>12</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>13</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>14</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right font-medium">
+                            <td></td>
+                            <td>TOTAL</td>
+                            <td>36.539</td>
+                            <td>257</td>
+                            <td>7.576</td>
+                            <td>28.279</td>
+                            <td>-</td>
+                            <td>7.816</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Fin Tabla Página 6 -->
+            </table>
+        </div>
+        <!-- Fin Página 7 -->
+
     </main>
 
 </body>
