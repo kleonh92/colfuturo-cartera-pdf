@@ -3215,6 +3215,233 @@
         </div>
         <!-- Fin  Pag 12 -->
 
+        <!-- Inicio Pag 13 -->
+        <div class="page" style="page-break-before: always;">
+            <table>
+                <tr>
+                    <td>
+                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Cuotas pagadas</h4>
+                        <!-- Tabla 1 - Cuotas Pagadas , Pag 13  -->
+                        <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
+                            <tbody>
+                                <tr class="font-bold text-center">
+                                    <td style="width:82px;"></td>
+                                    <td style="width:122px;">Inicio</td>
+                                    <td style="width:122px;">Fin</td>
+                                    <td style="width:71px;">Pagadas</td>
+                                    <td style="width:88px;">Pendientes</td>
+                                    <td style="width:63px;">Totales</td>
+                                </tr>
+                                <tr>
+                                    <td>Normales</td>
+                                    <td class="font-roboto-mono font-normal">01 jun 2022</td>
+                                    <td class="font-roboto-mono font-normal">31 may 2027</td>
+                                    <td class="font-roboto-mono font-normal text-right">9</td>
+                                    <td class="font-roboto-mono font-normal text-right">27</td>
+                                    <td class="font-roboto-mono font-normal text-right">66</td>
+                                </tr>
+                                <tr class="bg-gray-2">
+                                    <td>Reducidas</td>
+                                    <td class="font-roboto-mono font-normal">01 jun 2022</td>
+                                    <td class="font-roboto-mono font-normal">31 may 2027</td>
+                                    <td class="font-roboto-mono font-normal text-right">-</td>
+                                    <td class="font-roboto-mono font-normal text-right">12</td>
+                                    <td class="font-roboto-mono font-normal text-right">12</td>
+                                </tr>
+                                <tr class="font-roboto-mono font-medium text-right bg-neutral-50">
+                                    <td></td>
+                                    <td></td>
+                                    <td>TOTAL</td>
+                                    <td>9</td>
+                                    <td>39</td>
+                                    <td>48</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 1 - Cuotas Pagadas , Pag 13  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Pagos realizados</h4>
+                        <!-- Tabla pagos Realizados, pag 13 -->
+                        <table style="width:auto;" class="ml-20 font-roboto-condensed text-base table-stripped-2 table-p-1">
+                            <tbody>
+                                <tr class="font-bold bg-neutral-50 text-center">
+                                    <td class="bg-transparent"></td>
+                                    <td class="bg-transparent"></td>
+                                    <td class="bg-transparent"></td>
+                                    <td colspan="3">Pagos realizados</td>
+                                    <td colspan="5">Abonos en COP</td>
+                                </tr>
+                                <tr class="font-bold text-center">
+                                    <td>#</td>
+                                    <td>Fecha</td>
+                                    <td>Observación</td>
+                                    <td>COP</td>
+                                    <td>TRM <span class="text-color-primary">*</span></td>
+                                    <td>USD</td>
+                                    <td>Interés mora</td>
+                                    <td>Intereses</td>
+                                    <td>Capital</td>
+                                    <td>Cuota anticipada</td>
+                                    <td>Total</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>1</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
+                                    <td class="text-secondary-main">1.000.000</td>
+                                    <td>3.700</td>
+                                    <td class="text-secondary-main">270</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>1.000.000</td>
+                                    <td>10.000.000</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>2</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Interés</td>
+                                    <td>1.000.000</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td class="text-color-primary">(1.000.000)</td>
+                                    <td>231.000</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>3</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
+                                    <td>1.000.000</td>
+                                    <td>3.700</td>
+                                    <td>270</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="text-color-primary">(10.000.000)</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>4</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Interés</td>
+                                    <td>1.000.000</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>5</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
+                                    <td>1.000.000</td>
+                                    <td>3.700</td>
+                                    <td>270</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>6</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Interés</td>
+                                    <td>1.000.000</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>7</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
+                                    <td>1.000.000</td>
+                                    <td>3.700</td>
+                                    <td>270</td>
+                                    <td>-</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>8</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Interés</td>
+                                    <td>1.000.000</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>9</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
+                                    <td>1.000.000</td>
+                                    <td>3.700</td>
+                                    <td>270</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>10</td>
+                                    <td>01 mar 2022</td>
+                                    <td class="font-roboto-condensed text-left">Interés</td>
+                                    <td>1.000.000</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>12.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                    <td>231.000</td>
+                                </tr>
+                                <tr class="bg-neutral-50 text-right font-roboto-mono font-medium">
+                                    <td></td>
+                                    <td></td>
+                                    <td>TOTAL</td>
+                                    <td>8.506.908</td>
+                                    <td></td>
+                                    <td>2.205</td>
+                                    <td>12.000</td>
+                                    <td>1.873.757</td>
+                                    <td>6.621.151</td>
+                                    <td>-</td>
+                                    <td>8.506.908</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-10 ml-20 font-roboto font-normal text-sm text-neutral-80"><span class="text-color-primary">*</span> TRM = Tasa Representativa del Mercado.</div>
+                        <div class="ml-20 font-roboto font-normal text-sm text-neutral-80">Los valores en 0 absoluto se muestran con "-". Los valores "0" contienen decimales.</div>
+                        <div class="ml-20 font-roboto font-normal text-sm text-neutral-80">Los valores en verde corresponden a la moneda en la que se hizo el abono.</div>
+                        <!-- Fin Tabla pagos Realizados, pag 13 -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- Fin Pag 13 -->
+
     </main>
 
 </body>
