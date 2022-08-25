@@ -940,6 +940,15 @@
                                 <td>COP</td>
                                 <td></td>
                             </tr>
+                            {{-- @foreach ($info as $key => $list)
+                            <tr class="font-roboto-condensed font-normal">
+                                <td style="width:162px;"    class="pl-1">{{$list->concept}}</td>
+                                <td style="width:92px;"     class="font-roboto-mono text-center">29.743</td>
+                                <td style="width:90px;"     class="font-roboto-mono text-center">20.000</td>
+                                <td style="width:137px;"    class="font-roboto-mono text-center">63.261.923</td>
+                                <td class="bg-white"></td>
+                            </tr>
+                            @endforeach --}}
                             <tr class="font-roboto-condensed font-normal">
                                 <td style="width:162px;"    class="pl-1">Desembolsos</td>
                                 <td style="width:92px;"     class="font-roboto-mono text-center">29.743</td>
