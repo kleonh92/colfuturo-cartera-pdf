@@ -834,28 +834,28 @@
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
-                                                aria-hidden="true">................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">..............................................</span></span><span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
                                                 aria-hidden="true">.....................................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Desembolsos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"> Desembolsos<span class="leaders"
+                                                aria-hidden="true">.....................................................</span></span><span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Cuotas pagadas<span class="leaders"
-                                                aria-hidden="true">...................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"> Cuotas pagadas<span class="leaders"
+                                                aria-hidden="true">.................................................</span></span><span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
-                                                aria-hidden="true">..............................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">.........................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Pagos realizados<span class="leaders"
-                                                aria-hidden="true">..................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">..............................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li ><span class="font-roboto font-normal text-lg text-neutral-90">Plan de pagos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span>
+                                                aria-hidden="true">.....................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
                                 </ul>
@@ -871,36 +871,36 @@
                                 <h4 class="font-roboto font-medium text-2xl text-yellow-400 m-0">Extracto Beca</h4>
                                 <ul style="list-style:none; margin-top:5px;">
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen<span class="leaders"
-                                                aria-hidden="true">..............................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">...........................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
-                                                aria-hidden="true">................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">............................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
-                                                aria-hidden="true">.....................................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">..................................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Desembolsos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">....................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Cuotas pagadas<span class="leaders"
-                                                aria-hidden="true">...................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
-                                                aria-hidden="true">..............................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">.........................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Pagos realizados<span class="leaders"
-                                                aria-hidden="true">..................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">..............................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                     <li><span class="font-roboto font-normal text-lg text-neutral-90">Plan de pagos<span class="leaders"
-                                                aria-hidden="true">.......................................................</span></span>
-                                        <span class="font-roboto-mono font-normal text-base">01</span>
+                                                aria-hidden="true">...................................................</span></span>
+                                        <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
                                 </ul>
                             </li>
@@ -1033,11 +1033,11 @@
 
                         <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg pb-1 border-bottom-gray">Próximo pago Crédito</h4>
                         <table style="width:auto;" class="font-roboto-condensed font-normal text-base">
-                            <tr class="bg-gray">
+                            <tr class="bg-neutral-50">
                                 <td style="width:144px;" class="pl-1 pt-1 pb-1 ">Fecha próximo pago</td>
                                 <td style="width:121px;" class="pl-1 pt-1 pb-1 ">12 dic 2022</td>
                             </tr>
-                            <tr class="bg-gray">
+                            <tr class="bg-neutral-50">
                                 <td class="pl-1 pt-1 pb-1 "><b>Pago sugerido</b></td>
                                 <td class="pl-1 pt-1 pb-1 "><b>USD 1.229</b></td>
                             </tr>
