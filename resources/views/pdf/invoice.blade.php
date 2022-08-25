@@ -3444,6 +3444,7 @@
 
         <!-- Inicio Pag 14 -->
         <div class="page" style="page-break-before: always;">
+        
             <table>
                 <tr>
                     <td>
@@ -3942,6 +3943,12 @@
                             </tbody>
                         </table>
                         <!-- Fin Tabla Pagos Refinanciados -->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Fin extracto beca</h4>
                     </td>
                 </tr>
             </table>
