@@ -3015,7 +3015,99 @@
         </div>
         <!-- Fin Página 10 -->
 
-        
+        <!-- Inicio Pag 11 -->
+        <div class="page" style="page-break-before: always;">
+            <!-- Main layout pag 11 -->
+            <table>
+                <tr>
+                    <td>
+                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Condonación estimada</h4>
+
+                        <p class="mt-20 font-roboto font-normal text-sm">Periodo para cumplir 36 meses de permanencia</p>
+
+                        <!-- Fin Tabla 1 , Pag 11 -->
+                        <table style="width:auto;" class="mt-20 font-roboto-condensed table-stripped table-p-1 text-base">
+                            <tbody>
+                                <tr>
+                                    <td style="width:54px;">Inicial</td>
+                                    <td style="width:93px;" class="font-roboto-mono">sep 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Final</td>
+                                    <td class="font-roboto-mono">ago 2026</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="font-roboto-mono font-bold">72 meses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 1 , Pag 11 -->
+
+                        <!-- Inicio Tabla 2, Pag 11 -->
+                        <table style="width:auto;" class="mt-20 text-base">
+                            <tbody>
+                                <tr>
+                                    <td style="width:250px;" class="text-neutral-80 font-normal">Total por condonar</td>
+                                    <td style="width:120px;" class="text-right font-bold">36 meses</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-neutral-80 font-normal">Reportados en Colombia</td>
+                                    <td class="text-right font-bold border-bottom-gray"> <span>-</span> 18 meses</td>
+                                </tr>
+                                <tr >
+                                    <td class="text-neutral-80 font-normal">Adicionales requeridos</td>
+                                    <td class="text-right font-bold">18 meses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Fin Tabla 2, Pag 11 -->
+
+                        <!-- Inicio Tabla 3, Pag 11 -->
+                        <table style="width:auto;"class="mt-20 font-roboto-condensed table-p-1 text-base">
+                            <tbody>
+                                <tr class="font-bold bg-neutral-50">
+                                    <td style="width:198px;"></td>
+                                    <td style="width:95px;"></td>
+                                    <td style="width:55px;"></td>
+                                    <td style="width:26px;"></td>
+                                    <td style="width:131px;">Condonación<br />estimada</td>
+                                    <td style="width:100px;">Saldo por <br />condonar</td>
+                                </tr>
+                                <tr>
+                                    <td>Total desembolsos</td>
+                                    <td class="font-roboto-mono">72.000.000</td>
+                                    <td class="font-roboto-mono">50 %</td>
+                                    <td class="font-roboto-mono text-color-primary">*</td>
+                                    <td class="font-roboto-mono">36.000.000</td>
+                                    <td class="font-roboto-mono">36.000.000</td>
+                                </tr>
+                                <tr class="bg-gray-2">
+                                    <td>Total intereses al 21 jul 2022</td>
+                                    <td class="font-roboto-mono">20.000.000</td>
+                                    <td class="font-roboto-mono">50 %</td>
+                                    <td class="font-roboto-mono text-color-primary">*</td>
+                                    <td class="font-roboto-mono">10.000.000</td>
+                                    <td class="font-roboto-mono">10.000.000</td>
+                                </tr>
+                                <tr class="font-bold bg-neutral-50">
+                                    <td>Total monto a condonar</td>
+                                    <td class="font-roboto-mono">92.000.000</td>
+                                    <td class="font-roboto-mono"></td>
+                                    <td class="font-roboto-mono"></td>
+                                    <td class="font-roboto-mono">46.000.000</td>
+                                    <td class="font-roboto-mono">46.000.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-10 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">*</span> Este porcentaje corresponde a 18/36 = 50 % condonación estimada, calculado al 21 jul 2022.</div>
+                        <!-- Fin Tabla 3, Pag 11 -->
+                    </td>
+                </tr>
+            </table>
+            <!-- End main layout pag 11 -->
+        </div>
+        <!-- Fin Página 11 -->
     </main>
 
 </body>
