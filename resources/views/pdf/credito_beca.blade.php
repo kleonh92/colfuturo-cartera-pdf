@@ -971,7 +971,7 @@
 
                         <!-- Inicio Info Adicional Tabla Resumen General -->
 
-                        <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">* </span> Este resumen no muestradecimales pero los cálculos los consideran todos</small>
+                        <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">* </span> Este resumen no muestra decimales pero los cálculos los consideran todos</small>
                         <br>
                         <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">**</span> Intereses calculados con la inflación</small>
 
@@ -988,15 +988,15 @@
                             <table style="width:auto; padding-top:10px;" class="table-stripped font-roboto-condensed font-normal text-base">
                                 <tr>
                                     <td style="width:121px;"  class="text-center">Días vencidos</td>
-                                    <td style="width:104px;" class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">78</td>
+                                    <td style="width:104px;" class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">{{ $creditos['01']['inicio'][0]['expiredDaysArrear'] }}</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">Cuotas vencidas</td>
-                                    <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">3</td>
+                                    <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">{{ $creditos['01']['inicio'][0]['overdueFeesArrear'] }}</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center font-bold">Monto en mora</td>
-                                    <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">USD 1.229</td>
+                                    <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">USD {{ \App\Helpers\GicDataFormatter::formatNumber($creditos['01']['inicio'][0][$creditArrear ? 'amountSuggestedArrear' : 'amountSuggested']) }}</td>
                                 </tr>
                             </table>
                             <!-- Fin de tabla de días vencidos por pago en mora! -->
@@ -1139,15 +1139,15 @@
                                 </tr>
                                 <tr>
                                     <td class="p-1">Interés</td>
-                                    <td class="p-1 font-roboto-mono text-center">9,00 %</td>
+                                    <td class="p-1 font-roboto-mono text-center">{{ \App\Helpers\GicDataFormatter::formatPercentage($creditos['01']['inicio'][0]['currentInterest']) }}</td>
                                 </tr>
                                 <tr>
                                     <td class="p-1">Mora</td>
-                                    <td class="p-1 font-roboto-mono text-center">25,00 %</td>
+                                    <td class="p-1 font-roboto-mono text-center">{{ \App\Helpers\GicDataFormatter::formatPercentage($creditos['01']['inicio'][0]['arrears']) }}</td>
                                 </tr>
                                 <tr>
                                     <td class="p-1">Seguro</td>
-                                    <td class="p-1 font-roboto-mono text-center">0,29 %</td>
+                                    <td class="p-1 font-roboto-mono text-center">{{ \App\Helpers\GicDataFormatter::formatPercentage($creditos['01']['inicio'][0]['insurance']) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1159,11 +1159,11 @@
                             <tbody>
                                 <tr>
                                     <td style="width:131px;" class="p-1 font-bold bg-neutral-50">Inicio pago</td>
-                                    <td style="width:122px;" class="p-1 font-roboto-mono bg-gray-2">01 sep 2021</td>
+                                    <td style="width:122px;" class="p-1 font-roboto-mono bg-gray-2">{{ \App\Helpers\GicDataFormatter::formatDate($creditos['01']['inicio'][0]['startDate']) }}</td>
                                 </tr>
                                 <tr>
                                     <td class="p-1 font-bold bg-neutral-50">Estimado fin pago</td>
-                                    <td class="p-1 font-roboto-mono bg-gray-2">31 jul 2027</td>
+                                    <td class="p-1 font-roboto-mono bg-gray-2">{{ \App\Helpers\GicDataFormatter::formatDate($creditos['01']['inicio'][0]['endDate']) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1178,15 +1178,15 @@
                                 </tr>
                                 <tr>
                                     <td class="p-1">Pagadas</td>
-                                    <td class="p-1 font-roboto-mono text-right">6</td>
+                                    <td class="p-1 font-roboto-mono text-right">{{ $creditos['01']['inicio'][0]['feesPaid'] }}</td>
                                 </tr>
                                 <tr class="bg-gray-2">
                                     <td class="p-1">Estimadas pendientes</td>
-                                    <td class="p-1 font-roboto-mono text-right">65</td>
+                                    <td class="p-1 font-roboto-mono text-right">{{ $creditos['01']['inicio'][0]['outstandingFees'] }}</td>
                                 </tr>
                                 <tr class="bg-neutral-50">
                                     <td class="p-1 font-bold text-right">TOTAL</td>
-                                    <td class="p-1 font-roboto-mono font-medium text-right">71</td>
+                                    <td class="p-1 font-roboto-mono font-medium text-right">{{ $creditos['01']['inicio'][0]['feesPaid'] + $creditos['01']['inicio'][0]['outstandingFees'] }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1197,7 +1197,7 @@
                             <tbody>
                                 <tr>
                                     <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
-                                    <td style="width:113px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">USD 28.506</td>
+                                    <td style="width:113px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">USD {{ \App\Helpers\GicDataFormatter::formatNumber($creditos['01']['inicio'][0]['balanceAtCutoff']) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1222,60 +1222,17 @@
                                     <td style="width:106px;"    class="p-1 text-right">Intereses USD</td>
                                     <td style="width:92px;"     class="p-1 text-right">Seguro USD</td>
                                 </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Amortizacion Ordinario (PAO)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">60</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">41</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Perido Gracia Ordinario (PGO)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">16</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">41</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Gracia Fuera (PGF)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">6</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">7</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Extraordinario de Estudios (PEE)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">7 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">36</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Ordinario de Estudios(POE)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">24</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">64</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal font-bold text-right">TOTAL</td>
-                                    <td class="p-1 font-normal font-bold font-roboto-mono text-right">4.865</td>
-                                    <td class="p-1 font-normal font-bold font-roboto-mono text-right">189</td>
-                                </tr>
+                                @foreach($creditos['01']['interesesYSeguros'] as $item)
+                                    <tr>
+                                        <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                        <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
+                                        <td class="p-1 font-normal">Periodo Amortizacion Ordinario (PAO)</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">60</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">41</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> EA = Tasa Efectiva Anual.</div>
@@ -1297,12 +1254,14 @@
                                     <td style="width:100px;"    class="p-1">Días en mora</td>
                                     <td style="width:74px;"     class="p-1">USD</td>
                                 </tr>
-                                <tr class="bg-gray-2 font-roboto-mono">
-                                    <td class="p-1 text-center">01 sept 2018</td>
-                                    <td class="p-1 text-center">28 feb 2022</td>
-                                    <td class="p-1 text-right">48</td>
-                                    <td class="p-1 text-center">31.105</td>
-                                </tr>
+                                @foreach($creditos['01']['mora'] as $item)
+                                    <tr class="bg-gray-2 font-roboto-mono">
+                                        <td class="p-1 text-center">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
+                                        <td class="p-1 text-center">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
+                                        <td class="p-1 text-right">{{ $item['days'] }}</td>
+                                        <td class="p-1 text-center">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amount']) }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- Fin Tabla 1 - Pag 3, Mora -->

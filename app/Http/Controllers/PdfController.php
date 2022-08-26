@@ -23,9 +23,9 @@ class PdfController extends Controller
             $data = ColfuturoGicData::getAllData($identification, $codes[$identification]);
             Cache::forever($cacheKey, $data);
         }
-        $pdf = Pdf::loadView('pdf.invoice', $data);
+        $pdf = Pdf::loadView('pdf.credito_beca', $data);
         $pdf->setOption(['dpi' => 105, 'defaultFont' => 'Roboto']);
         $pdf->setPaper('a3', 'landscape');
-        return $pdf->stream(Str::uuid()->toString() . '_report.pdf');
+        return $pdf->stream('credito-beca-' . Str::uuid()->toString() . '.pdf');
     }
 }
