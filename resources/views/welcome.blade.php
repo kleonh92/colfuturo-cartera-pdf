@@ -50,6 +50,11 @@
                         <a href="/download/pdf" class="p-6 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" target="_blank">Descargar PDF</a>
                     </div>
                 </div>
+                <div class="mt-8">
+                    <div style="text-align:center;">
+                        <a href="/download/excel" class="p-6 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" target="_blank">Descargar Excel</a>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

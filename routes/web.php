@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('download/pdf', 'App\Http\Controllers\PdfController@download');
+Route::get('download/excel', 'App\Http\Controllers\ExcelController@download');
