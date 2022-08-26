@@ -938,7 +938,8 @@
                                 <td style="width:137px;">COP</td>
                                 <td></td>
                             </tr>
-                            @foreach ([
+                            @php
+                                $resumenImportantItems = [
                                   'Desembolsos' => 'disbursements',
                                   'Intereses' => 'interests',
                                   'Seguro deudores' => 'debtorsInsurance',
@@ -946,7 +947,12 @@
                                   'Pagos' => 'payments',
                                   'Condonación estimada' => 'estimatedForgiveness',
                                   'Apoyos entregados' => 'supportsDelivered',
-]                        as $title => $key)
+                                ];
+                                $resumenItems = collect(array_filter($resumen, function($key) use ($resumenImportantItems) {
+                                    return in_array($key, array_values($resumenImportantItems));
+                                }, ARRAY_FILTER_USE_KEY));
+                            @endphp
+                            @foreach ($resumenImportantItems as $title => $key)
                             <tr class="font-roboto-condensed font-normal {{ $resumen[$key]['isDebit'] ? 'text-color-primary' : '' }}">
                                 <td class="pl-1 text-neutral-100">{{ $title }}</td>
                                 <td class="font-roboto-mono text-center">{{ \App\Helpers\GicDataFormatter::formatNumber($resumen[$key]['amountColfuturo'], $resumen[$key]['isDebit']) }}</td>
@@ -961,7 +967,7 @@
                             @endforeach
                             <tr class="font-roboto-condensed font-normal bg-gray">
                                 <td class="pl-1"><b>TOTAL</b></td>
-                                <td class="font-roboto-mono text-center"><b>33.025</b></td>
+                                <td class="font-roboto-mono text-center"><b>{{ $resumenItems->sum('amountColfuturo') }}</b></td>
                                 <td class="font-roboto-mono text-center"><b>33.025</b></td>
                                 <td class="font-roboto-mono text-center"><b>53.686.805</b></td>
                                 <td class="bg-white"></td>
@@ -1458,28 +1464,25 @@
                                     <td style=""   class="p-1 text-center">Pendientes</td>
                                     <td style=""   class="p-1 text-center">Totales</td>
                                 </tr>
-                                <tr>
-                                    <td class="font-normal p-1">Normales</td>
-                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
-                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
-                                    <td class="font-normal p-1 font-roboto-mono text-right">60</td>
-                                    <td class="font-normal p-1 font-roboto-mono text-right">60</td>
-                                    <td class="font-normal p-1 font-roboto-mono text-right">66</td>
-                                </tr>
-                                <tr class="bg-gray-2">
-                                    <td class="font-normal p-1 ">Reducidas</td>
-                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
-                                    <td class="font-normal p-1 font-roboto-mono">12 dic 2022</td>
-                                    <td class="font-normal p-1 font-roboto-mono text-right">-</td>
-                                    <td class="font-normal p-1 font-roboto-mono text-right">6</td>
-                                    <td class="font-normal p-1 font-roboto-mono text-right">6</td>
-                                </tr>
+                                @php
+                                    $pagos = collect($creditos['01']['pagos']);
+                                @endphp
+                                @foreach($pagos as $key => $item)
+                                    <tr class="{{ $key & 1 ? 'bg-gray-2' : '' }}">
+                                        <td class="font-normal p-1">{{ $item['detail'] }}</td>
+                                        <td class="font-normal p-1 font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
+                                        <td class="font-normal p-1 font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
+                                        <td class="font-normal p-1 font-roboto-mono text-right">{{ $item['paid'] ?: '-' }}</td>
+                                        <td class="font-normal p-1 font-roboto-mono text-right">{{ $item['pending'] ?: '-'}}</td>
+                                        <td class="font-normal p-1 font-roboto-mono text-right">{{ $item['total'] ?: '-'}}</td>
+                                    </tr>
+                                @endforeach
                                 <tr class="bg-neutral-50">
                                     <td colspan="2"></td>
                                     <td class="font-bold p-1 text-right">TOTAL</td>
-                                    <td class="font-bold p-1 text-right">6</td>
-                                    <td class="font-bold p-1 text-right">66</td>
-                                    <td class="font-bold p-1 text-right">72</td>
+                                    <td class="font-bold p-1 text-right">{{ $pagos->sum('paid') }}</td>
+                                    <td class="font-bold p-1 text-right">{{ $pagos->sum('pending') }}</td>
+                                    <td class="font-bold p-1 text-right">{{ $pagos->sum('total') }}</td>
                                 </tr>
                             </tbody>
                         </table>
