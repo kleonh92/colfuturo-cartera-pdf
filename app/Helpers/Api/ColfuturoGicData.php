@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class ColfuturoGicData
 {
 
-    public static function getAllData($identification, $disbursementCode = 201806121)
+    public static function getAllData($identification, $disbursementCode)
     {
         $data = [];
         foreach (['beneficiario', 'resumen'] as $generalSection) {
@@ -20,7 +20,7 @@ class ColfuturoGicData
             foreach ([
                 'inicio', 'condonaciones', 'desembolsos',  'interesesYSeguros', 'mora', 'pagos', 'pagosRealizados', 'planPagosMora'
                      ] as $creditSection) {
-                $data[$typeCredit][$creditSection] = self::getIndividualData(['extracto', $identification, $disbursementCode, $typeCredit, $creditSection . '.raw']);
+                $data['creditos'][$typeCredit][$creditSection] = self::getIndividualData(['extracto', $identification, $disbursementCode, $typeCredit, $creditSection . '.raw']);
             }
         }
         /**
