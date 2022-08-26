@@ -1,19 +1,19 @@
 {
     "roboto": {
-        "300": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_300_32acfcb296f555e063ebba2be7db9e2f",
-        "normal": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_normal_7bc701b343c10631f60048716b96e4f7",
-        "500": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_500_5774d6fb05eba3d096525f821dbe4137",
-        "bold": "roboto_bold_8db5cb5d0586c1e891426d13097b1d04"
+        "300": "\/var\/www\/html\/storage\/fonts\/roboto_300_32acfcb296f555e063ebba2be7db9e2f",
+        "normal": "\/var\/www\/html\/storage\/fonts\/roboto_normal_7bc701b343c10631f60048716b96e4f7",
+        "500": "roboto_500_5774d6fb05eba3d096525f821dbe4137",
+        "bold": "\/var\/www\/html\/storage\/fonts\/roboto_bold_8db5cb5d0586c1e891426d13097b1d04"
     },
     "roboto condensed": {
-        "300": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_condensed_300_e7008b98ab3054aae221d9265a319767",
-        "normal": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_condensed_normal_0f4b84b34f148b1ab47e419b61ac29ae",
-        "bold": "roboto_condensed_bold_518a77b8d3453f5b6004b272b16fab67"
+        "300": "\/var\/www\/html\/storage\/fonts\/roboto_condensed_300_e7008b98ab3054aae221d9265a319767",
+        "normal": "roboto_condensed_normal_0f4b84b34f148b1ab47e419b61ac29ae",
+        "bold": "\/var\/www\/html\/storage\/fonts\/roboto_condensed_bold_518a77b8d3453f5b6004b272b16fab67"
     },
     "roboto mono": {
-        "300": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_mono_300_9bc3289645d8bb8630d0b5e64b1f77b2",
-        "normal": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_mono_normal_6993c75795dec63f84b1e385d9671cd4",
-        "500": "C:\\laragon\\www\\example-pdf\\storage\\fonts\/roboto_mono_500_b44e5668c90b603d0dbdbd5f918a19fa",
-        "bold": "roboto_mono_bold_8aa485ad2669f1610ea23396e39b6046"
+        "300": "\/var\/www\/html\/storage\/fonts\/roboto_mono_300_9bc3289645d8bb8630d0b5e64b1f77b2",
+        "normal": "\/var\/www\/html\/storage\/fonts\/roboto_mono_normal_6993c75795dec63f84b1e385d9671cd4",
+        "500": "roboto_mono_500_b44e5668c90b603d0dbdbd5f918a19fa",
+        "bold": "\/var\/www\/html\/storage\/fonts\/roboto_mono_bold_8aa485ad2669f1610ea23396e39b6046"
     }
 }
