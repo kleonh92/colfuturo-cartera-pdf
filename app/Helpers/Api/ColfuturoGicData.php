@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class ColfuturoGicData
 {
 
-    public static function getAllData($identification, $disbursementCode = 201806121)
+    public static function getAllData($identification, $disbursementCode)
     {
         $data = [];
         foreach (['beneficiario', 'resumen'] as $generalSection) {
@@ -20,13 +20,20 @@ class ColfuturoGicData
             foreach ([
                 'inicio', 'condonaciones', 'desembolsos',  'interesesYSeguros', 'mora', 'pagos', 'pagosRealizados', 'planPagosMora'
                      ] as $creditSection) {
-                $data[$typeCredit][$creditSection] = self::getIndividualData(['extracto', $identification, $disbursementCode, $typeCredit, $creditSection . '.raw']);
+                $data['creditos'][$typeCredit][$creditSection] = self::getIndividualData(['extracto', $identification, $disbursementCode, $typeCredit, $creditSection . '.raw']);
             }
         }
         /**
          * @TODO ask for /extracto/{identification}/{disbursementCode}/{typeCredit}/planPagos/{paymentPlanType} endpoint
          */
         return $data;
+    }
+
+    public static function getDisbursementCode($identification) {
+        $disbursements = self::getIndividualData(['extracto', $identification, 'desembolsosBeneficiario.raw']);
+        $disbursements = collect($disbursements);
+        $disbursement = $disbursements->first();
+        return $disbursement ? substr($disbursement['disbursementCode'], 0, -2) : NULL;
     }
 
     public static function getIndividualData(array $path) {
