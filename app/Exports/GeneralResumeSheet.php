@@ -15,6 +15,7 @@ use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use Maatwebsite\Excel\Concerns\WithTitle;
 use Maatwebsite\Excel\Events\AfterSheet;
+use Maatwebsite\Excel\Events\BeforeSheet;
 use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Time;
 use PhpOffice\PhpSpreadsheet\Cell\DataType;
 use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
@@ -118,6 +119,8 @@ class GeneralResumeSheet implements FromView, WithEvents, WithColumnWidths, With
             'I' => 15,
             'J' => 8,
             'K' => 7,
+            'L' => 12,
+            'M' => 8,
         ];
     }
 
@@ -130,42 +133,99 @@ class GeneralResumeSheet implements FromView, WithEvents, WithColumnWidths, With
 
     public function registerEvents(): array
     {
-        return [ AfterSheet::class => function(AfterSheet $event){
+        return [
+            BeforeSheet::class => function(BeforeSheet $event){
+                $event->getSheet()->getStyle('I19')->getNumberFormat()->setFormatCode('D MMM YYYY');
+            },
+            AfterSheet::class => function(AfterSheet $event){
 
-            $drawing = new Drawing();
-            $drawing->setName('Logo');
-            $drawing->setCoordinates('A1');
-            $drawing->setPath(resource_path() . '/img/logo.png');
-            $drawing->setHeight(95);
-            $drawing->setWidth(120);
-            $drawing->setWorksheet($event->sheet->getDelegate());
+                $drawing = new Drawing();
+                $drawing->setName('Logo');
+                $drawing->setCoordinates('A1');
+                $drawing->setPath(resource_path() . '/img/logo.png');
+                $drawing->setHeight(95);
+                $drawing->setWidth(120);
+                $drawing->setWorksheet($event->sheet->getDelegate());
 
-        }];
+
+                $event->getSheet()->getStyle('C29')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('C30')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('J30')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('C31')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('J31')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('L31')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('C33')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('C34')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+                $event->getSheet()->getStyle('C35')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+            }
+        ];
     }
 
     public function styles(Worksheet $sheet)
     {
-        $sheet->getParent()->getDefaultStyle()->getFont()->setSize(9);
+        $sheet->getParent()->getDefaultStyle()->getFont()->setSize(11);
         $sheet->getRowDimension('12')->setRowHeight('0.79', 'cm');
+        $sheet->getRowDimension('13')->setRowHeight('0.53', 'cm');
+        $sheet->getRowDimension('30')->setRowHeight('0.95', 'cm');
+        $sheet->getRowDimension('31')->setRowHeight('0.74', 'cm');
         $sheet->mergeCells('C1:E1');
+        $sheet->mergeCells('I1:J1');
+        $sheet->mergeCells('I2:J2');
         $sheet->mergeCells('D12:E12');
+        $sheet->mergeCells('H29:I29');
+        $sheet->mergeCells('J29:K29');
+        $sheet->mergeCells('H30:I30');
+        $sheet->mergeCells('J30:K30');
+        $sheet->mergeCells('H31:I31');
+        $sheet->mergeCells('J31:K31');
 
         return [
+            'C1:K3'  => ['font' => ['size' => 9]],
             'C1'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_RED]]],
-            'A6'  => ['font' => ['bold' => true, 'size' => 11, 'color' => ['argb' => Color::COLOR_RED]]],
+            'A6'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_RED]]],
             'C7'  => ['numberFormat' => ['formatCode' => NumberFormat::FORMAT_DATE_TIME1]],
-            'A10'  => ['font' => ['bold' => true, 'size' => 11, 'color' => ['argb' => '434343']]],
-            'H10'  => ['font' => ['bold' => true, 'size' => 11]],
-            'I10'  => ['font' => ['bold' => true, 'size' => 11, 'color' => ['argb' => Color::COLOR_RED]]],
+            'A10'  => ['font' => ['bold' => true, 'color' => ['argb' => '434343']]],
+            'H10'  => ['font' => ['bold' => true]],
+            'I10'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_RED]]],
+            'I10:I20'  => ['alignment' => ['horizontal' => 'right']],
             12 => ['alignment' => ['vertical' => 'center']],
             'B12:E12'  => [
                 'fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']],
-                'font' => ['bold' => true, 'size' => 11, 'color' => ['argb' => '434343']],
+                'font' => ['bold' => true, 'color' => ['argb' => '434343']],
                 'alignment' => ['horizontal' => 'center']
             ],
-            'H12'  => ['font' => ['size' => 11]],
-            'I12'  => ['font' => ['size' => 11, 'color' => ['argb' => Color::COLOR_RED]]],
-            'H12:I12'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']]],
+            'I12'  => ['font' => ['color' => ['argb' => Color::COLOR_RED]]],
+            'H12:I12'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'F4F4F4']]],
+            'H13:I13'  => ['font' => ['size' => 10]],
+            'I13'  => ['font' => ['color' => ['argb' => Color::COLOR_RED]]],
+            'B14:E14'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'F4F4F4']]],
+            'F14'  => ['font' => ['color' => ['argb' => Color::COLOR_RED]]],
+            'H14:I14'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']]],
+            'I14'  => ['font' => ['bold' => true], 'numberFormat' => ['formatCode' => '[$USD]\ #,##0\ ']],
+            'C14:E20'  => ['numberFormat' => ['formatCode' => '#,##0;[Red]\(#,##0\)']],
+            'E16:E17'  => ['numberFormat' => ['formatCode' => '_-* #,##0.00_-;\-* #,##0.00_-;_-* "-"??_-;_-@']],
+            'H17'  => ['font' => ['bold' => true]],
+            'B16:E16'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'F4F4F4']]],
+            'B18:E18'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'F4F4F4']]],
+            'H19:I19'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'F4F4F4']]],
+            'B20:E20'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'F4F4F4']]],
+            'H20:I20'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']]],
+            'B21:E21'  => [
+                'fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']],
+                'numberFormat' => ['formatCode' => '_(* #,##0_);_(* \(#,##0\);_(* "-"??_);_(@_)'],
+                'font' => ['bold' => true]
+            ],
+            'B23:B24'  => ['font' => ['color' => ['argb' => Color::COLOR_RED]]],
+            'A27'  => ['font' => ['bold' => true]],
+            'H27'  => ['font' => ['bold' => true]],
+            'H29:M29'  => [
+                'font' => ['bold' => true],
+                'fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']],
+                'alignment' => ['horizontal' => 'center']
+            ],
+            'C29:C35'  => ['alignment' => ['horizontal' => 'right']],
+            'J30:L31'  => ['alignment' => ['horizontal' => 'right']],
+            'H31:M31'  => ['fill' => ['fillType'   => Fill::FILL_SOLID, 'startColor' => ['argb' => 'E5E5E5']]],
         ];
     }
 }
