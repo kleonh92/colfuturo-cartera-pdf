@@ -2618,7 +2618,7 @@
                 <tr>
                     <td>
                         <span class="ml-20 font-roboto-condensed text-base font-normal">Al 18 jul 2022 interés</span>
-                        <br>
+                        <br/>
                         <span class="ml-20 font-roboto-condensed text-base font-normal text-neutral-80">Periodo para cumplir 36 meses de permanencia: <span class="text-neutral-90">oct 2019 - sep 2027</span></span>
                         <!-- Inicio Tabla 1 - Su historia de residencia, pag 10 -->
                         <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped table-p-1 text-base">

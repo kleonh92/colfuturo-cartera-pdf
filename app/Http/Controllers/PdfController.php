@@ -43,4 +43,30 @@ class PdfController extends Controller
             throw new HttpException(Response::HTTP_BAD_REQUEST, "Something wrong generating data for this identification.");
         }
     }
+
+    /**
+     * @throws HttpException
+     */
+    public function preview($identification)
+    {
+        if (!($disbursementCode = ColfuturoGicData::getDisbursementCode($identification))) {
+            throw new HttpException(Response::HTTP_NOT_FOUND, "Not found data for this identification.");
+        }
+        $cacheKey = 'gic_data_all:' . $identification;
+        /**
+         * @TODO remove this when data is available in API
+         */
+        //Cache::flush();
+        if (!($data = Cache::get($cacheKey))) {
+            $data = ColfuturoGicData::getAllData($identification, $disbursementCode);
+            Cache::forever($cacheKey, $data);
+        }
+        try {
+            return view('pdf.credito_beca', $data);
+        }
+        catch (\Exception $exception) {
+            Log::error($exception->getMessage());
+            throw new HttpException(Response::HTTP_BAD_REQUEST, "Something wrong generating data for this identification.");
+        }
+    }
 }

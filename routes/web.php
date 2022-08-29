@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('download/pdf/{identification}', [PdfController::class, 'download']);
+Route::get('download/pdf/preview/{identification}', [PdfController::class, 'preview']);
 Route::get('download/excel', 'App\Http\Controllers\ExcelController@download');
