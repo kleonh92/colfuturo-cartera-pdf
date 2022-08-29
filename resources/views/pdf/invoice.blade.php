@@ -503,6 +503,10 @@
                 margin-left: 20px;
             }
 
+            .ml-30 {
+                margin-left: 30px;
+            }
+
             .ml-40 {
                 margin-left: 40px;
             }
@@ -633,6 +637,10 @@
 
             table.table-p-1 tbody tr td {
                 padding: 4px 8px;
+            }
+
+            table.table-leading-1 tbody tr  td {
+                line-height: 24px;
             }
 
             .border-bottom-red {
@@ -935,7 +943,7 @@
                         <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Resumen general <span class="text-color-primary">*</span></h4>
                         
                         <!-- Inicio de table Resumen General Página 2 -->
-                        <table class="ml-20 table-stripped text-base border-separate border-spacing-1">
+                        <table class="ml-20 table-stripped text-base border-separate border-spacing-1 table-p-1">
                             <tr class="bg-neutral-50 font-roboto-condensed font-medium">
                                 <th></th>
                                 <th>Crédito</th>
@@ -1009,8 +1017,8 @@
 
                         <!-- Inicio Info Adicional Tabla Resumen General -->
                         
-                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> Este resumen no muestradecimales pero los cálculos los consideran todos</div>
-                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">**</span> Intereses calculados con la inflación</div>
+                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary"> *</span> Este resumen no muestra decimales pero los cálculos los consideran todos.</div>
+                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">**</span> Intereses calculados con la inflación.</div>
                         
                         <!-- Fin Info Adicional Tabla Resumen General -->
                     </td>
@@ -1022,31 +1030,31 @@
                         <div class="pl-20 font-roboto font-medium text-base">Crédito <span class="text-color-primary">en mora</span></div>
 
                         <!-- Incio Tabla de días vencidos por pago en Mora: OJO!! Esta tabla solo debe aparecer si el crédito está en mora -->
-                        <table style="width:auto; padding-top:10px;" class="pl-20 table-stripped font-roboto-condensed font-normal text-base">
+                        <table style="width:auto; padding-top:10px;" class="pl-20 table-stripped table-p-1 font-roboto-condensed font-normal text-base">
                                 <tr>
-                                    <td style="width:121px;"  class="text-center">Días vencidos</td>
+                                    <td style="width:105px;"  class="text-left">Días vencidos</td>
                                     <td style="width:104px;" class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">78</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">Cuotas vencidas</td>
+                                    <td class="text-left">Cuotas vencidas</td>
                                     <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">3</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center font-bold">Monto en mora</td>
+                                    <td class="text-left font-bold">Monto en mora</td>
                                     <td class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">USD 1.229</td>
                                 </tr>
                         </table>
                         <!-- Fin de tabla de días vencidos por pago en mora! -->
 
                         <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg pb-1 border-bottom-gray">Próximo pago Crédito</h4>
-                        <table style="width:auto;" class="pl-20 font-roboto-condensed font-normal text-base">
+                        <table style="width:auto;" class="pl-20 font-roboto-condensed font-normal text-base table-p-1">
                             <tr class="bg-gray-2">
                                 <td style="width:144px;" class="pl-1 pt-1 pb-1 ">Fecha próximo pago</td>
-                                <td style="width:121px;" class="pl-1 pt-1 pb-1 ">12 dic 2022</td>
+                                <td style="width:121px;" class="font-roboto-mono text-right pl-1 pt-1 pb-1 ">12 dic 2022</td>
                             </tr>
                             <tr class="bg-neutral-50">
                                 <td class="pl-1 pt-1 pb-1 "><b>Pago sugerido</b></td>
-                                <td class="pl-1 pt-1 pb-1 "><b>USD 1.229</b></td>
+                                <td class="font-roboto-mono text-right pl-1 pt-1 pb-1"><b>USD 1.229</b></td>
                             </tr>
                         </table>
                     </td>
@@ -1070,7 +1078,7 @@
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td class="font-roboto-mono font-medium">24 meses</td>
+                                    <td class="font-roboto-mono font-medium text-right">24 meses</td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -1095,7 +1103,7 @@
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td class="font-roboto-mono font-medium">+ 72 meses</td>
+                                    <td class="font-roboto-mono font-medium text-right border-bottom-gray">+ 72 meses</td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -1116,9 +1124,9 @@
                     <td width="50%">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Requisitos para mantener mi estatus</h4>
 
-                        <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed text-base">
+                        <table style="width:auto" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                             <tr class="bg-neutral-50">
-                                <th style="width:272px;">Requisitos</th>
+                                <th style="width:272px;">Requisito</th>
                                 <th style="width:122px;">Desde</th>
                                 <th style="width:122px;">Hasta</th>
                                 <th style="width:60px;">Estado</th>
@@ -1163,23 +1171,23 @@
                         <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Resumen</h4>
         
                         <!-- Tabla 1 , Pag 3, Resumen -->
-                        <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
+                        <table style="width:auto" class="ml-20 table-stripped table-p-1 font-roboto-condensed">
                             <tbody>
                                 <tr class="text-center bg-neutral-50">
                                     <td style="width:75px;" class="font-bold p-1">Tasas</td>
                                     <td style="width:84px;" class="font-bold p-1">EA <span class="text-color-primary">*</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1">Interés</td>
-                                    <td class="p-1 font-roboto-mono text-center">9,00 %</td>
+                                    <td class="p-1 text-center">Interés</td>
+                                    <td class="p-1 font-roboto-mono text-right">9,00 %</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1">Mora</td>
-                                    <td class="p-1 font-roboto-mono text-center">25,00 %</td>
+                                    <td class="p-1 text-center">Mora</td>
+                                    <td class="p-1 font-roboto-mono text-right">25,00 %</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-1">Seguro</td>
-                                    <td class="p-1 font-roboto-mono text-center">0,29 %</td>
+                                    <td class="p-1 text-center">Seguro</td>
+                                    <td class="p-1 font-roboto-mono text-right">0,29 %</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1187,7 +1195,7 @@
                         <!-- Fin Tabla 1 , Pag 3, Resumen -->
                         
                         <!--  Tabla 2, Pag 3, Resumen-->
-                        <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
+                        <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base table-p-1">
                             <tbody>
                                 <tr>
                                     <td style="width:131px;" class="p-1 font-bold bg-neutral-50">Inicio pago</td>
@@ -1202,7 +1210,7 @@
                         <!-- Fin Tabla 2, Pag 3, Resumen-->
 
                         <!-- Inicio Tabla 3, Pag 3, Resumen -->
-                        <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped text-base">
+                        <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped table-p-1 text-base">
                             <tbody>
                                 <tr class="bg-neutral-50">
                                     <td style="width:152px;" class="text-center font-bold p-1">Cuotas</td>
@@ -1225,7 +1233,7 @@
                         <!-- Fin Tabla 3, Pag 3, Resumen -->
 
                         <!-- Inicio Tabla 4, Pag 3, Resumen -->
-                        <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base">
+                        <table style="width:auto" class="ml-20 mt-20 font-roboto-condensed text-base table-p-1">
                             <tbody>
                                 <tr>
                                     <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
@@ -1243,70 +1251,70 @@
                         <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Intereses y seguro</h4>
 
                         <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
-                        <table style="width:auto" class="font-roboto-condensed text-base table-stripped">
+                        <table style="width:auto" class="font-roboto-condensed text-base table-stripped table-p-1">
                             <tbody>
                                 <tr class="font-bold text-center bg-neutral-50">
-                                    <td style="width:110px;"    class="p-1">Inicio</td>
-                                    <td style="width:120px;"     class="p-1">Fin</td>
-                                    <td style="width:270px;"    class="p-1">Estatus</td>
-                                    <td style="width:45px;"     class="p-1 text-right">EA <span class="text-color-primary">*</span></td>
-                                    <td style="width:58px;"     class="p-1 text-right">Meses</td>
-                                    <td style="width:106px;"    class="p-1 text-right">Intereses USD</td>
-                                    <td style="width:92px;"     class="p-1 text-right">Seguro USD</td>
+                                    <td style="width:110px;"    >Inicio</td>
+                                    <td style="width:120px;"    >Fin</td>
+                                    <td style="width:265px;"    >Estatus</td>
+                                    <td style="width:40px;"     class="text-right">EA <span class="text-color-primary">*</span></td>
+                                    <td style="width:45px;"     class="text-right">Meses</td>
+                                    <td style="width:95px;"    class="text-right">Intereses USD</td>
+                                    <td style="width:80px;"     class="text-right">Seguro USD</td>
                                 </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Amortizacion Ordinario (PAO)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">60</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">41</td>
+                                <tr class="text-center">
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal text-left">Periodo Amortizacion Ordinario (PAO)</td>
+                                    <td class="font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="font-normal font-roboto-mono text-right">60</td>
+                                    <td class="font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="font-normal font-roboto-mono text-right">41</td>
                                 </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Perido Gracia Ordinario (PGO)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">16</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">41</td>
+                                <tr class="text-center">
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal text-left">Perido Gracia Ordinario (PGO)</td>
+                                    <td class="font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="font-normal font-roboto-mono text-right">16</td>
+                                    <td class="font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="font-normal font-roboto-mono text-right">41</td>
                                 </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Gracia Fuera (PGF)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">6</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">7</td>
+                                <tr class="text-center">
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal text-left">Periodo Gracia Fuera (PGF)</td>
+                                    <td class="font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="font-normal font-roboto-mono text-right">6</td>
+                                    <td class="font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="font-normal font-roboto-mono text-right">7</td>
                                 </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Extraordinario de Estudios (PEE)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">7 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">36</td>
+                                <tr class="text-center">
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal">Periodo Extraordinario de Estudios (PEE)</td>
+                                    <td class="font-normal font-roboto-mono text-right">7 %</td>
+                                    <td class="font-normal font-roboto-mono text-right">1</td>
+                                    <td class="font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="font-normal font-roboto-mono text-right">36</td>
                                 </tr>
-                                <tr>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                    <td class="p-1 font-normal">Periodo Ordinario de Estudios(POE)</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">24</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                    <td class="p-1 font-normal font-roboto-mono text-right">64</td>
+                                <tr class="text-center">
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal font-roboto-mono">12 dic 2022</td>
+                                    <td class="font-normal text-left">Periodo Ordinario de Estudios (POE)</td>
+                                    <td class="font-normal font-roboto-mono text-right">9 %</td>
+                                    <td class="font-normal font-roboto-mono text-right">24</td>
+                                    <td class="font-normal font-roboto-mono text-right">1.292</td>
+                                    <td class="font-normal font-roboto-mono text-right">64</td>
                                 </tr>
                                 <tr class="bg-neutral-50">
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal"></td>
-                                    <td class="p-1 font-normal font-bold text-right">TOTAL</td>
-                                    <td class="p-1 font-normal font-bold font-roboto-mono text-right">4.865</td>
-                                    <td class="p-1 font-normal font-bold font-roboto-mono text-right">189</td>
+                                    <td class="font-normal"></td>
+                                    <td class="font-normal"></td>
+                                    <td class="font-normal"></td>
+                                    <td class="font-normal"></td>
+                                    <td class="font-normal font-bold text-right">TOTAL</td>
+                                    <td class="font-normal font-bold font-roboto-mono text-right">4.865</td>
+                                    <td class="font-normal font-bold font-roboto-mono text-right">189</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1363,7 +1371,7 @@
                                     <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
                                             <tr class="font-bold text-center bg-neutral-50">
-                                                <td style="width:41px;"     class="p-1">#</td>
+                                                <td style="width:30px;"     class="p-1">#</td>
                                                 <td style="width:138px;"    class="p-1">Fecha</td>
                                                 <td style="width:107px;"    class="p-1">Concepto</td>
                                                 <td style="width:50px;"     class="p-1">USD</td>
@@ -1413,7 +1421,7 @@
                                     <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
                                             <tr class="font-bold text-center bg-neutral-50">
-                                                <td style="width:41px;"     class="p-1">#</td>
+                                                <td style="width:30px;"     class="p-1">#</td>
                                                 <td style="width:138px;"    class="p-1">Fecha</td>
                                                 <td style="width:107px;"    class="p-1">Concepto</td>
                                                 <td style="width:50px;"     class="p-1">USD</td>
@@ -1462,7 +1470,7 @@
                                     <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
                                             <tr class="font-bold text-center bg-neutral-50">
-                                                <td style="width:41px;"     class="p-1">#</td>
+                                                <td style="width:30px;"     class="p-1">#</td>
                                                 <td style="width:138px;"    class="p-1">Fecha</td>
                                                 <td style="width:107px;"    class="p-1">Concepto</td>
                                                 <td style="width:50px;"     class="p-1">USD</td>
@@ -1573,10 +1581,10 @@
                                 </tr>
                                 <tr class="text-center font-bold p-1 bg-neutral-50">
                                     <td style="width:130px;"    class="p-1">Fecha</td>
-                                    <td style="width:77px;"     class="p-1 text-left">Concepto</td>
+                                    <td style="width:60px;"     class="p-1 text-left">Concepto</td>
                                     <td style="width:65px;"     class="p-1">USD</td>
                                     <td style="width:66px;"     class="p-1 text-right">TRM <span class="text-color-primary">*</span></td>
-                                    <td style="width:103px;"    class="p-1">COP</td>
+                                    <td style="width:90px;"    class="p-1">COP</td>
                                     <td style="width:97px;"     class="p-1">Interes mora</td>
                                     <td style="width:76px;"     class="p-1">Intereses</td>
                                     <td style="width:61px;"     class="p-1">Capital</td>
@@ -1633,9 +1641,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="ml-20 mt-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>TRM= Tasa Representativa del Mercado.</div>
-                        <div class="ml-40 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en 0 absoluto se muestran con "-". Los valores "0" contienen decimales.</div>
-                        <div class="ml-40 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en verde corresponden a la moneda en la que se hizo el abono.</div>
+                        <ul style="list-style: none;" class="p-0 font-roboto font-normal text-neutral-80 text-sm">
+                            <li class="ml-20" ><span class="text-color-primary">* </span>TRM= Tasa Representativa del Mercado.</li>
+                            <li class="ml-30">Los valores en 0 absoluto se muestran con "-". Los valores "0" contienen decimales.</li>
+                            <li class="ml-30">Los valores en verde corresponden a la moneda en la que se hizo el abono.</li>
+                        </ul>
+                    
                     </td>
                 </tr>
                 <!-- End Tabla Apoyo a terceras entidades - Pag 4 -->
@@ -1663,11 +1674,11 @@
                                 <td style="width:417px;" colspan="5" class="border-bottom-red">Abonos en USD</td>
                             </tr>
                             <tr class="bg-neutral-50 font-bold text-center">
-                                <td style="width:36px;">#</td>
+                                <td style="width:26px;">#</td>
                                 <td>Fecha</td>
                                 <td>Observación</td>
-                                <td>USD</td>
-                                <td class="text-right">TRM <span class="text-color-primary">*</span></td>
+                                <td style="width:45px;">USD</td>
+                                <td style="width:55px" class="text-right">TRM <span class="text-color-primary">*</span></td>
                                 <td>COP</td>
                                 <td>Interes mora</td>
                                 <td>Intereses</td>
@@ -1956,7 +1967,7 @@
                             <td>A interés</td>
                             <td>A capital</td>
                             <td>A interés <br />acumulado</td>
-                            <td>Interés del mes</td>
+                            <td>Interés <br />del mes</td>
                             <td>Pendiente <br />interés mes</td>
                             <td>Acum. pend.<br />interés mes</td>
                             <td>Sin interés</td>
@@ -2206,24 +2217,25 @@
                         <tr class="font-bold text-center">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
-                            <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
-                            <td colspan="4" class="border-bottom-red">Saldos acumulados</td>
-                            <td colspan="2" class="border-bottom-red">Saldos deuda</td>
+                            <td colspan="6" class="border-bottom-red">Discriminacion del pago</td>
+                            <td colspan="3" class="border-bottom-red">Saldos acumulados</td>
+                            <td colspan="3" class="border-bottom-red">Saldos deuda</td>
                         </tr>
                         <tr class="font-bold text-center bg-neutral-50">
                             <td>#</td>
                             <td>Fecha</td>
                             <td>Cuota</td>
-                            <td>A seguro</td>
-                            <td>A interés</td>
+                            <td>Cuota<br />a pagar</td>
+                            <td>A Seguro</td>
+                            <td>A intereses</td>
                             <td>A capital</td>
-                            <td>A interés <br />acumulado</td>
-                            <td>Interés del mes</td>
+                            <td>A interés <br />acumu.</td>
+                            <td>Interés <br />del mes</td>
                             <td>Pendiente <br />interés mes</td>
                             <td>Acum. pend.<br />interés mes</td>
+                            <td>Cuotas <br />anticipadas</td>
                             <td>Sin interés</td>
                             <td>Con interés</td>
-                            <td class="bg-transparent"></td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right ">
                             <td>1</td>
@@ -2238,6 +2250,8 @@
                             <td>40</td>
                             <td>28.351</td>
                             <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                             <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="ml-20 point bg-green-surface"></span> Meses de cuota anticipada</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right ">
@@ -2246,14 +2260,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
                             <td>204</td>
                             <td>6</td>
-                            <td>80</td>
-                            <td>28.341</td>
-                            <td>28.341</td>
-                            <td class="bg-transparent"></td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right">
                             <td>3</td>
@@ -2261,14 +2276,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
+                            <td>204</td>
+                            <td>6</td>
                             <td>40</td>
-                            <td>121</td>
-                            <td>28.331</td>
-                            <td>28.331</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right" >
                             <td>4</td>
@@ -2276,14 +2292,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
+                            <td>204</td>
+                            <td>6</td>
                             <td>40</td>
-                            <td>161</td>
-                            <td>28.321</td>
-                            <td>28.321</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right" >
                             <td>5</td>
@@ -2296,9 +2313,10 @@
                             <td>203</td>
                             <td>40</td>
                             <td>201</td>
-                            <td>28.311</td>
-                            <td>28.311</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right" >
                             <td>6</td>
@@ -2311,9 +2329,10 @@
                             <td>203</td>
                             <td>40</td>
                             <td>240</td>
-                            <td>28.301</td>
-                            <td>28.301</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right" >
                             <td>7</td>
@@ -2321,14 +2340,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>28.291</td>
-                            <td>28.291</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right">
                             <td>8</td>
@@ -2336,14 +2356,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.900</td>
-                            <td>27.900</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right">
                             <td>9</td>
@@ -2351,194 +2372,207 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.506</td>
-                            <td>27.506</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right">
                             <td>10</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>11</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>12</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>13</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>14</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>15</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>17</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>18</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>19</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>20</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>21</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>22</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                     </tbody>
                 </table>
@@ -2560,24 +2594,25 @@
                         <tr class="font-bold text-center bg-neutral-50">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
-                            <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
-                            <td colspan="4" class="border-bottom-red">Saldos acumulados</td>
-                            <td colspan="2" class="border-bottom-red">Saldos deuda</td>
+                            <td colspan="6" class="border-bottom-red">Discriminacion del pago</td>
+                            <td colspan="3" class="border-bottom-red">Saldos acumulados</td>
+                            <td colspan="3" class="border-bottom-red">Saldos deuda</td>
                         </tr>
                         <tr class="font-bold text-center bg-neutral-50">
-                            <td>#</td>
+                        <td>#</td>
                             <td>Fecha</td>
                             <td>Cuota</td>
-                            <td>A seguro</td>
-                            <td>A interés</td>
+                            <td>Cuota<br />a pagar</td>
+                            <td>A Seguro</td>
+                            <td>A intereses</td>
                             <td>A capital</td>
-                            <td>A interés <br />acumulado</td>
-                            <td>Interés del mes</td>
+                            <td>A interés <br />acumu.</td>
+                            <td>Interés <br />del mes</td>
                             <td>Pendiente <br />interés mes</td>
                             <td>Acum. pend.<br />interés mes</td>
+                            <td>Cuotas <br />anticipadas</td>
                             <td>Sin interés</td>
                             <td>Con interés</td>
-                            <td class="bg-transparent"></td>
                         </tr>
                         <tr class="font-roboto-mono text-right ">
                             <td>1</td>
@@ -2585,11 +2620,13 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
                             <td>204</td>
                             <td>6</td>
                             <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                             <td>28.351</td>
                             <td>28.351</td>
                         </tr>
@@ -2599,14 +2636,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
                             <td>204</td>
                             <td>6</td>
-                            <td>80</td>
-                            <td>28.341</td>
-                            <td>28.341</td>
-                            <td class="bg-transparent"></td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>3</td>
@@ -2614,14 +2652,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
+                            <td>204</td>
+                            <td>6</td>
                             <td>40</td>
-                            <td>121</td>
-                            <td>28.331</td>
-                            <td>28.331</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right" >
                             <td>4</td>
@@ -2629,14 +2668,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
+                            <td>204</td>
+                            <td>6</td>
                             <td>40</td>
-                            <td>161</td>
-                            <td>28.321</td>
-                            <td>28.321</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right" >
                             <td>5</td>
@@ -2644,14 +2684,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
+                            <td>204</td>
+                            <td>6</td>
                             <td>40</td>
-                            <td>201</td>
-                            <td>28.311</td>
-                            <td>28.311</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right" >
                             <td>6</td>
@@ -2659,14 +2700,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
+                            <td>204</td>
+                            <td>6</td>
                             <td>40</td>
-                            <td>240</td>
-                            <td>28.301</td>
-                            <td>28.301</td>
-                            <td class="bg-transparent"></td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right" >
                             <td>7</td>
@@ -2674,14 +2716,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>28.291</td>
-                            <td>28.291</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>8</td>
@@ -2689,14 +2732,15 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.900</td>
-                            <td>27.900</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>9</td>
@@ -2704,119 +2748,127 @@
                             <td class="text-color-primary">180</td>
                             <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.506</td>
-                            <td>27.506</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>10</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>11</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>12</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>13</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>14</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right">
                             <td>15</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
-                            <td>6</td>
+                            <td>7</td>
                             <td>163</td>
-                            <td>10</td>
+                            <td>100</td>
                             <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
+                            <td>204</td>
+                            <td>6</td>
+                            <td>40</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
+                            <td>28.351</td>
                         </tr>
                         <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
                             <td></td>
                             <td>TOTAL</td>
-                            <td>36.539</td>
-                            <td>257</td>
-                            <td>7.576</td>
-                            <td>28.279</td>
-                            <td>-</td>
-                            <td>7.816</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="bg-transparent"></td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
+                            <td>31.033</td>
                         </tr>
                     </tbody>
                 </table>
