@@ -3,6 +3,7 @@
 namespace App\Helpers\Api;
 
 use GuzzleHttp\RequestOptions;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -22,18 +23,33 @@ class ColfuturoGicData
                      ] as $creditSection) {
                 $data['creditos'][$typeCredit][$creditSection] = self::getIndividualData(['extracto', $identification, $disbursementCode, $typeCredit, $creditSection . '.raw']);
             }
+            // Getting the plan pagos data
+            foreach ([1, 2] as $paymentPlanType) {
+                $data['creditos'][$typeCredit]['planPagos'][$paymentPlanType] = self::getIndividualData(['extracto', $identification, $disbursementCode, $typeCredit, 'planPagos', $paymentPlanType . '.raw']);
+            }
         }
-        /**
-         * @TODO ask for /extracto/{identification}/{disbursementCode}/{typeCredit}/planPagos/{paymentPlanType} endpoint
-         */
         return $data;
     }
 
     public static function getDisbursementCode($identification) {
-        $disbursements = self::getIndividualData(['extracto', $identification, 'desembolsosBeneficiario.raw']);
-        $disbursements = collect($disbursements);
-        $disbursement = $disbursements->first();
-        return $disbursement ? substr($disbursement['disbursementCode'], 0, -2) : NULL;
+        $cacheKey = 'disbursement_code:' . $identification;
+        if (!($data = Cache::get($cacheKey))) {
+            $disbursements = self::getIndividualData(['extracto', $identification, 'desembolsosBeneficiario.raw']);
+            $disbursements = collect($disbursements);
+            $disbursement = $disbursements->first();
+            $data = $disbursement ? substr($disbursement['disbursementCode'], 0, -2) : NULL;
+            /**
+             * @TODO remove this when data is available in API
+             */
+            $codes = [
+                1001083190 => 201901335,
+                1018473865 => 201806121,
+            ];
+            $data = $codes[$identification];
+            // End remove
+            Cache::forever($cacheKey, $data);
+        }
+        return $data;
     }
 
     public static function getIndividualData(array $path) {

@@ -967,9 +967,9 @@
                             @endforeach
                             <tr class="font-roboto-condensed font-normal bg-gray">
                                 <td class="pl-1"><b>TOTAL</b></td>
-                                <td class="font-roboto-mono text-center"><b>{{ $resumenItems->sum('amountColfuturo') }}</b></td>
-                                <td class="font-roboto-mono text-center"><b>33.025</b></td>
-                                <td class="font-roboto-mono text-center"><b>53.686.805</b></td>
+                                <td class="font-roboto-mono text-center"><b>{{ \App\Helpers\GicDataFormatter::formatNumber($resumenItems->where('isDebit', false)->sum('amountColfuturo') - $resumenItems->where('isDebit', true)->sum('amountColfuturo')) }}</b></td>
+                                <td class="font-roboto-mono text-center"><b>{{ \App\Helpers\GicDataFormatter::formatNumber($resumenItems->where('isDebit', false)->sum('amountForgiveness') - $resumenItems->where('isDebit', true)->sum('amountForgiveness')) }}</b></td>
+                                <td class="font-roboto-mono text-center"><b>{{ \App\Helpers\GicDataFormatter::formatNumber($resumenItems->where('isDebit', false)->sum('amountForgivenessCop') - $resumenItems->where('isDebit', true)->sum('amountForgivenessCop')) }}</b></td>
                                 <td class="bg-white"></td>
                             </tr>
                         </table>
@@ -1044,7 +1044,7 @@
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td class="font-roboto-mono font-medium">24 meses</td>
+                                    <td class="font-roboto-mono font-medium">{{ \App\Helpers\GicDataFormatter::diffDatesInMonths($resumen['endDateFinancing'], $resumen['startDateFinancing']) }} meses</td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -1288,163 +1288,55 @@
                 <tr style="vertical-align:top">
                     <td>
                         <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Desembolsos</h4>
+                        @php
+                            // @TODO remove dummy data when available in API
+                            $desembolsos = $creditos['01']['desembolsos'];
+                            $desembolsos = array_fill(0, 30, [
+                                'concept' => 'Concept ' . rand(),
+                                'amount' => rand(),
+                                'dateConfirmed' => '2022-02-27T05:00:00.000+0000',
+                            ]);
+                            $desembolsos = collect($desembolsos);
+                            $desembolsosTables = $desembolsos->chunk(18);
+                        @endphp
 
-                        <table style="width:auto;">
-                            <tr style="vertical-align: top;">
-                                <!-- Inicio Tabla 1 Desembolsos -->
-                                <td>
-                                    <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
-                                        <tbody>
-                                            <tr class="font-bold text-center">
-                                                <td style="width:41px;"     class="p-1">#</td>
-                                                <td style="width:138px;"    class="p-1">Fecha</td>
-                                                <td style="width:107px;"    class="p-1">Concepto</td>
-                                                <td style="width:50px;"     class="p-1">USD</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">1</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">2</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">3</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">4</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">5</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1 ">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">6</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <!-- Fin Tabla 1 Desembolsos -->
-
-                                <td>
-                                    <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
-                                        <tbody>
-                                            <tr class="font-bold text-center">
-                                                <td style="width:41px;"     class="p-1">#</td>
-                                                <td style="width:138px;"    class="p-1">Fecha</td>
-                                                <td style="width:107px;"    class="p-1">Concepto</td>
-                                                <td style="width:50px;"     class="p-1">USD</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">7</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">8</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">9</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">10</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">11</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1 ">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">12</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-
-                                <td>
-                                <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
-                                        <tbody>
-                                            <tr class="font-bold text-center">
-                                                <td style="width:41px;"     class="p-1">#</td>
-                                                <td style="width:138px;"    class="p-1">Fecha</td>
-                                                <td style="width:107px;"    class="p-1">Concepto</td>
-                                                <td style="width:50px;"     class="p-1">USD</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">1</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">2</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">3</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">4</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">5</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1 ">Matrícula</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-1 font-roboto-mono text-right">6</td>
-                                                <td class="p-1 font-roboto-mono text-center">12 dic 2022</td>
-                                                <td class="p-1">Sostenimiento</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                            <tr class="bg-neutral-50">
-                                                <td colspan="3" class="p-1 text-right font-bold">Total</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
+                        @foreach($desembolsosTables as $keyTable => $desembolsosTable)
+                            <table style="width:auto;">
+                                <tr style="vertical-align: top;">
+                                    @php
+                                        $desembolsosSubtables = $desembolsosTable->chunk(6);
+                                    @endphp
+                                    @foreach($desembolsosSubtables as $keySubtable => $desembolsosSubtable)
+                                        <td>
+                                            <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
+                                                <tbody>
+                                                    <tr class="font-bold text-center">
+                                                        <td style="width:41px;" class="p-1">#</td>
+                                                        <td style="width:138px;" class="p-1">Fecha</td>
+                                                        <td style="width:107px;" class="p-1">Concepto</td>
+                                                        <td style="width:50px;" class="p-1">USD</td>
+                                                    </tr>
+                                                    @foreach($desembolsosSubtable as $key => $item)
+                                                        <tr>
+                                                            <td class="p-1 font-roboto-mono text-right">{{ $key + 1 }}</td>
+                                                            <td class="p-1 font-roboto-mono text-center">{{ \App\Helpers\GicDataFormatter::formatDate($item['dateConfirmed']) }}</td>
+                                                            <td class="p-1">{{ $item['concept'] }}</td>
+                                                            <td class="p-1 font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amount']) }}</td>
+                                                        </tr>
+                                                        @if ($loop->last && $loop->parent->last && $loop->parent->parent->last)
+                                                            <tr class="bg-neutral-50">
+                                                                <td colspan="3" class="p-1 text-right font-bold">Total</td>
+                                                                <td class="p-1 font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatNumber($desembolsos->sum('amount')) }}</td>
+                                                            </tr>
+                                                        @endif
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    @endforeach
+                                </tr>
+                            </table>
+                        @endforeach
                     </td>
                 </tr>
                 <!-- End Tabla Desembolsos - Pag 4 -->
@@ -1491,6 +1383,9 @@
                 <!-- End tabla Cuotas pagadas - Pag 4 -->
 
                 <!-- Tabla Apoyo a terceras entidades - Pag 4 -->
+                @php
+                    //@TODO integrate this section when data is available
+                @endphp
                 <tr>
                     <td>
                         <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Apoyos de terceras entidades</h4>
@@ -1605,256 +1500,40 @@
                                 <td>Cuota anticipada</td>
                                 <td>Total</td>
                             </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">1</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">2</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">62</td>
-                                <td class="font-roboto-mono text-right">238</td>
-                                <td class="font-roboto-mono text-right text-color-primary">(300)</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">3</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">93</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">4</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">5</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">6</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">7</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">0</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">8</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">9</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right text-color-primary">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">10</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">11</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right text-color-primary">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">12</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">13</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right text-color-primary">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">14</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">15</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right text-color-primary">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">16</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">17</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Pago</td>
-                                <td class="font-roboto-mono text-right">60</td>
-                                <td class="font-roboto-mono text-right">3.781</td>
-                                <td class="font-roboto-mono text-right text-green-500">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right text-color-primary">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
-                            <tr>
-                                <td class="font-roboto-mono text-right">18</td>
-                                <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                <td>Cuota anticipada</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">1.134.255</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">100</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">300</td>
-                            </tr>
+                            @php
+                                $pagosRealizados = collect($creditos['01']['pagosRealizados']);
+                            @endphp
+                            @foreach($pagosRealizados as $key => $item)
+                                <tr>
+                                    <td class="font-roboto-mono text-right">{{ $key + 1 }}</td>
+                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                    <td>{{ $item['detail'] }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountUsd']) }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['trm']) }}</td>
+                                    <td class="font-roboto-mono text-right {{ $item['advanceFeeApplication'] ? '' : 'text-green-500' }}">{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountCop']) }}</td>
+                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interestArrears']) : '' }}</td>
+                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interest']) : '' }}</td>
+                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['capital']) : '' }}</td>
+                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['advancePayment']) : '' }}</td>
+                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}</td>
+                                </tr>
+                            @endforeach
                             <tr class="font-bold">
                                 <td></td>
                                 <td></td>
                                 <td class="text-right">TOTAL</td>
-                                <td class="font-roboto-mono text-right">1800</td>
+                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountUSD')) }}</td>
                                 <td></td>
-                                <td class="font-roboto-mono text-right">6.987.986</td>
+                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountCOP')) }}</td>
                                 <td class="text-right">-</td>
-                                <td class="font-roboto-mono text-right">1.099</td>
-                                <td class="font-roboto-mono text-right">710</td>
+                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('interest')) }}</td>
+                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('capital')) }}</td>
                                 <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">1800</td>
+                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->sum('total')) }}</td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM= Tasa Representativa del Mercado.</div>
+                    <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM = Tasa Representativa del Mercado.</div>
                     <!-- Fin Tabla Pagos Realizados, Pag 6 -->
                 </tr>
 
@@ -1862,15 +1541,24 @@
             <!-- End Main Layout Pag 5 -->
         </div>
         <!-- Fin Página 5 -->
-
         <!-- Inicio Página 6 -->
-        <div class="page" style="page-break-before: always;">
-            <table>
-                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos refinanciado</h4>
+        @php
+            $planPagosReducida = collect($creditos['01']['planPagos'][1]);
+            $planPagosReducidaPages = $planPagosReducida->chunk(22);
+        @endphp
+        @foreach($planPagosReducidaPages as $keyPlanPagosReducidaPage => $planPagosReducidaPage)
+            <div class="page" style="page-break-before: always;">
+                <table>
+                    @if((($keyPlanPagosReducidaPage + 1) * 22) <= $planPagosReducida->count() && !$loop->first)
+                        <p class="font-roboto text-xs font-light">Continuación de la página anterior</p>
+                    @endif
+                    @if($loop->first)
+                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos refinanciado</h4>
+                    @endif
 
-                <!-- Inicio Tabla Página 6 -->
-                <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
-                    <tbody>
+                    <!-- Inicio Tabla Página 6 -->
+                    <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                        <tbody>
                         <tr class="font-bold text-center">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
@@ -1893,236 +1581,51 @@
                             <td>Con interés</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-blue-200 font-roboto-mono text-right ">
-                            <td>1</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
-                        </tr>
-                        <tr class="bg-blue-200 font-roboto-mono text-right ">
-                            <td>2</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>80</td>
-                            <td>28.341</td>
-                            <td>28.341</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="bg-blue-200 font-roboto-mono text-right">
-                            <td>3</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>40</td>
-                            <td>121</td>
-                            <td>28.331</td>
-                            <td>28.331</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>4</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>40</td>
-                            <td>161</td>
-                            <td>28.321</td>
-                            <td>28.321</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>5</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>40</td>
-                            <td>201</td>
-                            <td>28.311</td>
-                            <td>28.311</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>6</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>40</td>
-                            <td>240</td>
-                            <td>28.301</td>
-                            <td>28.301</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>7</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>28.291</td>
-                            <td>28.291</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>8</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.900</td>
-                            <td>27.900</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>9</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.506</td>
-                            <td>27.506</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>10</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>6</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>11</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>6</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>12</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>6</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>13</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>6</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>14</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>6</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>-</td>
-                            <td>240</td>
-                            <td>27.109</td>
-                            <td>27.109</td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right font-medium">
-                            <td></td>
-                            <td>TOTAL</td>
-                            <td>36.539</td>
-                            <td>257</td>
-                            <td>7.576</td>
-                            <td>28.279</td>
-                            <td>-</td>
-                            <td>7.816</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="bg-transparent"></td>
-                        </tr>
-                    </tbody>
+                        @foreach($planPagosReducidaPage as $key => $item)
+                            <tr class="font-roboto-mono text-right {{ $item['isReduced'] ? 'bg-blue-200' : '' }}">
+                                <td>{{ $key + 1 }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                <td class="text-color-primary">{{ \App\Helpers\GicDataFormatter::formatNumber($item['fee']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toInsurance']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toInterest']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toCapital']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toAccruedInterest']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['interestOfTheMonth']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['pendingInterestForTheMonth']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['accumulatedPendingInterest']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['balanceWithoutInterest']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['balanceWithInterestl']) ?? '-' }}</td>
+                                @if($loop->first)
+                                    <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
+                                @endif
+                            </tr>
+                        @endforeach
+                        @if($loop->last)
+                            <tr class="font-roboto-mono text-right font-medium">
+                                <td></td>
+                                <td>TOTAL</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('fee')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('toInsurance')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('toInterest')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('toCapital')) }}</td>
+                                <td>-</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('interestOfTheMonth')) }}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-transparent"></td>
+                            </tr>
+                        @endif
+                        </tbody>
+                    </table>
+                    <!-- Fin Tabla Página 6 -->
+                    @if((($keyPlanPagosReducidaPage + 1) * 22) < $planPagosReducida->count())
+                        <p class="font-roboto text-xs font-light text-right">Tabla continúa en la siguiente página</p>
+                    @endif
                 </table>
-                <!-- Fin Tabla Página 6 -->
-            </table>
-        </div>
+            </div>
+        @endforeach
         <!--  Fin Página 6-->
 
         <!-- Inicio Página 7 -->

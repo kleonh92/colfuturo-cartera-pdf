@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Dompdf\Dompdf;
 use Dompdf\FontMetrics;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Helpers\Api\ColfuturoGicData;
@@ -15,21 +16,18 @@ use Symfony\Component\HttpFoundation\Response;
 class PdfController extends Controller
 {
     /**
-     * @throws \HttpException
+     * @throws HttpException
      */
     public function download($identification)
     {
         if (!($disbursementCode = ColfuturoGicData::getDisbursementCode($identification))) {
-            $codes = [
-                1001083190 => 201901335,
-                1018473865 => 201806121,
-            ];
-            if (!($disbursementCode = $codes[$identification])) {
-                throw new \HttpException("Not found data for this identification", Response::HTTP_NOT_FOUND);
-            }
+            throw new HttpException(Response::HTTP_NOT_FOUND, "Not found data for this identification.");
         }
         $cacheKey = 'gic_data_all:' . $identification;
-        Cache::flush();
+        /**
+         * @TODO remove this when data is available in API
+         */
+        //Cache::flush();
         if (!($data = Cache::get($cacheKey))) {
             $data = ColfuturoGicData::getAllData($identification, $disbursementCode);
             Cache::forever($cacheKey, $data);
@@ -42,7 +40,7 @@ class PdfController extends Controller
         }
         catch (\Exception $exception) {
             Log::error($exception->getMessage());
-            throw new \HttpException("Something wrong generating data for this identification", Response::HTTP_BAD_REQUEST);
+            throw new HttpException(Response::HTTP_BAD_REQUEST, "Something wrong generating data for this identification.");
         }
     }
 }
