@@ -1230,13 +1230,13 @@
                                 </tr>
                                 @foreach($creditos['01']['interesesYSeguros'] as $item)
                                     <tr>
-                                        <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                        <td class="p-1 font-normal font-roboto-mono">12 dic 2022</td>
-                                        <td class="p-1 font-normal">Periodo Amortizacion Ordinario (PAO)</td>
-                                        <td class="p-1 font-normal font-roboto-mono text-right">9 %</td>
-                                        <td class="p-1 font-normal font-roboto-mono text-right">60</td>
-                                        <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
-                                        <td class="p-1 font-normal font-roboto-mono text-right">41</td>
+                                        <td class="p-1 font-normal font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
+                                        <td class="p-1 font-normal font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
+                                        <td class="p-1 font-normal">{{ $item['period'] }}</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatPercentage($item['effectiveAnnualRate'])  }}</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">{{ $item['months'] }}</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amountUsd']) }}</td>
+                                        <td class="p-1 font-normal font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amountSecure']) }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -1505,7 +1505,7 @@
                                     <td style="width:130px;"    class="p-1">Fecha</td>
                                     <td style="width:77px;"     class="p-1 text-left">Concepto</td>
                                     <td style="width:65px;"     class="p-1">USD</td>
-                                    <td style="width:66px;"     class="p-1 text-right">TRM <span class="text-color-primary">*</span></td>
+                                    <td style="width:66px;"     class="p-1 text-right">TRM<span class="text-color-primary">*</span></td>
                                     <td style="width:103px;"    class="p-1">COP</td>
                                     <td style="width:97px;"     class="p-1">Interes mora</td>
                                     <td style="width:76px;"     class="p-1">Intereses</td>
@@ -2147,7 +2147,7 @@
                             <td>A seguro</td>
                             <td>A interés</td>
                             <td>A capital</td>
-                            <td>A interés <br />acumulado</td>
+                            <td>A interés <br/>acumulado</td>
                             <td>Interés del mes</td>
                             <td>Pendiente <br />interés mes</td>
                             <td>Acum. pend.<br />interés mes</td>
@@ -2471,7 +2471,7 @@
                             <td>A seguro</td>
                             <td>A interés</td>
                             <td>A capital</td>
-                            <td>A interés <br />acumulado</td>
+                            <td>A interés <br/>acumulado</td>
                             <td>Interés del mes</td>
                             <td>Pendiente <br />interés mes</td>
                             <td>Acum. pend.<br />interés mes</td>

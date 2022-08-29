@@ -29,6 +29,13 @@ class ColfuturoGicData
         return $data;
     }
 
+    public static function getDisbursementCode($identification) {
+        $disbursements = self::getIndividualData(['extracto', $identification, 'desembolsosBeneficiario.raw']);
+        $disbursements = collect($disbursements);
+        $disbursement = $disbursements->first();
+        return $disbursement ? substr($disbursement['disbursementCode'], 0, -2) : NULL;
+    }
+
     public static function getIndividualData(array $path) {
        $ch = curl_init(); '';
 
