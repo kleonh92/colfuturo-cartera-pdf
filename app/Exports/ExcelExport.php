@@ -3,6 +3,8 @@
 namespace App\Exports;
 
 use App\Helpers\Api\Colfuturo;
+use App\Helpers\Api\ColfuturoGicData;
+use Illuminate\Support\Facades\Log;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -30,6 +32,9 @@ class ExcelExport implements WithMultipleSheets
 
     public function __construct()
     {
+//        $this->data = ColfuturoGicData::getAllData(1018473865);
+//        Log::info('/////// DATA  ////////');
+//        Log::info($this->data);
         $this->data = [
             "city" => "Amsterdam, Noord-Holland",
             "statusName" => "PAEC (Periodo Amortización Exterior con Condonación)",

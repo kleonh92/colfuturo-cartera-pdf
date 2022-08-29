@@ -1,45 +1,62 @@
-
-
-
-        <table class="header">
-            <tr>
-                <td class="header_logo" width="10%">
-{{--                    <img style="width:200px; height:75px;" src="" alt="Logo" />--}}
-
-                </td>
-                <td></td>
-                <td width="35%">
-                    <small class="font-roboto font-medium text-color-primary text-base">Paloma Geraldine David Velásquez de la Santísima
-                        Trinidad</small>
-                </td>
-            </tr>
-            <tr>
-                <td></td><td></td>
-                <td width="35%">
-                    <small class="font-roboto font-normal text-sm text-neutral-90">Maestría/Teacher Education and Learning Sciences of Social Arts
-                        and Europe</small>
-                </td>
-            </tr>
-            <tr>
-                <td></td><td></td>
-                <td width="35%">
-                    <small class="font-roboto font-normal text-sm text-neutral-90">Universiteit van Amsterdam - Uva Amsterdam, Noord-Holland /
-                        Holanda</small>
-                </td>
-            </tr>
-                <td width="35%">
-                    <small class="font-roboto font-normal text-sm text-neutral-80">CC: <span class="font-medium text-neutral-90">1.018.473.865 </span>
-                    </small>
-                </td>
-                <td>
-                    <small class="font-roboto font-normal text-sm text-neutral-80">Código: <span class="font-medium text-neutral-90">201.806.121
-                        </span></small>
-                </td>
-                <td>
-                    <small class="font-roboto font-normal text-sm text-neutral-80">Estado: <span class="font-medium text-neutral-90">PAEC(Periodo Amortización
-                                    Exterior con
-                                    Condonación)</span></small>
-                </td>
-            </tr>
-        </table>
+<table class="header">
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Paloma Geraldine David Velásquez de la Santísima Trinidad</td>
+        <td></td>
+        <td></td>
+        <td>CC 1018473865</td>
+        <td></td>
+        <td>Saldo COLFUTURO</td>
+        <td>000.000 USD</td>
+        <td></td>
+        <td>XX%</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Maestría Religious Studies</td>
+        <td></td>
+        <td></td>
+        <td>Código 2018-06.121</td>
+        <td></td>
+        <td>Saldo Condonación</td>
+        <td>000.000.000 COP</td>
+        <td></td>
+        <td>40%</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Universiteit van Amsterdam - Uva</td>
+        <td></td>
+        <td></td>
+        <td>Estatus PAO</td>
+    </tr>
+    <tr></tr><tr></tr>
+    <tr>
+        <td>Extracto programa Crédito Beca</td>
+    </tr>
+    <tr>
+        <td>Corte al: 27 feb 2022</td>
+        <td></td>
+        <td>=NOW()</td>
+    </tr>
+    <tr></tr><tr></tr>
+    <tr>
+        <td>Resumen general *</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+        <td>Estado Crédito</td>
+        <td>En mora</td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td></td><td></td>
+        <td>Crédito</td>
+        <td>Beca</td>
+        <td></td><td></td><td></td>
+        <td>Días vencidos</td>
+        <td>78</td>
+    </tr>
+</table>
 
