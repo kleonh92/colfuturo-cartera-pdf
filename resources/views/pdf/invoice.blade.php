@@ -503,6 +503,10 @@
                 margin-left: 20px;
             }
 
+            .ml-40 {
+                margin-left: 40px;
+            }
+
             .mr-20 {
                 margin-right: 20px;
             }
@@ -547,6 +551,10 @@
                 padding-right: 20px !important;
             }
 
+            .pr-40 {
+                padding-right: 40px !important;
+            }
+
             .pl-20 {
                 padding-left: 20px !important;
             }
@@ -576,7 +584,7 @@
             }
 
             .bg-neutral-50 {
-                background-color: #E5E5E5;
+                background-color: #E5E5E5 !important;
             }
 
             .bg-gray {
@@ -584,7 +592,7 @@
             }
 
             .bg-gray-2{
-                background-color: #F4F4F4;
+                background-color: #F4F4F4 !important;
             }
 
             .bg-white{
@@ -616,11 +624,11 @@
             }
 
             table.table-stripped tr:nth-child(odd) {
-                background-color: #E5E5E5;
+                background-color: #f4f4f4;
             }
 
             table.table-stripped-2 tr:nth-child(even) {
-                background-color: #E5E5E5;
+                background-color: #f4f4f4;
             }
 
             table.table-p-1 tbody tr td {
@@ -923,12 +931,12 @@
                 </tr>
                 <tr style="vertical-align: top;">
                     <!-- Página 2 - Arriba Izquierda - Tabla Resumen General -->
-                    <td width="50%" class="pr-20">
+                    <td width="50%" class="pr-40">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Resumen general <span class="text-color-primary">*</span></h4>
                         
                         <!-- Inicio de table Resumen General Página 2 -->
-                        <table class="table-stripped text-base border-separate border-spacing-1">
-                            <tr class="font-roboto-condensed font-medium">
+                        <table class="ml-20 table-stripped text-base border-separate border-spacing-1">
+                            <tr class="bg-neutral-50 font-roboto-condensed font-medium">
                                 <th></th>
                                 <th>Crédito</th>
                                 <th colspan="2" class="border-bottom-red p-1">Beca</th>
@@ -989,7 +997,7 @@
                                 <td></td>
                                 <td class="bg-white"></td>
                             </tr>
-                            <tr class="font-roboto-condensed font-normal bg-gray">
+                            <tr class="bg-neutral-50 font-roboto-condensed font-normal bg-gray">
                                 <td class="pl-1"><b>TOTAL</b></td>
                                 <td class="font-roboto-mono text-center"><b>33.025</b></td>
                                 <td class="font-roboto-mono text-center"><b>33.025</b></td>
@@ -1001,9 +1009,8 @@
 
                         <!-- Inicio Info Adicional Tabla Resumen General -->
                         
-                        <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">* </span> Este resumen no muestradecimales pero los cálculos los consideran todos</small>
-                        <br>
-                        <small class="font-roboto font-normal text-neutral-80"><span class="text-color-primary">**</span> Intereses calculados con la inflación</small>
+                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> Este resumen no muestradecimales pero los cálculos los consideran todos</div>
+                        <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">**</span> Intereses calculados con la inflación</div>
                         
                         <!-- Fin Info Adicional Tabla Resumen General -->
                     </td>
@@ -1011,11 +1018,11 @@
                     <td>
                         <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Estado Crédito</h4>
                         <!-- OJOOO: Estos textos son condicionales, aparecen dependiendo el estado del pago, esté en mora o al día. -->
-                        <div class="font-roboto font-medium text-base">Crédito <span class="text-secondary-main">al día</span></div>
-                        <div class="font-roboto font-medium text-base">Crédito <span class="text-color-primary">en mora</span></d>
+                        <div class="pl-20 font-roboto font-medium text-base">Crédito <span class="text-secondary-main">al día</span></div>
+                        <div class="pl-20 font-roboto font-medium text-base">Crédito <span class="text-color-primary">en mora</span></div>
 
                         <!-- Incio Tabla de días vencidos por pago en Mora: OJO!! Esta tabla solo debe aparecer si el crédito está en mora -->
-                        <table style="width:auto; padding-top:10px;" class="table-stripped font-roboto-condensed font-normal text-base">
+                        <table style="width:auto; padding-top:10px;" class="pl-20 table-stripped font-roboto-condensed font-normal text-base">
                                 <tr>
                                     <td style="width:121px;"  class="text-center">Días vencidos</td>
                                     <td style="width:104px;" class="font-roboto-mono text-right text-color-primary pr-1 pt-1 pb-1">78</td>
@@ -1032,8 +1039,8 @@
                         <!-- Fin de tabla de días vencidos por pago en mora! -->
 
                         <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg pb-1 border-bottom-gray">Próximo pago Crédito</h4>
-                        <table style="width:auto;" class="font-roboto-condensed font-normal text-base">
-                            <tr class="bg-neutral-50">
+                        <table style="width:auto;" class="pl-20 font-roboto-condensed font-normal text-base">
+                            <tr class="bg-gray-2">
                                 <td style="width:144px;" class="pl-1 pt-1 pb-1 ">Fecha próximo pago</td>
                                 <td style="width:121px;" class="pl-1 pt-1 pb-1 ">12 dic 2022</td>
                             </tr>
@@ -1046,10 +1053,10 @@
                 </tr>
                 
                 <tr style="vertical-align: top;">
-                    <td class="pr-20">
+                    <td class="pr-40">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Fechas del Crédito</h4>
 
-                        <table style="width:auto" class="font-roboto-condensed border-separate border-spacing-1 text-base">
+                        <table style="width:auto" class="ml-20 font-roboto-condensed border-separate border-spacing-1 text-base">
                             <tbody>
                                 <tr>
                                     <td class="text-neutral-80 font-normal">Inicio financiación</td>
@@ -1109,8 +1116,8 @@
                     <td width="50%">
                         <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Requisitos para mantener mi estatus</h4>
 
-                        <table style="width:auto" class="table-stripped font-roboto-condensed text-base">
-                            <tr>
+                        <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed text-base">
+                            <tr class="bg-neutral-50">
                                 <th style="width:272px;">Requisitos</th>
                                 <th style="width:122px;">Desde</th>
                                 <th style="width:122px;">Hasta</th>
@@ -1152,13 +1159,13 @@
                 <!-- Main Layout -->
                 <tr style="vertical-align:top">
                     <!-- Extracto Crédito P3: Resumen -->
-                    <td width="40%" height="50%" class="pr-20">
+                    <td width="40%" height="50%" class="pr-40">
                         <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Resumen</h4>
         
                         <!-- Tabla 1 , Pag 3, Resumen -->
                         <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
                             <tbody>
-                                <tr class="text-center">
+                                <tr class="text-center bg-neutral-50">
                                     <td style="width:75px;" class="font-bold p-1">Tasas</td>
                                     <td style="width:84px;" class="font-bold p-1">EA <span class="text-color-primary">*</span></td>
                                 </tr>
@@ -1197,7 +1204,7 @@
                         <!-- Inicio Tabla 3, Pag 3, Resumen -->
                         <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped text-base">
                             <tbody>
-                                <tr>
+                                <tr class="bg-neutral-50">
                                     <td style="width:152px;" class="text-center font-bold p-1">Cuotas</td>
                                     <td style="width:36px;"></td>
                                 </tr>
@@ -1238,7 +1245,7 @@
                         <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
                         <table style="width:auto" class="font-roboto-condensed text-base table-stripped">
                             <tbody>
-                                <tr class="font-bold text-center">
+                                <tr class="font-bold text-center bg-neutral-50">
                                     <td style="width:110px;"    class="p-1">Inicio</td>
                                     <td style="width:120px;"     class="p-1">Fin</td>
                                     <td style="width:270px;"    class="p-1">Estatus</td>
@@ -1292,7 +1299,7 @@
                                     <td class="p-1 font-normal font-roboto-mono text-right">1.292</td>
                                     <td class="p-1 font-normal font-roboto-mono text-right">64</td>
                                 </tr>
-                                <tr>
+                                <tr class="bg-neutral-50">
                                     <td class="p-1 font-normal"></td>
                                     <td class="p-1 font-normal"></td>
                                     <td class="p-1 font-normal"></td>
@@ -1310,11 +1317,11 @@
                 </tr>
                 <!-- Inicio - Pag 3 - Mora -->
                 <tr>
-                    <td>
+                    <td class="pr-40">
                         <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Mora</h4>
 
                         <!-- Inicio Tabla 1 - Pag 3 , Mora -->
-                        <table style="width:auto" class="font-roboto-condensed">
+                        <table style="width:auto" class="ml-20 font-roboto-condensed">
                             <tbody>
                                 <tr class="bg-neutral-50 text-center font-bold">
                                     <td style="width:148px;"    class="p-1">Inicio</td>
@@ -1355,7 +1362,7 @@
                                 <td>
                                     <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
-                                            <tr class="font-bold text-center">
+                                            <tr class="font-bold text-center bg-neutral-50">
                                                 <td style="width:41px;"     class="p-1">#</td>
                                                 <td style="width:138px;"    class="p-1">Fecha</td>
                                                 <td style="width:107px;"    class="p-1">Concepto</td>
@@ -1405,7 +1412,7 @@
                                 <td>
                                     <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
-                                            <tr class="font-bold text-center">
+                                            <tr class="font-bold text-center bg-neutral-50">
                                                 <td style="width:41px;"     class="p-1">#</td>
                                                 <td style="width:138px;"    class="p-1">Fecha</td>
                                                 <td style="width:107px;"    class="p-1">Concepto</td>
@@ -1452,9 +1459,9 @@
                                 </td>
                                 
                                 <td>
-                                <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
+                                    <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base">
                                         <tbody>
-                                            <tr class="font-bold text-center">
+                                            <tr class="font-bold text-center bg-neutral-50">
                                                 <td style="width:41px;"     class="p-1">#</td>
                                                 <td style="width:138px;"    class="p-1">Fecha</td>
                                                 <td style="width:107px;"    class="p-1">Concepto</td>
@@ -1498,7 +1505,7 @@
                                             </tr>
                                             <tr class="bg-neutral-50">
                                                 <td colspan="3" class="p-1 text-right font-bold">Total</td>
-                                                <td class="p-1 font-roboto-mono">1.746</td>
+                                                <td class="p-1 font-roboto-mono font-bold">1.746</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1626,9 +1633,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="ml-20 mt-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM= Tasa Representativa del Mercado.</div>
-                        <div class="ml-20 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en 0 absoluto se muestran con "-". Los valores "0" contienen decimales.</div>
-                        <div class="ml-20 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en verde corresponden a la moneda en la que se hizo el abono.</div>
+                        <div class="ml-20 mt-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>TRM= Tasa Representativa del Mercado.</div>
+                        <div class="ml-40 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en 0 absoluto se muestran con "-". Los valores "0" contienen decimales.</div>
+                        <div class="ml-40 mt-6 font-roboto font-normal text-neutral-80 text-sm">Los valores en verde corresponden a la moneda en la que se hizo el abono.</div>
                     </td>
                 </tr>
                 <!-- End Tabla Apoyo a terceras entidades - Pag 4 -->
@@ -1649,7 +1656,7 @@
 
                 <tr>
                     <!-- Inicio Tabla Pagos Realizados, Pag 6 -->
-                    <table style="width:auto" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                    <table style="width:auto" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                         <tbody>
                             <tr class="bg-neutral-50 text-center font-bold">
                                 <td style="width:527px;" colspan="6" class="border-bottom-red">Pagos</td>
@@ -1902,7 +1909,7 @@
                                 <td class="font-roboto-mono text-right">-</td>
                                 <td class="font-roboto-mono text-right">300</td>
                             </tr>
-                            <tr class="font-bold">
+                            <tr class="font-bold bg-neutral-50">
                                 <td></td>
                                 <td></td>
                                 <td class="text-right">TOTAL</td>
@@ -1917,7 +1924,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM= Tasa Representativa del Mercado.</div>
+                    <div class="ml-20 mt-6 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span> TRM= Tasa Representativa del Mercado.</div>
                     <!-- Fin Tabla Pagos Realizados, Pag 6 -->
                 </tr>
 
@@ -1932,7 +1939,7 @@
                 <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos refinanciado</h4>
 
                 <!-- Inicio Tabla Página 6 -->
-                <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                     <tbody>
                         <tr class="font-bold text-center">
                             <td class="bg-transparent"></td>
@@ -1969,7 +1976,7 @@
                             <td>40</td>
                             <td>28.351</td>
                             <td>28.351</td>
-                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
+                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="ml-20 point bg-blue-200"></span> Meses de cuota reducida</td>
                         </tr>
                         <tr class="bg-blue-200 font-roboto-mono text-right ">
                             <td>2</td>
@@ -2166,7 +2173,7 @@
                             <td>27.109</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="font-roboto-mono text-right font-medium">
+                        <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
                             <td></td>
                             <td>TOTAL</td>
                             <td>36.539</td>
@@ -2194,7 +2201,7 @@
                 <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos cuota anticipada</h4>
 
                 <!-- Inicio Tabla Página 7 -->
-                <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                     <tbody>
                         <tr class="font-bold text-center">
                             <td class="bg-transparent"></td>
@@ -2231,7 +2238,7 @@
                             <td>40</td>
                             <td>28.351</td>
                             <td>28.351</td>
-                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-green-surface"></span> Meses de cuota anticipada</td>
+                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="ml-20 point bg-green-surface"></span> Meses de cuota anticipada</td>
                         </tr>
                         <tr class="bg-green-surface font-roboto-mono text-right ">
                             <td>2</td>
@@ -2503,10 +2510,40 @@
                             <td>27.109</td>
                             <td class="bg-transparent"></td>
                         </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>21</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
+                        <tr class="font-roboto-mono text-right">
+                            <td>22</td>
+                            <td>01 mar 2022</td>
+                            <td class="text-color-primary">180</td>
+                            <td>6</td>
+                            <td>163</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>203</td>
+                            <td>-</td>
+                            <td>240</td>
+                            <td>27.109</td>
+                            <td>27.109</td>
+                            <td class="bg-transparent"></td>
+                        </tr>
                     </tbody>
                 </table>
                 <!-- Fin Tabla Página 7 -->
-                <p class="font-roboto text-xs font-light text-right">Tabla continúa en la siguiente página</p>
+                <p class="font-roboto text-sm font-light text-right">Tabla continúa en la siguiente página</p>
             </table>
         </div>
         <!-- Fin Página 7 -->
@@ -2516,11 +2553,11 @@
             <table>
                 <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos cuota anticipada</h4>
 
-                <p class="font-roboto text-xs font-light">Continuación de la página anterior</p>
+                <p class="font-roboto text-sm font-light">Continuación de la página anterior</p>
                 <!-- Inicio Tabla Página 7 -->
-                <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                     <tbody>
-                        <tr class="font-bold text-center">
+                        <tr class="font-bold text-center bg-neutral-50">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
                             <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
@@ -2542,7 +2579,7 @@
                             <td>Con interés</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right ">
+                        <tr class="font-roboto-mono text-right ">
                             <td>1</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2555,9 +2592,8 @@
                             <td>40</td>
                             <td>28.351</td>
                             <td>28.351</td>
-                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-green-surface"></span> Meses de cuota anticipada</td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right ">
+                        <tr class="font-roboto-mono text-right ">
                             <td>2</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2572,7 +2608,7 @@
                             <td>28.341</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
+                        <tr class="font-roboto-mono text-right">
                             <td>3</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2587,7 +2623,7 @@
                             <td>28.331</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
+                        <tr class="font-roboto-mono text-right" >
                             <td>4</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2602,7 +2638,7 @@
                             <td>28.321</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
+                        <tr class="font-roboto-mono text-right" >
                             <td>5</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2617,7 +2653,7 @@
                             <td>28.311</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
+                        <tr class="font-roboto-mono text-right" >
                             <td>6</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2632,7 +2668,7 @@
                             <td>28.301</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
+                        <tr class="font-roboto-mono text-right" >
                             <td>7</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2647,7 +2683,7 @@
                             <td>28.291</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
+                        <tr class="font-roboto-mono text-right">
                             <td>8</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2662,7 +2698,7 @@
                             <td>27.900</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
+                        <tr class="font-roboto-mono text-right">
                             <td>9</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2677,7 +2713,7 @@
                             <td>27.506</td>
                             <td class="bg-transparent"></td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
+                        <tr class="font-roboto-mono text-right">
                             <td>10</td>
                             <td>01 mar 2022</td>
                             <td class="text-color-primary">180</td>
@@ -2839,7 +2875,7 @@
                             <td>193</td>
                             <td>408</td>
                         </tr>
-                        <tr class="font-roboto-mono text-right font-bold">
+                        <tr class="font-roboto-mono text-right font-bold bg-neutral-50">
                             <td></td>
                             <td></td>
                             <td>TOTAL</td>
@@ -2852,7 +2888,7 @@
                 </table>
                 <div class="mt-10 ml-20 font-roboto font-light">En síntesis para ponerse al día debe cancelar <span class="font-medium">USD 1.210</span></div>
                 
-                <h4 class="mt-70font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Fin extracto crédito</h4>
+                <h4 class="mt-70font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Fin extracto crédito</h4>
                 <!-- Fin Tabla Página 8 -->
             </table>
         </div>
@@ -2869,13 +2905,13 @@
                 <!-- Main Layout  -->
                 <table>
                     <tr>
-                        <td style="vertical-align:top;" class="pr-20">
+                        <td style="vertical-align:top;" class="pr-40">
                             
                             <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Resumen</h4>
                             <!-- Inicio Tabla 1 - Resumen, Pag 9 -->
                             <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
                                 <tbody>
-                                    <tr class="text-center">
+                                    <tr class="text-center bg-neutral-50">
                                         <td style="width:100px;" class="font-bold p-1">Interés</td>
                                         <td style="width:84px;" class="font-bold p-1">EA <span class="text-color-primary">*</span></td>
                                     </tr>
@@ -2911,7 +2947,7 @@
                             <!-- Inicio Tabla 3, Resumen, pag 9 -->
                             <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped text-base">
                                 <tbody>
-                                    <tr>
+                                    <tr class="bg-neutral-50">
                                         <td style="width:152px;" class="text-center font-bold p-1">Cuotas</td>
                                         <td style="width:36px;"></td>
                                     </tr>
@@ -2936,7 +2972,7 @@
                                 <tbody>
                                     <tr>
                                         <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
-                                        <td style="width:151px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">COP 53.717.910</td>
+                                        <td style="width:151px;" class="p-1 font-roboto-mono text-color-primary">COP 53.717.910</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -2947,9 +2983,9 @@
                         <td style="vertical-align:top;">
                             <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Intereses</h4>
                             <!-- Inicio Tabla 1, Intereses, Pag 9 -->
-                            <table style="width:auto;" class="table-stripped font-roboto-condensed text-base table-p-1">
+                            <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base table-p-1">
                                 <tbody>
-                                    <tr class="font-bold text-center">
+                                    <tr class="font-bold text-center bg-neutral-50">
                                         <td style="width:140px;">Inicio</td>
                                         <td style="width:132px;">Fin</td>
                                         <td style="width:367px;">Estatus</td>
@@ -2977,7 +3013,7 @@
                                         <td class="font-roboto-mono text-right">48</td>
                                         <td class="font-roboto-mono text-right">31.105</td>
                                     </tr>
-                                    <tr class="font-roboto mono text-right font-medium">
+                                    <tr class="font-roboto mono text-right font-medium bg-neutral-50">
                                         <td colspan="3">TOTAL</td>
                                         <td></td>
                                         <td>3.596.225</td>
@@ -2985,13 +3021,13 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="font-roboto font-normal text-neutral-80 text-sm">Los intereses del apoyo Minciencias se calculan con la inflación reportada por el DANE del mes anterior.</div>
-                            <div class="font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>Estos intereses pueden ser totalmente condonados si se cumplen los requisitos de retorno y permanencia establecidos.</div>
+                            <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm">Los intereses del apoyo Minciencias se calculan con la inflación reportada por el DANE del mes anterior.</div>
+                            <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>Estos intereses pueden ser totalmente condonados si se cumplen los requisitos de retorno y permanencia establecidos.</div>
 
                             <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Mora</h4>
 
                             <!-- Inicio Tabla 2 - Pag 9 , Mora -->
-                            <table style="width:auto" class="font-roboto-condensed">
+                            <table style="width:auto" class="pl-20 font-roboto-condensed">
                                 <tbody>
                                     <tr class="bg-neutral-50 text-center font-bold">
                                         <td style="width:148px;"    class="p-1">Inicio</td>
@@ -3018,7 +3054,7 @@
                         <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
                         <table style="width:auto;" class="ml-20 font-roboto-condensed table-stripped table-p-1 text-base">
                             <tbody>
-                                <tr class="text-center font-bold">
+                                <tr class="text-center font-bold bg-neutral-50">
                                     <td style="width:33px;">#</td>
                                     <td style="width:122px;">Fecha</td>
                                     <td style="width:125px;">Concepto de giro</td>
@@ -3050,10 +3086,10 @@
                                     <td class="font-roboto-mono text-right">1.746</td>
                                     <td class="font-roboto-mono text-right">9.022.498</td>
                                 </tr>
-                                <tr class="font-roboto-mono font-medium text-right">
+                                <tr class="font-roboto-mono font-medium text-right bg-neutral-50">
                                     <td></td>
                                     <td></td>
-                                    <td>Total</td>
+                                    <td class="font-roboto-condensed font-bold">Total</td>
                                     <td>9.822</td>
                                     <td>9.822</td>
                                     <td>20.000.000</td>
@@ -3080,10 +3116,11 @@
                 </tr>
                 <tr>
                     <td>
-                        <p class="ml-20 font-roboto-condensed text-base font-normal">Al 18 jul 2022 interés</p>
-                        <p class="ml-20 font-roboto-condensed text-base font-normal text-neutral-80">Periodo para cumplir 36 meses de permanencia: <span class="text-neutral-90">oct 2019 - sep 2027</span></p>
+                        <span class="ml-20 font-roboto-condensed text-base font-normal">Al 18 jul 2022 interés</span>
+                        <br>
+                        <span class="ml-20 font-roboto-condensed text-base font-normal text-neutral-80">Periodo para cumplir 36 meses de permanencia: <span class="text-neutral-90">oct 2019 - sep 2027</span></span>
                         <!-- Inicio Tabla 1 - Su historia de residencia, pag 10 -->
-                        <table style="width:auto;" class="ml-20 font-roboto-condensed table-stripped table-p-1 text-base">
+                        <table style="width:auto;" class="ml-20 mt-20 font-roboto-condensed table-stripped table-p-1 text-base">
                             <tbody>
                                 <tr class="font-bold">
                                     <td style="width:36px;"></td>
@@ -3338,7 +3375,7 @@
                         <!-- Tabla 1 - Cuotas Pagadas , Pag 13  -->
                         <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                             <tbody>
-                                <tr class="font-bold text-center">
+                                <tr class="font-bold text-center bg-neutral-50">
                                     <td style="width:82px;"></td>
                                     <td style="width:122px;">Inicio</td>
                                     <td style="width:122px;">Fin</td>
@@ -3388,7 +3425,7 @@
                                     <td colspan="3">Pagos realizados</td>
                                     <td colspan="5">Abonos en COP</td>
                                 </tr>
-                                <tr class="font-bold text-center">
+                                <tr class="font-bold text-center bg-neutral-50">
                                     <td>#</td>
                                     <td>Fecha</td>
                                     <td>Observación</td>
@@ -3566,7 +3603,7 @@
                         <!-- Tabla Pagos Refinanciados -->
                         <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
                             <tbody>
-                                <tr class="font-bold text-center">
+                                <tr class="font-bold text-center bg-neutral-50">
                                     <td class="bg-transparent"></td>
                                     <td class="bg-transparent"></td>
                                     <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
@@ -3601,7 +3638,7 @@
                                     <td>40</td>
                                     <td>28.351</td>
                                     <td>28.351</td>
-                                    <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
+                                    <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200 ml-20"></span> Meses de cuota reducida</td>
                                 </tr>
                                 <tr class="font-roboto-mono text-right ">
                                     <td>2</td>
@@ -3911,7 +3948,7 @@
                         <!-- Tabla Pagos Refinanciados -->
                         <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
                             <tbody>
-                                <tr class="font-bold text-center">
+                                <tr class="font-bold text-center bg-neutral-50">
                                     <td class="bg-transparent"></td>
                                     <td class="bg-transparent"></td>
                                     <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
@@ -3946,7 +3983,6 @@
                                     <td>40</td>
                                     <td>28.351</td>
                                     <td>28.351</td>
-                                    <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200"></span> Meses de cuota reducida</td>
                                 </tr>
                                 <tr class="font-roboto-mono text-right ">
                                     <td>2</td>
@@ -4158,7 +4194,7 @@
                                     <td>27.109</td>
                                     <td class="bg-transparent"></td>
                                 </tr>
-                                <tr class="font-roboto-mono text-right font-medium">
+                                <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
                                     <td></td>
                                     <td>TOTAL</td>
                                     <td>36.539</td>
