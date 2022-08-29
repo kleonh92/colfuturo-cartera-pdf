@@ -47,6 +47,9 @@ class ExcelExport implements WithMultipleSheets
                 throw new \HttpException("Not found data for this identification", Response::HTTP_NOT_FOUND);
             }
         }
+
+        $disbursementCode = 201806121;
+
         $cacheKey = 'gic_data_all:' . $identification;
         Cache::flush();
         if (!($data = Cache::get($cacheKey))) {
@@ -55,6 +58,8 @@ class ExcelExport implements WithMultipleSheets
         }
         try {
             $this->data = $data;
+            Log::info('/////// DATA  ////////');
+            Log::info(print_r($this->data, true));
         }
         catch (\Exception $exception) {
             Log::error($exception->getMessage());

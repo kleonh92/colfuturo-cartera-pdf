@@ -3,6 +3,7 @@
 namespace App\Exports;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Log;
 use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -18,6 +19,7 @@ use Maatwebsite\Excel\Events\AfterSheet;
 use Maatwebsite\Excel\Events\BeforeSheet;
 use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Time;
 use PhpOffice\PhpSpreadsheet\Cell\DataType;
+use PhpOffice\PhpSpreadsheet\Style\Conditional;
 use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 use PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
 use Illuminate\Contracts\View\View;
@@ -33,64 +35,8 @@ class GeneralResumeSheet implements FromView, WithEvents, WithColumnWidths, With
 
     public function __construct($data)
     {
-        $this->data = [
-            'data' => $data
-        ];
+        $this->data = $data;
     }
-
-//    public function headings(): array
-//    {
-//        return [
-//            ['', '', $this->data['beneficiario']['name'].' '.$this->data['beneficiario']['lastname']],
-//            ['', '', $this->data['beneficiario']['program']],
-//            ['', '', $this->data['beneficiario']['university']],
-//        ];
-//    }
-
-
-//    public function map($row): array
-//    {
-////        dd($row);
-////        dd(selff::ge)
-//        $data = $this->data['data'];
-//        // This example will return 3 rows.
-//        // First row will have 2 column, the next 2 will have 1 column
-//        return [
-//            [
-//                '',
-//                '',
-//                $data['beneficiario']['name'].' '.$data['beneficiario']['lastname']
-//            ],
-//            [
-//                '', '', $data['beneficiario']['program']
-//            ],
-//            [
-//                '', '', $data['beneficiario']['university']
-//            ]
-//        ];
-//    }
-//
-//    public function drawings()
-//    {
-//        $drawing = new Drawing();
-//        $drawing->setName('Logo');
-//        $drawing->setPath(resource_path() . '/img/logo.png');
-//        $drawing->setHeight(75);
-//        $drawing->setWidth(190);
-//        $drawing->setCoordinates('A1');
-//
-//        return $drawing;
-//    }
-
-    /**
-     * @return \Illuminate\Support\Collection
-     */
-//    public function collection()
-//    {
-////        return collect($this->data);
-////        dd($this->data);
-//        return $this->data;
-//    }
 
     public function array(): array
     {
@@ -157,6 +103,15 @@ class GeneralResumeSheet implements FromView, WithEvents, WithColumnWidths, With
                 $event->getSheet()->getStyle('C33')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
                 $event->getSheet()->getStyle('C34')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
                 $event->getSheet()->getStyle('C35')->getNumberFormat()->setFormatCode('DD\ MMM\ YYYY');
+
+                $conditional = new Conditional();
+                $conditional->setConditionType(Conditional::CONDITION_CONTAINSTEXT);
+                $conditional->setText('En mora');
+                $conditional->getStyle()->getFont()->getColor()->setARGB(Color::COLOR_RED);
+                $conditionalStyles[] = $conditional;
+
+                $event->getSheet()->getStyle('I10')->setConditionalStyles($conditionalStyles);
+
             }
         ];
     }
@@ -182,11 +137,19 @@ class GeneralResumeSheet implements FromView, WithEvents, WithColumnWidths, With
         return [
             'C1:K3'  => ['font' => ['size' => 9]],
             'C1'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_RED]]],
+            'I1'  => [
+                'numberFormat' => ['formatCode' => '\ #,##0\ [$USD] '],
+                'alignment' => ['horizontal' => 'left']
+            ],
+            'I2'  => [
+                'numberFormat' => ['formatCode' => '\ #,##0\ [$COP] '],
+                'alignment' => ['horizontal' => 'left']
+            ],
             'A6'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_RED]]],
             'C7'  => ['numberFormat' => ['formatCode' => NumberFormat::FORMAT_DATE_TIME1]],
             'A10'  => ['font' => ['bold' => true, 'color' => ['argb' => '434343']]],
             'H10'  => ['font' => ['bold' => true]],
-            'I10'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_RED]]],
+            'I10'  => ['font' => ['bold' => true, 'color' => ['argb' => Color::COLOR_GREEN]]],
             'I10:I20'  => ['alignment' => ['horizontal' => 'right']],
             12 => ['alignment' => ['vertical' => 'center']],
             'B12:E12'  => [

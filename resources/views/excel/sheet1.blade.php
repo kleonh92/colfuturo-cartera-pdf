@@ -2,43 +2,43 @@
     <tr>
         <td></td>
         <td></td>
-        <td>Paloma Geraldine David Velásquez de la Santísima Trinidad</td>
+        <td>{{ $data['beneficiario']['name'] }} {{ $data['beneficiario']['lastname'] }}</td>
         <td></td>
         <td></td>
-        <td>CC 1018473865</td>
+        <td>CC {{ $data['beneficiario']['identification'] }}</td>
         <td></td>
         <td>Saldo COLFUTURO</td>
-        <td>000.000 USD</td>
+        <td>=SUM(C14:C19)</td>
         <td></td>
-        <td>XX%</td>
+        <td>{{ 100 - $data['beneficiario']['forgivenessPercentage'] }}%</td>
     </tr>
     <tr>
         <td></td>
         <td></td>
-        <td>Maestría Religious Studies</td>
+        <td>{{ $data['beneficiario']['program'] }}</td>
         <td></td>
         <td></td>
-        <td>Código 2018-06.121</td>
+        <td>Código {{ $data['beneficiario']['disbursementCode'] }}</td>
         <td></td>
         <td>Saldo Condonación</td>
-        <td>000.000.000 COP</td>
+        <td>=SUM(E14:E19)</td>
         <td></td>
-        <td>40%</td>
+        <td>{{ $data['beneficiario']['forgivenessPercentage'] }}%</td>
     </tr>
     <tr>
         <td></td>
         <td></td>
-        <td>Universiteit van Amsterdam - Uva</td>
+        <td>{{ $data['beneficiario']['university'] }}</td>
         <td></td>
         <td></td>
-        <td>Estatus PAO</td>
+        <td>Estatus {{ explode(' ', $data['beneficiario']['statusName'])[0] }}</td>
     </tr>
     <tr></tr><tr></tr>
     <tr>
         <td>Extracto programa Crédito Beca</td>
     </tr>
     <tr>
-        <td>Corte al: 27 feb 2022</td>
+        <td>Corte al: 27 feb 2022</td> {{--DEFINIR --}}
         <td></td>
         <td>=NOW()</td>
     </tr>
@@ -47,7 +47,7 @@
         <td>Resumen general *</td>
         <td></td><td></td><td></td><td></td><td></td><td></td>
         <td>Estado Crédito</td>
-        <td>En mora</td>
+        <td>{{ $data['creditos']['01']['inicio'][0]['creditArrear'] == 1 ? 'En mora' : 'Al día' }}</td>
     </tr>
     <tr></tr>
     <tr>
