@@ -2299,8 +2299,8 @@
                             <tbody>
                                 <tr class="font-bold text-center bg-neutral-50">
                                     <td style="width:82px;"></td>
-                                    <td style="width:122px;">Inicio</td>
-                                    <td style="width:122px;">Fin</td>
+                                    <td style="width:107px;">Inicio</td>
+                                    <td style="width:107px;">Fin</td>
                                     <td style="width:71px;">Pagadas</td>
                                     <td style="width:88px;">Pendientes</td>
                                     <td style="width:63px;">Totales</td>
@@ -2343,8 +2343,7 @@
                                 <tr class="font-bold bg-neutral-50 text-center">
                                     <td class="bg-transparent"></td>
                                     <td class="bg-transparent"></td>
-                                    <td class="bg-transparent"></td>
-                                    <td colspan="3">Pagos realizados</td>
+                                    <td colspan="4">Pagos realizados</td>
                                     <td colspan="5">Abonos en COP</td>
                                 </tr>
                                 <tr class="font-bold text-center bg-neutral-50">
