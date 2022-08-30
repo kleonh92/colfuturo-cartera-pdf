@@ -3102,7 +3102,7 @@
                     <td>
                         <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Plan de pagos refinanciado</h4>
                         <!-- Tabla Pagos Refinanciados -->
-                        <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                        <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                             <tbody>
                                 <tr class="font-bold text-center bg-neutral-50">
                                     <td class="bg-transparent"></td>
@@ -3119,7 +3119,7 @@
                                     <td>A interés</td>
                                     <td>A capital</td>
                                     <td>A interés <br />acumulado</td>
-                                    <td>Interés del mes</td>
+                                    <td>Interés <br />del mes</td>
                                     <td>Pendiente <br />interés mes</td>
                                     <td>Acum. pend.<br />interés mes</td>
                                     <td>Sin interés</td>
@@ -3447,7 +3447,8 @@
                     <td>
                         <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Plan de pagos refinanciado</h4>
                         <!-- Tabla Pagos Refinanciados -->
-                        <table style="width:auto;" class="table-stripped table-p-1 font-roboto-condensed text-base">
+                        <p class="ml-20 font-roboto font-light text-xs text-left">Continuación de la página anterior</p>
+                        <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                             <tbody>
                                 <tr class="font-bold text-center bg-neutral-50">
                                     <td class="bg-transparent"></td>
@@ -3464,7 +3465,7 @@
                                     <td>A interés</td>
                                     <td>A capital</td>
                                     <td>A interés <br />acumulado</td>
-                                    <td>Interés del mes</td>
+                                    <td>Interés <br />del mes</td>
                                     <td>Pendiente <br />interés mes</td>
                                     <td>Acum. pend.<br />interés mes</td>
                                     <td>Sin interés</td>
@@ -3698,13 +3699,13 @@
                                 <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
                                     <td></td>
                                     <td>TOTAL</td>
-                                    <td>36.539</td>
-                                    <td>257</td>
-                                    <td>7.576</td>
-                                    <td>28.279</td>
-                                    <td>-</td>
-                                    <td>7.816</td>
-                                    <td></td>
+                                    <td>26.665.065</td>
+                                    <td>456</td>
+                                    <td>3.000.000</td>
+                                    <td>22.000.000</td>
+                                    <td>200.000</td>
+                                    <td>4.000.000</td>
+                                    <td>211.000</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
