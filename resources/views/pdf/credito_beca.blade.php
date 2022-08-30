@@ -2112,7 +2112,7 @@
                         <table style="width:auto;" class="mt-20 ml-20 text-base">
                             <tbody>
                                 <tr>
-                                    <td style="width:250px;" class="text-neutral-80 font-normal">Total por condonar</td>
+                                    <td style="width:180px;" class="text-neutral-80 font-normal">Total por condonar</td>
                                     <td style="width:120px;" class="text-right font-roboto-mono font-medium">36 meses</td>
                                 </tr>
                                 <tr>
@@ -2130,37 +2130,37 @@
                         <!-- Inicio Tabla 3, Pag 11 -->
                         <table style="width:auto;"class="mt-20 ml-20 font-roboto-condensed table-p-1 text-base">
                             <tbody>
-                                <tr class="font-bold bg-neutral-50">
+                                <tr class="font-bold bg-neutral-50 text-center">
                                     <td style="width:198px;"></td>
                                     <td style="width:95px;"></td>
                                     <td style="width:55px;"></td>
                                     <td style="width:26px;"></td>
-                                    <td style="width:131px;">Condonación<br />estimada</td>
+                                    <td style="width:120px;">Condonación<br />estimada</td>
                                     <td style="width:100px;">Saldo por <br />condonar</td>
                                 </tr>
                                 <tr>
                                     <td>Total desembolsos</td>
-                                    <td class="font-roboto-mono">72.000.000</td>
-                                    <td class="font-roboto-mono">50 %</td>
+                                    <td class="font-roboto-mono text-right">72.000.000</td>
+                                    <td class="font-roboto-mono text-right">50 %</td>
                                     <td class="font-roboto-mono text-color-primary">*</td>
-                                    <td class="font-roboto-mono">36.000.000</td>
-                                    <td class="font-roboto-mono">36.000.000</td>
+                                    <td class="font-roboto-mono text-right">36.000.000</td>
+                                    <td class="font-roboto-mono text-right">36.000.000</td>
                                 </tr>
                                 <tr class="bg-gray-2">
                                     <td>Total intereses al 21 jul 2022</td>
-                                    <td class="font-roboto-mono">20.000.000</td>
-                                    <td class="font-roboto-mono">50 %</td>
+                                    <td class="font-roboto-mono text-right">20.000.000</td>
+                                    <td class="font-roboto-mono text-right">50 %</td>
                                     <td class="font-roboto-mono text-color-primary">*</td>
-                                    <td class="font-roboto-mono">10.000.000</td>
-                                    <td class="font-roboto-mono">10.000.000</td>
+                                    <td class="font-roboto-mono text-right">10.000.000</td>
+                                    <td class="font-roboto-mono text-right">10.000.000</td>
                                 </tr>
                                 <tr class="font-bold bg-neutral-50">
                                     <td>Total monto a condonar</td>
-                                    <td class="font-roboto-mono">92.000.000</td>
+                                    <td class="font-roboto-mono text-right">92.000.000</td>
                                     <td class="font-roboto-mono"></td>
                                     <td class="font-roboto-mono"></td>
-                                    <td class="font-roboto-mono">46.000.000</td>
-                                    <td class="font-roboto-mono">46.000.000</td>
+                                    <td class="font-roboto-mono text-right">46.000.000</td>
+                                    <td class="font-roboto-mono text-right">46.000.000</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2206,11 +2206,11 @@
                         <table style="width:auto;" class="mt-20 ml-20 text-base">
                             <tbody>
                                 <tr>
-                                    <td style="width:250px;" class="text-neutral-80 font-normal">Total por condonar</td>
+                                    <td style="width:180px;" class="text-neutral-80 font-normal">Total por condonar</td>
                                     <td style="width:120px;" class="text-right font-roboto-mono font-medium">36 meses</td>
                                 </tr>
                                 <tr>
-                                    <td style="width:250px;" class="text-neutral-80 font-normal">CEA</td>
+                                    <td style="width:200px;" class="text-neutral-80 font-normal">CEA</td>
                                     <td style="width:120px;" class="text-right font-roboto-mono font-medium border-bottom-gray"><span>+</span> 12 meses</td>
                                     <td style="width:120px;" class="text-color-primary">**</td>
                                 </tr>
