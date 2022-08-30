@@ -38,15 +38,6 @@ class ColfuturoGicData
             $disbursements = collect($disbursements);
             $disbursement = $disbursements->first();
             $data = $disbursement ? substr($disbursement['disbursementCode'], 0, -2) : NULL;
-            /**
-             * @TODO remove this when data is available in API
-             */
-            $codes = [
-                1001083190 => 201901335,
-                1018473865 => 201806121,
-            ];
-            $data = $codes[$identification];
-            // End remove
             Cache::forever($cacheKey, $data);
         }
         return $data;
