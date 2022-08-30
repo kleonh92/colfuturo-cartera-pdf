@@ -887,7 +887,8 @@
                             <li>
                                 <h4 class="font-roboto font-medium text-2xl text-yellow-400 m-0">Extracto Beca</h4>
                                 <ul style="list-style:none; margin-top:5px;">
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-beca-resumen" class="text-neutral-90">Resumen</a><span class="leaders"
                                                 aria-hidden="true">...........................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
@@ -1221,7 +1222,7 @@
                             <tbody>
                                 <tr>
                                     <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
-                                    <td style="width:113px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">USD {{ \App\Helpers\GicDataFormatter::formatNumber($creditos['01']['inicio'][0]['balanceAtCutoff']) }}</td>
+                                    <td style="width:113px;" class="bg-gray-2 p-1 font-roboto-mono text-color-primary">{{ \App\Helpers\GicDataFormatter::coinTypeString($creditos['01']['inicio'][0]['coinTypeId']) . ' ' .  \App\Helpers\GicDataFormatter::formatNumber($creditos['01']['inicio'][0]['balanceAtCutoff']) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1233,7 +1234,9 @@
                     <!-- Inicio - Pag 3 - Ingresos y seguros -->
                     <td width="60%" height="50%">
                         <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Intereses y seguro</h4>
-
+                        @php
+                            $interesesYSeguros = collect($creditos['01']['interesesYSeguros']);
+                        @endphp
                         <!-- Inicio Tabla 1 , Pag 3 - Ingresos y seguros -->
                         <table style="width:auto" class="font-roboto-condensed text-base table-stripped table-p-1">
                             <tbody>
@@ -1246,7 +1249,7 @@
                                     <td style="width:95px;"    class="text-right">Intereses USD</td>
                                     <td style="width:80px;"     class="text-right">Seguro USD</td>
                                 </tr>
-                                @foreach($creditos['01']['interesesYSeguros'] as $item)
+                                @foreach($interesesYSeguros as $item)
                                     <tr>
                                         <td class="font-normal font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
                                         <td class="font-normal font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
@@ -1263,8 +1266,8 @@
                                     <td class="font-normal"></td>
                                     <td class="font-normal"></td>
                                     <td class="font-normal font-bold text-right">TOTAL</td>
-                                    <td class="font-normal font-bold font-roboto-mono text-right">4.865</td>
-                                    <td class="font-normal font-bold font-roboto-mono text-right">189</td>
+                                    <td class="font-normal font-bold font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($interesesYSeguros->sum('amountUsd')) }}</td>
+                                    <td class="font-normal font-bold font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($interesesYSeguros->sum('amountSecure')) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1812,7 +1815,7 @@
             <table>
                 <tr>
                     <td>
-                        <h4 id="extracto-beca" class="p-0 m-0 font-roboto font-medium text-2xl text-yellow-400">Extracto Beca </h4>
+                        <h4 id="extracto-beca" class="p-0 m-0 font-roboto font-medium text-2xl text-yellow-400">Extracto Beca</h4>
                     </td>
                 </tr>
                 <!-- Main Layout  -->
@@ -1820,7 +1823,7 @@
                     <tr>
                         <td style="vertical-align:top;" class="pr-40">
 
-                            <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Resumen</h4>
+                            <h4 id="extracto-beca-resumen" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Resumen</h4>
                             <!-- Inicio Tabla 1 - Resumen, Pag 9 -->
                             <table style="width:auto" class="ml-20 table-stripped font-roboto-condensed">
                                 <tbody>
@@ -1834,7 +1837,7 @@
                                     </tr>
                                     <tr>
                                         <td class="p-1">Mora</td>
-                                        <td class="p-1 font-roboto-mono text-center">25 %</td>
+                                        <td class="p-1 font-roboto-mono text-center">{{ \App\Helpers\GicDataFormatter::formatPercentage($creditos['02']['inicio'][0]['arrears']) }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1847,11 +1850,11 @@
                                 <tbody>
                                     <tr>
                                         <td style="width:209px;" class="p-1 font-bold bg-neutral-50">Inicio pago parte condonable</td>
-                                        <td style="width:122px;" class="p-1 font-roboto-mono bg-gray-2">10 sep 2018</td>
+                                        <td style="width:122px;" class="p-1 font-roboto-mono bg-gray-2">{{ \App\Helpers\GicDataFormatter::formatDate($creditos['02']['inicio'][0]['startDate']) }}</td>
                                     </tr>
                                     <tr>
                                         <td class="p-1 font-bold bg-neutral-50">Estimado fin pago condonable</td>
-                                        <td class="p-1 font-roboto-mono bg-gray-2">31 jul 2027</td>
+                                        <td class="p-1 font-roboto-mono bg-gray-2">{{ \App\Helpers\GicDataFormatter::formatDate($creditos['02']['inicio'][0]['endDate']) }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1866,15 +1869,15 @@
                                     </tr>
                                     <tr>
                                         <td class="p-1">Pagadas</td>
-                                        <td class="p-1 font-roboto-mono text-right">6</td>
+                                        <td class="p-1 font-roboto-mono text-right">{{ $creditos['02']['inicio'][0]['feesPaid'] }}</td>
                                     </tr>
                                     <tr class="bg-gray-2">
                                         <td class="p-1">Estimadas pendientes</td>
-                                        <td class="p-1 font-roboto-mono text-right">30</td>
+                                        <td class="p-1 font-roboto-mono text-right">{{ $creditos['02']['inicio'][0]['outstandingFees'] }}</td>
                                     </tr>
                                     <tr class="bg-neutral-50">
                                         <td class="p-1 font-bold text-right">TOTAL</td>
-                                        <td class="p-1 font-roboto-mono font-medium text-right">36</td>
+                                        <td class="p-1 font-roboto-mono font-medium text-right">{{ $creditos['02']['inicio'][0]['feesPaid'] + $creditos['02']['inicio'][0]['outstandingFees'] }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1885,7 +1888,7 @@
                                 <tbody>
                                     <tr>
                                         <td style="width:105px;" class="bg-neutral-50 p-1 font-bold">Saldo al corte</td>
-                                        <td style="width:151px;" class="p-1 font-roboto-mono text-color-primary">COP 53.717.910</td>
+                                        <td style="width:151px;" class="p-1 font-roboto-mono text-color-primary">{{ \App\Helpers\GicDataFormatter::coinTypeString($creditos['02']['inicio'][0]['coinTypeId']) . ' ' . \App\Helpers\GicDataFormatter::formatNumber($creditos['02']['inicio'][0]['balanceAtCutoff']) }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1895,6 +1898,9 @@
 
                         <td style="vertical-align:top;">
                             <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Intereses</h4>
+                            @php
+                                $interesesYSeguros = collect($creditos['02']['interesesYSeguros']);
+                            @endphp
                             <!-- Inicio Tabla 1, Intereses, Pag 9 -->
                             <table style="width:auto;" class="ml-20 table-stripped font-roboto-condensed text-base table-p-1">
                                 <tbody>
@@ -1905,31 +1911,20 @@
                                         <td style="width:58px;">Meses</td>
                                         <td style="width:103px;">COP</td>
                                     </tr>
-                                    <tr>
-                                        <td class="font-roboto-mono">01 sept 2018</td>
-                                        <td class="font-roboto-mono">28 feb 2022</td>
-                                        <td >Periodo Amortización Especial Sin Condonación (PAES)</td>
-                                        <td class="font-roboto-mono text-right">48</td>
-                                        <td class="font-roboto-mono text-right">31.105</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-roboto-mono">01 sept 2018</td>
-                                        <td class="font-roboto-mono">01 sept 2022</td>
-                                        <td >Periodo Amortización Especial Provisional (PAEP)</td>
-                                        <td class="font-roboto-mono text-right">48</td>
-                                        <td class="font-roboto-mono text-right">31.105</td>
-                                    </tr>
-                                    <tr >
-                                        <td class="font-roboto-mono">01 sept 2018</td>
-                                        <td class="font-roboto-mono">28 feb 2022</td>
-                                        <td >Periodo Amortización Especial Sin Condonación (PAES)</td>
-                                        <td class="font-roboto-mono text-right">48</td>
-                                        <td class="font-roboto-mono text-right">31.105</td>
-                                    </tr>
+                                    @foreach($creditos['02']['interesesYSeguros'] as $item)
+                                        <tr>
+                                            <td class="font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
+                                            <td class="font-roboto-mono">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
+                                            <td>{{ $item['period'] }}</td>
+                                            <td class="font-roboto-mono text-right">{{ $item['months'] }}</td>
+                                            <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amountCop']) }}</td>
+                                        </tr>
+                                    @endforeach
+
                                     <tr class="font-roboto mono text-right font-medium bg-neutral-50">
                                         <td colspan="3">TOTAL</td>
                                         <td></td>
-                                        <td>3.596.225</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($interesesYSeguros->sum('amountCop')) }}</td>
                                         <td class="bg-transparent"><span class="text-color-primary">*</span></td>
                                     </tr>
                                 </tbody>
@@ -1948,12 +1943,14 @@
                                         <td style="width:100px;"    class="p-1">Días en mora</td>
                                         <td style="width:74px;"     class="p-1">COP</td>
                                     </tr>
-                                    <tr class="bg-gray-2 font-roboto-mono">
-                                        <td class="p-1 text-center">01 sept 2018</td>
-                                        <td class="p-1 text-center">28 feb 2022</td>
-                                        <td class="p-1 text-right">48</td>
-                                        <td class="p-1 text-center">31.105</td>
-                                    </tr>
+                                    @foreach($creditos['02']['mora'] as $item)
+                                        <tr class="bg-gray-2 font-roboto-mono">
+                                            <td class="p-1 text-center">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
+                                            <td class="p-1 text-center">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
+                                            <td class="p-1 text-right">{{ $item['days'] }}</td>
+                                            <td class="p-1 text-center">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amount']) }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                             <!-- Fin Tabla 2 - Pag 9, Mora -->
@@ -1964,53 +1961,51 @@
                 <!-- Inicio Desembolsos, Pag 9 -->
                 <tr>
                     <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Desembolsos</h4>
-                        <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
-                        <table style="width:auto;" class="ml-20 font-roboto-condensed table-stripped table-p-1 text-base">
-                            <tbody>
-                                <tr class="text-center font-bold bg-neutral-50">
-                                    <td style="width:33px;">#</td>
-                                    <td style="width:122px;">Fecha</td>
-                                    <td style="width:125px;">Concepto de giro</td>
-                                    <td style="width:65px;">USD</td>
-                                    <td style="width:65px;">TRM <span class="text-color-primary">*</span></td>
-                                    <td style="width:113px;">COP</td>
-                                </tr>
+                    @php
+                        // @TODO remove dummy data when available in API
+                        $desembolsos = $creditos['02']['desembolsos'];
+                        $desembolsos = array_fill(0, 3, [
+                            'concept' => 'Concept ' . rand(),
+                            'amount' => rand(),
+                            'exchangeRate' => rand(),
+                            'amountDisbursementCounterparty' => rand(),
+                            'dateConfirmed' => '2022-02-27T05:00:00.000+0000',
+                        ]);
+                        $desembolsos = collect($desembolsos);
+                    @endphp
+                    <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
+                    <table style="width:auto;" class="ml-20 font-roboto-condensed table-stripped table-p-1 text-base">
+                        <tbody>
+                            <tr class="text-center font-bold bg-neutral-50">
+                                <td style="width:33px;">#</td>
+                                <td style="width:122px;">Fecha</td>
+                                <td style="width:125px;">Concepto de giro</td>
+                                <td style="width:65px;">USD</td>
+                                <td style="width:65px;">TRM <span class="text-color-primary">*</span></td>
+                                <td style="width:113px;">COP</td>
+                            </tr>
+                            @foreach($desembolsos as $key => $item)
                                 <tr>
-                                    <td class="font-roboto-mono text-right">1</td>
-                                    <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                    <td>Matrícula</td>
-                                    <td class="font-roboto-mono text-right">1.746</td>
-                                    <td class="font-roboto-mono text-right">1.746</td>
-                                    <td class="font-roboto-mono text-right">5.836.440</td>
+                                    <td class="font-roboto-mono text-right">{{ $key + 1 }}</td>
+                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatDate($item['dateConfirmed']) }}</td>
+                                    <td>{{ $item['concept'] }}</td>
+                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amount']) }}</td>
+                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['exchangeRate']) }}</td>
+                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['amountDisbursementCounterparty']) }}</td>
                                 </tr>
-                                <tr>
-                                    <td class="font-roboto-mono text-right">2</td>
-                                    <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                    <td>Sostenimiento</td>
-                                    <td class="font-roboto-mono text-right">1.746</td>
-                                    <td class="font-roboto-mono text-right">1.746</td>
-                                    <td class="font-roboto-mono text-right">12.350.920</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-roboto-mono text-right">3</td>
-                                    <td class="font-roboto-mono text-right">12 dic 2022</td>
-                                    <td>Matrícula</td>
-                                    <td class="font-roboto-mono text-right">1.746</td>
-                                    <td class="font-roboto-mono text-right">1.746</td>
-                                    <td class="font-roboto-mono text-right">9.022.498</td>
-                                </tr>
-                                <tr class="font-roboto-mono font-medium text-right bg-neutral-50">
-                                    <td></td>
-                                    <td></td>
-                                    <td class="font-roboto-condensed font-bold">Total</td>
-                                    <td>9.822</td>
-                                    <td>9.822</td>
-                                    <td>20.000.000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
-                        <div class="mt-6 ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>TRM = Tasa Representativa del Mercado.</div>
+                            @endforeach
+                            <tr class="font-roboto-mono font-medium text-right bg-neutral-50">
+                                <td></td>
+                                <td></td>
+                                <td class="font-roboto-condensed font-bold">TOTAL</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($desembolsos->sum('amount')) }}</td>
+                                <td></td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($desembolsos->sum('amountDisbursementCounterparty')) }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Inicio Tabla 1 Desembolsos, Pag 9 -->
+                    <div class="mt-6 ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>TRM = Tasa Representativa del Mercado.</div>
                 </tr>
                 <!-- Fin Desembolsos, Pag 9 -->
 
