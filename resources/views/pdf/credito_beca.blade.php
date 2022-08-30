@@ -2326,8 +2326,8 @@
                                 <tr class="font-bold bg-neutral-50 text-center">
                                     <td class="bg-transparent"></td>
                                     <td class="bg-transparent"></td>
-                                    <td colspan="4">Pagos realizados</td>
-                                    <td colspan="5">Abonos en COP</td>
+                                    <td colspan="4" class="border-bottom-red">Pagos realizados</td>
+                                    <td colspan="5" class="border-bottom-red">Abonos en COP</td>
                                 </tr>
                                 <tr class="font-bold text-center bg-neutral-50">
                                     <td>#</td>
