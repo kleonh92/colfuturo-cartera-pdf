@@ -19,7 +19,11 @@ class GicDataFormatter
     public static function formatDate($string, $format = 'd M Y') {
         $date = Carbon::createFromFormat('Y-m-d\TH:i:s.uO', $string);
         return $date->timezone('America/Bogota')->format($format);
+    }
 
+    public static function coinTypeString($coinTypeId) {
+        $coinTypeId = intval($coinTypeId);
+        return $coinTypeId === 1 ? 'COP' : ($coinTypeId === 2 ? 'USD' : '');
     }
 
     public static function diffDatesInMonths($string_date_1, $string_date_2) {
