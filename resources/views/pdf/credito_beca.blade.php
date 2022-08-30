@@ -1576,7 +1576,7 @@
         @foreach($planPagosReducidaPages as $keyPlanPagosReducidaPage => $planPagosReducidaPage)
             <div class="page" style="page-break-before: always;">
                 <table>
-                    @if((($keyPlanPagosReducidaPage + 1) * 22) <= $planPagosReducida->count() && !$loop->first)
+                    @if(!$loop->first)
                         <p class="font-roboto text-sm font-light">Continuación de la página anterior</p>
                     @endif
                     @if($loop->first)
@@ -1589,7 +1589,7 @@
                         <tr class="font-bold text-center">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
-                            <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
+                            <td colspan="4" class="border-bottom-red">Discriminación del pago</td>
                             <td colspan="4" class="border-bottom-red">Saldos acumulados</td>
                             <td colspan="2" class="border-bottom-red">Saldos deuda</td>
                         </tr>
@@ -1656,17 +1656,27 @@
         <!--  Fin Página 6-->
 
         <!-- Inicio Página 7 -->
-        <div class="page" style="page-break-before: always;">
-            <table>
-                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos cuota anticipada</h4>
+        @php
+            $planPagosAnticipada = collect($creditos['01']['planPagos'][2]);
+            $planPagosAnticipadaPages = $planPagosAnticipada->chunk(22);
+        @endphp
+        @foreach($planPagosAnticipadaPages as $keyPlanPagosAnticipadaPage => $planPagosAnticipadaPage)
+            <div class="page" style="page-break-before: always;">
+                <table>
+                    @if(!$loop->first)
+                        <p class="font-roboto text-sm font-light">Continuación de la página anterior</p>
+                    @endif
+                    @if($loop->first)
+                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos cuota anticipada</h4>
+                    @endif
 
-                <!-- Inicio Tabla Página 7 -->
-                <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
-                    <tbody>
+                    <!-- Inicio Tabla Página 7 -->
+                    <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
+                        <tbody>
                         <tr class="font-bold text-center">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
-                            <td colspan="6" class="border-bottom-red">Discriminacion del pago</td>
+                            <td colspan="6" class="border-bottom-red">Discriminación del pago</td>
                             <td colspan="3" class="border-bottom-red">Saldos acumulados</td>
                             <td colspan="3" class="border-bottom-red">Saldos deuda</td>
                         </tr>
@@ -1686,654 +1696,64 @@
                             <td>Sin interés</td>
                             <td>Con interés</td>
                         </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right ">
-                            <td>1</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="ml-20 point bg-green-surface"></span> Meses de cuota anticipada</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right ">
-                            <td>2</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
-                            <td>3</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
-                            <td>4</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
-                            <td>5</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>40</td>
-                            <td>201</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
-                            <td>6</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>10</td>
-                            <td>-</td>
-                            <td>203</td>
-                            <td>40</td>
-                            <td>240</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right" >
-                            <td>7</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
-                            <td>8</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
-                            <td>9</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="bg-green-surface font-roboto-mono text-right">
-                            <td>10</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>11</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>12</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>13</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>14</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>15</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>17</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>18</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>19</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>20</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>21</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>22</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                    </tbody>
+                        @foreach($planPagosAnticipadaPage as $key => $item)
+                            <tr class="font-roboto-mono text-right {{ $item['isAnticipated'] ? 'bg-green-surface' : '' }}">
+                                <td>{{ $key + 1 }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                <td class="text-color-primary">{{ \App\Helpers\GicDataFormatter::formatNumber($item['fee']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['feeToPay']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toInsurance']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toInterest']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toCapital']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toAccruedInterest']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['interestOfTheMonth']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['pendingInterestForTheMonth']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['accumulatedPendingInterest']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['advanceFees']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['balanceWithoutInterest']) ?? '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['balanceWithInterestl']) ?? '-' }}</td>
+                                @if($loop->first)
+                                    <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="ml-20 point bg-green-surface"></span> Meses de cuota anticipada</td>
+                            @endif
+                        @endforeach
+                        @if($loop->last)
+                            <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
+                                <td></td>
+                                <td>TOTAL</td>
+                                <td></td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosAnticipada->sum('feeToPay')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosAnticipada->sum('toInsurance')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosAnticipada->sum('toInterest')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosAnticipada->sum('toCapital')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosAnticipada->sum('toAccruedInterest')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosAnticipada->sum('interestOfTheMonth')) }}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        @endif
+                        </tbody>
+                    </table>
+                    <!-- Fin Tabla Página 7 -->
+                    @if((($keyPlanPagosAnticipadaPage + 1) * 22) < $planPagosAnticipada->count())
+                        <p class="font-roboto text-sm font-light text-right">Tabla continúa en la siguiente página</p>
+                    @endif
                 </table>
-                <!-- Fin Tabla Página 7 -->
-                <p class="font-roboto text-sm font-light text-right">Tabla continúa en la siguiente página</p>
-            </table>
-        </div>
+            </div>
+
+        @endforeach
         <!-- Fin Página 7 -->
+        @if($creditArrear)
+            <!-- Inicio Página 8 -->
+            <div class="page" style="page-break-before: always;">
+                <table>
+                    <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Cuotas en mora</h4>
 
-        <!-- Inicio Página 8 -->
-        <div class="page" style="page-break-before: always;">
-            <table>
-                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos cuota anticipada</h4>
-
-                <p class="font-roboto text-sm font-light">Continuación de la página anterior</p>
-                <!-- Inicio Tabla Página 7 -->
-                <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
-                    <tbody>
-                        <tr class="font-bold text-center bg-neutral-50">
-                            <td class="bg-transparent"></td>
-                            <td class="bg-transparent"></td>
-                            <td colspan="6" class="border-bottom-red">Discriminacion del pago</td>
-                            <td colspan="3" class="border-bottom-red">Saldos acumulados</td>
-                            <td colspan="3" class="border-bottom-red">Saldos deuda</td>
-                        </tr>
-                        <tr class="font-bold text-center bg-neutral-50">
-                        <td>#</td>
-                            <td>Fecha</td>
-                            <td>Cuota</td>
-                            <td>Cuota<br />a pagar</td>
-                            <td>A Seguro</td>
-                            <td>A intereses</td>
-                            <td>A capital</td>
-                            <td>A interés <br />acumu.</td>
-                            <td>Interés <br />del mes</td>
-                            <td>Pendiente <br />interés mes</td>
-                            <td>Acum. pend.<br />interés mes</td>
-                            <td>Cuotas <br />anticipadas</td>
-                            <td>Sin interés</td>
-                            <td>Con interés</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right ">
-                            <td>1</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right ">
-                            <td>2</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>3</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>4</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>5</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>6</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right" >
-                            <td>7</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>8</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>9</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>10</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>11</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>12</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>13</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>14</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>15</td>
-                            <td>01 mar 2022</td>
-                            <td class="text-color-primary">180</td>
-                            <td>7</td>
-                            <td>163</td>
-                            <td>100</td>
-                            <td>-</td>
-                            <td>204</td>
-                            <td>6</td>
-                            <td>40</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                            <td>28.351</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
-                            <td></td>
-                            <td>TOTAL</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                            <td>31.033</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- Fin Tabla Página 7 -->
-            </table>
-        </div>
-        <!-- Fin Página 8 -->
-
-        <!-- Inicio Página 9 -->
-        <div class="page" style="page-break-before: always;">
-            <table>
-                <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Cuotas en mora</h4>
-
-                <!-- Inicio Tabla Página 8 -->
-                <table style="width:auto;" class="ml-20 table-stripped-2 table-p-1 font-roboto-condensed text-base">
-                    <tbody>
+                    <!-- Inicio Tabla Página 8 -->
+                    <table style="width:auto;" class="ml-20 table-stripped-2 table-p-1 font-roboto-condensed text-base">
+                        <tbody>
                         <tr class="text-center font-bold bg-neutral-50">
                             <td class="bg-transparent"></td>
                             <td class="bg-transparent"></td>
@@ -2385,15 +1805,16 @@
                             <td>583</td>
                             <td>1.210</td>
                         </tr>
-                    </tbody>
-                </table>
-                <div class="mt-10 ml-20 font-roboto font-light">En síntesis para ponerse al día debe cancelar <span class="font-medium">USD 1.210</span></div>
+                        </tbody>
+                    </table>
+                    <div class="mt-10 ml-20 font-roboto font-light">En síntesis para ponerse al día debe cancelar <span class="font-medium">USD 1.210</span></div>
 
-                <h4 class="mt-70 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Fin extracto crédito</h4>
-                <!-- Fin Tabla Página 8 -->
-            </table>
-        </div>
-        <!-- Inicio Página 9 -->
+                    <!-- Fin Tabla Página 8 -->
+                </table>
+            </div>
+            <!-- Inicio Página 8 -->
+        @endif
+        <h4 class="mt-70 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Fin extracto crédito</h4>
 
         <!-- Inicio Página 10 -->
         <div class="page" style="page-break-before: always;">
