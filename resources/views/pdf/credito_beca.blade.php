@@ -818,18 +818,21 @@
                         <h4 id="content-table" class="font-roboto font-medium text-2xl text-color-primary p-0 m-0">Tabla de contenido</h4>
                         <ul style="list-style:none; margin-top:5px;">
                             <li>
-                                <h4 class="font-roboto font-medium text-2xl text-neutral-90 m-0">Extracto programa Crédito Beca</h4>
+                                <h4 class="font-roboto font-medium text-2xl text-neutral-90 m-0"><a href="#extracto-programa-credito-beca" class="text-neutral-90">Extracto programa Crédito Beca</a></h4>
                                 <ul style="list-style:none; margin-top:10px;" class="toc-list">
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen general<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-programa-credito-beca-resumen-general" class="text-neutral-90">Resumen general</a><span class="leaders"
                                                 aria-hidden="true">...................................................</span></span><span
                                             class="font-roboto-mono font-normal text-base">01</span></li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Estado Crédito<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-programa-credito-beca-estado-credito" class="text-neutral-90">Estado Crédito</a><span class="leaders"
                                                 aria-hidden="true">.......................................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Próximo pago Crédito<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-programa-credito-beca-proximo-pago-credito" class="text-neutral-90">Próximo pago Crédito</a><span class="leaders"
                                                 aria-hidden="true">...........................................</span></span><span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li ><span class="font-roboto font-normal text-lg text-neutral-90">Requisitos para mantener mi estatus<span class="leaders"
+                                    <li ><span class="font-roboto font-normal text-lg text-neutral-90"><a href="#extracto-programa-credito-beca-requisitos" class="text-neutral-90">Requisitos para mantener mi estatus</a><span class="leaders"
                                                 aria-hidden="true">..................</span></span><span class="font-roboto-mono font-normal text text-base">01</span>
                                     </li>
                                 </ul>
@@ -932,13 +935,13 @@
                 <!-- Título Página 2 -->
                 <tr>
                     <td>
-                        <h4 class="p-0 m-0 font-roboto font-medium text-2xl text-color-primary">Extracto programa Crédito Beca</h4>
+                        <h4 id="extracto-programa-credito-beca" class="p-0 m-0 font-roboto font-medium text-2xl text-color-primary">Extracto programa Crédito Beca</h4>
                     </td>
                 </tr>
                 <tr style="vertical-align: top;">
                     <!-- Página 2 - Arriba Izquierda - Tabla Resumen General -->
                     <td width="50%" class="pr-40">
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Resumen general <span class="text-color-primary">*</span></h4>
+                        <h4 id="extracto-programa-credito-beca-resumen-general" class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Resumen general <span class="text-color-primary">*</span></h4>
 
                         <!-- Inicio de table Resumen General Página 2 -->
                         <table class="ml-20 table-stripped text-base border-separate border-spacing-1 table-p-1">
@@ -1000,7 +1003,7 @@
                     </td>
 
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Estado Crédito</h4>
+                        <h4 id="extracto-programa-credito-beca-estado-credito" class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Estado Crédito</h4>
 
                         <!-- OJOOO: Estos textos son condicionales, aparecen dependiendo el estado del pago, esté en mora o al día. -->
                         @if($creditArrear = $creditos['01']['inicio'][0]['creditArrear'])
@@ -1027,7 +1030,7 @@
 
 
 
-                        <h4 style="margin-top:50px;" class="font-roboto font-medium text-lg pb-1 border-bottom-gray">Próximo pago Crédito</h4>
+                        <h4 id="extracto-programa-credito-beca-proximo-pago-credito" style="margin-top:50px;" class="font-roboto font-medium text-lg pb-1 border-bottom-gray">Próximo pago Crédito</h4>
                         <table style="width:auto;" class="pl-20 font-roboto-condensed font-normal text-base table-p-1">
                             <tr class="bg-gray-2">
                                 <td style="width:144px;" class="pl-1 pt-1 pb-1 ">Fecha próximo pago</td>
@@ -1103,7 +1106,7 @@
                     </td>
                     <!-- Tabla Página 2 - Requisitos para mantener mi estatus -->
                     <td width="50%">
-                        <h4 class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Requisitos para mantener mi estatus</h4>
+                        <h4 id="extracto-programa-credito-beca-requisitos" class="font-roboto font-medium text-lg text-neutral-90 pb-1 border-bottom-gray">Requisitos para mantener mi estatus</h4>
 
                         <table style="width:auto" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                             <tr class="bg-neutral-50">
@@ -1570,8 +1573,9 @@
         <!-- Fin Página 5 -->
         <!-- Inicio Página 6 -->
         @php
+            $pageLimit = 21;
             $planPagosReducida = collect($creditos['01']['planPagos'][1]);
-            $planPagosReducidaPages = $planPagosReducida->chunk(22);
+            $planPagosReducidaPages = $planPagosReducida->chunk($pageLimit);
         @endphp
         @foreach($planPagosReducidaPages as $keyPlanPagosReducidaPage => $planPagosReducidaPage)
             <div class="page" style="page-break-before: always;">
@@ -1647,7 +1651,7 @@
                         </tbody>
                     </table>
                     <!-- Fin Tabla Página 6 -->
-                    @if((($keyPlanPagosReducidaPage + 1) * 22) < $planPagosReducida->count())
+                    @if((($keyPlanPagosReducidaPage + 1) * $pageLimit) < $planPagosReducida->count())
                         <p class="font-roboto text-sm font-light text-right">Tabla continúa en la siguiente página</p>
                     @endif
                 </table>
@@ -1658,7 +1662,7 @@
         <!-- Inicio Página 7 -->
         @php
             $planPagosAnticipada = collect($creditos['01']['planPagos'][2]);
-            $planPagosAnticipadaPages = $planPagosAnticipada->chunk(22);
+            $planPagosAnticipadaPages = $planPagosAnticipada->chunk($pageLimit);
         @endphp
         @foreach($planPagosAnticipadaPages as $keyPlanPagosAnticipadaPage => $planPagosAnticipadaPage)
             <div class="page" style="page-break-before: always;">
@@ -1737,7 +1741,7 @@
                         </tbody>
                     </table>
                     <!-- Fin Tabla Página 7 -->
-                    @if((($keyPlanPagosAnticipadaPage + 1) * 22) < $planPagosAnticipada->count())
+                    @if((($keyPlanPagosAnticipadaPage + 1) * $pageLimit) < $planPagosAnticipada->count())
                         <p class="font-roboto text-sm font-light text-right">Tabla continúa en la siguiente página</p>
                     @endif
                 </table>
@@ -1747,6 +1751,9 @@
         <!-- Fin Página 7 -->
         @if($creditArrear)
             <!-- Inicio Página 8 -->
+            @php
+                $planPagosMora = collect($creditos['01']['planPagosMora']);
+            @endphp
             <div class="page" style="page-break-before: always;">
                 <table>
                     <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Cuotas en mora</h4>
@@ -1769,45 +1776,29 @@
                             <td style="width:61px;">Capital</td>
                             <td style="width:65px;">Total</td>
                         </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>1</td>
-                            <td>12 dic 2021</td>
-                            <td>90</td>
-                            <td>4</td>
-                            <td>190</td>
-                            <td>204</td>
-                            <td>397</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>2</td>
-                            <td>12 dic 2021</td>
-                            <td>60</td>
-                            <td>11</td>
-                            <td>202</td>
-                            <td>191</td>
-                            <td>404</td>
-                        </tr>
-                        <tr class="font-roboto-mono text-right">
-                            <td>3</td>
-                            <td>12 dic 2021</td>
-                            <td>30</td>
-                            <td>15</td>
-                            <td>201</td>
-                            <td>193</td>
-                            <td>408</td>
-                        </tr>
+                        @foreach($planPagosMora as $key => $item)
+                            <tr class="font-roboto-mono text-right">
+                                <td>{{ $key + 1 }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                <td>{{ $item['daysInArrears'] }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['interestOnArrears']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['currentInterest']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['capital']) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}</td>
+                            </tr>
+                        @endforeach
                         <tr class="font-roboto-mono text-right font-bold bg-neutral-50">
                             <td></td>
                             <td></td>
                             <td>TOTAL</td>
-                            <td>29</td>
-                            <td>593</td>
-                            <td>583</td>
-                            <td>1.210</td>
+                            <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosMora->sum('interestOnArrears')) }}</td>
+                            <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosMora->sum('currentInterest')) }}</td>
+                            <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosMora->sum('capital')) }}</td>
+                            <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosMora->sum('total')) }}</td>
                         </tr>
                         </tbody>
                     </table>
-                    <div class="mt-10 ml-20 font-roboto font-light">En síntesis para ponerse al día debe cancelar <span class="font-medium">USD 1.210</span></div>
+                    <div class="mt-10 ml-20 font-roboto font-light">En síntesis para ponerse al día debe cancelar <span class="font-medium">USD {{ \App\Helpers\GicDataFormatter::formatNumber($planPagosMora->sum('total')) }}</span></div>
 
                     <!-- Fin Tabla Página 8 -->
                 </table>
