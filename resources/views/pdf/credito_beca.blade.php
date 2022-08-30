@@ -844,34 +844,41 @@
                     <td>
                         <ul style="list-style:none;">
                             <li>
-                                <h4 class="font-roboto font-medium text-2xl text-blue-500 m-0">Extracto Crédito</h4>
+                                <h4 class="font-roboto font-medium text-2xl text-blue-500 m-0"><a href="#extracto-credito" class="text-blue-500">Extracto Crédito</a></h4>
                                 <ul style="list-style:none; margin-top:5px;">
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Resumen<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-resumen" class="text-neutral-90">Resumen</a><span class="leaders"
                                                 aria-hidden="true">..............................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-intereses-y-seguros" class="text-neutral-90">Intereses y seguro</a><span class="leaders"
                                                 aria-hidden="true">..............................................</span></span><span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-mora" class="text-neutral-90">Mora</a><span class="leaders"
                                                 aria-hidden="true">.....................................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"> Desembolsos<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-desembolsos" class="text-neutral-90">Desembolsos</a><span class="leaders"
                                                 aria-hidden="true">.....................................................</span></span><span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"> Cuotas pagadas<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-cuotas-pagadas" class="text-neutral-90">Cuotas pagadas</a><span class="leaders"
                                                 aria-hidden="true">.................................................</span></span><span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-apoyos-de-terceras-entidades" class="text-neutral-90">Apoyos de terceras entidades</a><span class="leaders"
                                                 aria-hidden="true">.........................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Pagos realizados<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-credito-pagos-realizados" class="text-neutral-90">Pagos realizados</a><span class="leaders"
                                                 aria-hidden="true">..............................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li ><span class="font-roboto font-normal text-lg text-neutral-90">Plan de pagos<span class="leaders"
+                                    <li ><span class="font-roboto font-normal text-lg text-neutral-90"><a href="#extracto-credito-plan-de-pagos-refinanciado" class="text-neutral-90">Plan de pagos</a><span class="leaders"
                                                 aria-hidden="true">.....................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base">01</span>
                                     </li>
@@ -892,31 +899,36 @@
                                                 aria-hidden="true">...........................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Intereses y seguro<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-beca-intereses-y-seguros" class="text-neutral-90">Intereses y seguros</a><span class="leaders"
                                                 aria-hidden="true">............................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Mora<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-beca-mora" class="text-neutral-90">Mora</a><span class="leaders"
                                                 aria-hidden="true">..................................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Desembolsos<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-beca-desembolsos" class="text-neutral-90">Desembolsos</a><span class="leaders"
                                                 aria-hidden="true">....................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Cuotas pagadas<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-beca-cuotas-pagadas" class="text-neutral-90">Cuotas pagadas</a><span class="leaders"
                                                 aria-hidden="true">................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Apoyos de terceras entidades (Sección no presente en el PDF de diseño)<span class="leaders"
                                                 aria-hidden="true">.........................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90">Pagos realizados<span class="leaders"
+                                    <li class="my-5"><span class="font-roboto font-normal text-lg text-neutral-90"><a
+                                                href="#extracto-beca-pagos-realizados" class="text-neutral-90">Pagos realizados</a><span class="leaders"
                                                 aria-hidden="true">..............................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
-                                    <li><span class="font-roboto font-normal text-lg text-neutral-90">Plan de pagos<span class="leaders"
+                                    <li><span class="font-roboto font-normal text-lg text-neutral-90"><a href="#extracto-beca-plan-de-pagos-refinanciado" class="text-neutral-90">Plan de pagos</a><span class="leaders"
                                                 aria-hidden="true">...................................................</span></span>
                                         <span class="font-roboto-mono font-normal text-base"> 01</span>
                                     </li>
@@ -1153,7 +1165,7 @@
                 <tr style="vertical-align:top">
                     <!-- Extracto Crédito P3: Resumen -->
                     <td width="40%" height="50%" class="pr-40">
-                        <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Resumen</h4>
+                        <h4 id="extracto-credito-resumen" class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Resumen</h4>
 
                         <!-- Tabla 1 , Pag 3, Resumen -->
                         <table style="width:auto" class="ml-20 table-stripped table-p-1 font-roboto-condensed">
@@ -1233,7 +1245,7 @@
 
                     <!-- Inicio - Pag 3 - Ingresos y seguros -->
                     <td width="60%" height="50%">
-                        <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Intereses y seguro</h4>
+                        <h4 id="extracto-credito-intereses-y-seguros" class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Intereses y seguro</h4>
                         @php
                             $interesesYSeguros = collect($creditos['01']['interesesYSeguros']);
                         @endphp
@@ -1279,7 +1291,7 @@
                 <!-- Inicio - Pag 3 - Mora -->
                 <tr>
                     <td class="pr-40">
-                        <h4 class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Mora</h4>
+                        <h4 id="extracto-credito-mora" class="font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Mora</h4>
 
                         <!-- Inicio Tabla 1 - Pag 3 , Mora -->
                         <table style="width:auto" class="ml-20 font-roboto-condensed">
@@ -1317,7 +1329,7 @@
                 <!-- Tabla Desembolsos - Pag 4 -->
                 <tr style="vertical-align:top">
                     <td>
-                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Desembolsos</h4>
+                        <h4 id="extracto-credito-desembolsos" class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Desembolsos (con data dummy por no estar disponible en API)</h4>
                         @php
                             // @TODO remove dummy data when available in API
                             $desembolsos = $creditos['01']['desembolsos'];
@@ -1374,7 +1386,7 @@
                 <!-- Tabla Cuotas pagadas - Pag 4 -->
                 <tr>
                     <td>
-                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Cuotas pagadas</h4>
+                        <h4 id="extracto-credito-cuotas-pagadas" class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Cuotas pagadas</h4>
 
                         <table style="width:auto" class="ml-20 font-roboto-condensed">
                             <tbody>
@@ -1418,7 +1430,7 @@
                 @endphp
                 <tr>
                     <td>
-                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Apoyos de terceras entidades</h4>
+                        <h4 id="extracto-credito-apoyos-de-terceras-entidades" class="mt-20 font-roboto font-medium text-lg text-blue-500 pb-1 border-bottom-gray">Apoyos de terceras entidades (pendiente de data de API)</h4>
 
                         <table style="width:auto;" class="ml-20 font-roboto-condensed text-base">
                             <tbody>
@@ -1508,7 +1520,7 @@
             <table>
                 <tr>
                     <td>
-                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Pagos realizados</h4>
+                        <h4 id="extracto-credito-pagos-realizados" class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Pagos realizados</h4>
                     </td>
                 </tr>
 
@@ -1587,7 +1599,7 @@
                         <p class="font-roboto text-sm font-light">Continuación de la página anterior</p>
                     @endif
                     @if($loop->first)
-                        <h4 class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos refinanciado</h4>
+                        <h4 id="extracto-credito-plan-de-pagos-refinanciado" class="mt-20 font-roboto font-medium text-lg text-blue-500 border-bottom-gray pb-1">Plan de pagos refinanciado</h4>
                     @endif
 
                     <!-- Inicio Tabla Página 6 -->
@@ -1897,7 +1909,7 @@
                         </td>
 
                         <td style="vertical-align:top;">
-                            <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Intereses</h4>
+                            <h4 id="extracto-beca-intereses-y-seguros" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Intereses</h4>
                             @php
                                 $interesesYSeguros = collect($creditos['02']['interesesYSeguros']);
                             @endphp
@@ -1932,7 +1944,7 @@
                             <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm">Los intereses del apoyo Minciencias se calculan con la inflación reportada por el DANE del mes anterior.</div>
                             <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">* </span>Estos intereses pueden ser totalmente condonados si se cumplen los requisitos de retorno y permanencia establecidos.</div>
 
-                            <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Mora</h4>
+                            <h4 id="extracto-beca-mora" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Mora</h4>
 
                             <!-- Inicio Tabla 2 - Pag 9 , Mora -->
                             <table style="width:auto" class="pl-20 font-roboto-condensed">
@@ -1960,7 +1972,7 @@
                 </table>
                 <!-- Inicio Desembolsos, Pag 9 -->
                 <tr>
-                    <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Desembolsos</h4>
+                    <h4 id="extracto-beca-desembolsos" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Desembolsos (Pendiente con data dummy)</h4>
                     @php
                         // @TODO remove dummy data when available in API
                         $desembolsos = $creditos['02']['desembolsos'];
@@ -2020,7 +2032,7 @@
             <!-- Main Layout -->
             <table>
                 <tr>
-                    <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Su historia de residencia</h4>
+                    <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Su historia de residencia (Pendiente si data del API)</h4>
                 </tr>
                 <tr>
                     <td>
@@ -2080,7 +2092,7 @@
             <table>
                 <tr>
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Condonación estimada</h4>
+                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Condonación estimada (Pendiente si data del API)</h4>
 
                         <p class="mt-20 ml-20 font-roboto font-normal text-sm">Periodo para cumplir 36 meses de permanencia</p>
 
@@ -2174,7 +2186,7 @@
             <table>
                 <tr>
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Condonación estimada</h4>
+                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Condonación estimada (Pendiente si data del API)</h4>
 
                         <p class="mt-20 ml-20 font-roboto font-normal text-sm">Periodo para cumplir 36 meses de permanencia</p>
 
@@ -2279,7 +2291,7 @@
             <table>
                 <tr>
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Cuotas pagadas</h4>
+                        <h4 id="extracto-beca-cuotas-pagadas" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Cuotas pagadas</h4>
                         <!-- Tabla 1 - Cuotas Pagadas , Pag 13  -->
                         <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
                             <tbody>
@@ -2319,7 +2331,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Pagos realizados</h4>
+                        <h4 id="extracto-beca-pagos-realizados" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Pagos realizados</h4>
                         <!-- Tabla pagos Realizados, pag 13 -->
                         <table style="width:auto;" class="ml-20 font-roboto-condensed text-base table-stripped-2 table-p-1">
                             <tbody>
@@ -2357,7 +2369,7 @@
                                         <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interest']) : '-' }}</td>
                                         <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['capital']) : '-' }}</td>
                                         <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['advancePayment']) : '-' }}</td>
-                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}/td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}</td>
                                     </tr>
                                 @endforeach
                                 <tr class="bg-neutral-50 text-right font-roboto-mono font-medium">
@@ -2386,15 +2398,25 @@
         <!-- Fin Pag 14 -->
 
         <!-- Inicio Pag 15 -->
-        <div class="page" style="page-break-before: always;">
-
-            <table>
-                <tr>
-                    <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Plan de pagos refinanciado</h4>
-                        <!-- Tabla Pagos Refinanciados -->
-                        <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
-                            <tbody>
+        @php
+            $pageLimit = 21;
+            $planPagosReducida = collect($creditos['02']['planPagos'][1]);
+            $planPagosReducidaPages = $planPagosReducida->chunk($pageLimit);
+        @endphp
+        @foreach($planPagosReducidaPages as $keyPlanPagosReducidaPage => $planPagosReducidaPage)
+            <div class="page" style="page-break-before: always;">
+                <table>
+                    <tr>
+                        <td>
+                            @if($loop->first)
+                                <h4 id="extracto-beca-plan-de-pagos-refinanciado" class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Plan de pagos refinanciado</h4>
+                            @endif
+                            @if(!$loop->first)
+                                <p class="ml-20 font-roboto font-light text-xs text-left">Continuación de la página anterior</p>
+                            @endif
+                            <!-- Tabla Pagos Refinanciados -->
+                            <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
+                                <tbody>
                                 <tr class="font-bold text-center bg-neutral-50">
                                     <td class="bg-transparent"></td>
                                     <td class="bg-transparent"></td>
@@ -2417,605 +2439,65 @@
                                     <td>Con interés</td>
                                     <td class="bg-transparent"></td>
                                 </tr>
-                                <tr class="font-roboto-mono text-right ">
-                                    <td>1</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>204</td>
-                                    <td>6</td>
-                                    <td>40</td>
-                                    <td>28.351</td>
-                                    <td>28.351</td>
-                                    <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="point bg-blue-200 ml-20"></span> Meses de cuota reducida</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right ">
-                                    <td>2</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>204</td>
-                                    <td>6</td>
-                                    <td>80</td>
-                                    <td>28.341</td>
-                                    <td>28.341</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>3</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>121</td>
-                                    <td>28.331</td>
-                                    <td>28.331</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>4</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>161</td>
-                                    <td>28.321</td>
-                                    <td>28.321</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>5</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>201</td>
-                                    <td>28.311</td>
-                                    <td>28.311</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>6</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>240</td>
-                                    <td>28.301</td>
-                                    <td>28.301</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>7</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>28.291</td>
-                                    <td>28.291</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>8</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.900</td>
-                                    <td>27.900</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>9</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.506</td>
-                                    <td>27.506</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>10</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>11</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>12</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>13</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>14</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>15</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>16</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>17</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>18</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>19</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>20</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Fin Tabla Pagos Refinanciados -->
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="font-roboto font-light text-xs text-right" >Tabla continúa en la siguiente página</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                                @foreach($planPagosReducidaPage as $key => $item)
+                                    <tr class="font-roboto-mono text-right {{ $item['isReduced'] ? 'bg-blue-200' : '' }}">
+                                        <td>{{ $key + 1 }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                        <td class="text-color-primary">{{ \App\Helpers\GicDataFormatter::formatNumber($item['fee']) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toInsurance']) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toInterest']) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toCapital']) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['toAccruedInterest']) ?? '-' }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['interestOfTheMonth']) ?? '-' }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['pendingInterestForTheMonth']) ?? '-' }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['accumulatedPendingInterest']) ?? '-' }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['balanceWithoutInterest']) ?? '-' }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['balanceWithInterestl']) ?? '-' }}</td>
+                                        @if($loop->first)
+                                            <td style="vertical-align: top;" class="font-roboto bg-transparent"><span class="ml-20 point bg-blue-200"></span> Meses de cuota reducida</td>
+                                        @endif
+                                    </tr>
+                                @endforeach
+                                @if($loop->last)
+                                    <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
+                                        <td></td>
+                                        <td>TOTAL</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('fee')) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('toInsurance')) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('toInterest')) }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('toCapital')) }}</td>
+                                        <td>-</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($planPagosReducida->sum('interestOfTheMonth')) }}</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="bg-transparent"></td>
+                                    </tr>
+                                @endif
+                                </tbody>
+                            </table>
+                            <!-- Fin Tabla Pagos Refinanciados -->
+                        </td>
+                    </tr>
+                    @if((($keyPlanPagosReducidaPage + 1) * $pageLimit) < $planPagosReducida->count())
+                        <tr>
+                            <td>
+                                <p class="font-roboto font-light text-xs text-right" >Tabla continúa en la siguiente página</p>
+                            </td>
+                        </tr>
+                    @endif
+                    @if($loop->last)
+                        <tr>
+                            <td>
+                                <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Fin extracto beca</h4>
+                            </td>
+                        </tr>
+                    @endif
+                </table>
+            </div>
+        @endforeach
         <!-- Fin Pag 15 -->
-
-        <!-- Inicio, Pag 16 -->
-        <div class="page" style="page-break-before: always;">
-            <table>
-                <tr>
-                    <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Plan de pagos refinanciado</h4>
-                        <!-- Tabla Pagos Refinanciados -->
-                        <p class="ml-20 font-roboto font-light text-xs text-left">Continuación de la página anterior</p>
-                        <table style="width:auto;" class="ml-20 table-stripped table-p-1 font-roboto-condensed text-base">
-                            <tbody>
-                                <tr class="font-bold text-center bg-neutral-50">
-                                    <td class="bg-transparent"></td>
-                                    <td class="bg-transparent"></td>
-                                    <td colspan="4" class="border-bottom-red">Discriminacion del pago</td>
-                                    <td colspan="4" class="border-bottom-red">Saldos acumulados</td>
-                                    <td colspan="2" class="border-bottom-red">Saldos deuda</td>
-                                </tr>
-                                <tr class="font-bold text-center bg-neutral-50">
-                                    <td>#</td>
-                                    <td>Fecha</td>
-                                    <td>Cuota</td>
-                                    <td>A seguro</td>
-                                    <td>A interés</td>
-                                    <td>A capital</td>
-                                    <td>A interés <br />acumulado</td>
-                                    <td>Interés <br />del mes</td>
-                                    <td>Pendiente <br />interés mes</td>
-                                    <td>Acum. pend.<br />interés mes</td>
-                                    <td>Sin interés</td>
-                                    <td>Con interés</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right ">
-                                    <td>1</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>204</td>
-                                    <td>6</td>
-                                    <td>40</td>
-                                    <td>28.351</td>
-                                    <td>28.351</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right ">
-                                    <td>2</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>204</td>
-                                    <td>6</td>
-                                    <td>80</td>
-                                    <td>28.341</td>
-                                    <td>28.341</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>3</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>121</td>
-                                    <td>28.331</td>
-                                    <td>28.331</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>4</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>161</td>
-                                    <td>28.321</td>
-                                    <td>28.321</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>5</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>201</td>
-                                    <td>28.311</td>
-                                    <td>28.311</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>6</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>40</td>
-                                    <td>240</td>
-                                    <td>28.301</td>
-                                    <td>28.301</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right" >
-                                    <td>7</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>28.291</td>
-                                    <td>28.291</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>8</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.900</td>
-                                    <td>27.900</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>9</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>7</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.506</td>
-                                    <td>27.506</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>10</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>11</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>12</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>13</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>14</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>15</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="text-color-primary">180</td>
-                                    <td>6</td>
-                                    <td>163</td>
-                                    <td>10</td>
-                                    <td>-</td>
-                                    <td>203</td>
-                                    <td>-</td>
-                                    <td>240</td>
-                                    <td>27.109</td>
-                                    <td>27.109</td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right font-medium bg-neutral-50">
-                                    <td></td>
-                                    <td>TOTAL</td>
-                                    <td>26.665.065</td>
-                                    <td>456</td>
-                                    <td>3.000.000</td>
-                                    <td>22.000.000</td>
-                                    <td>200.000</td>
-                                    <td>4.000.000</td>
-                                    <td>211.000</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="bg-transparent"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Fin Tabla Pagos Refinanciados -->
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <h4 class="font-roboto font-medium text-lg text-yellow-400 border-bottom-gray">Fin extracto beca</h4>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!-- Fin, Pag 16 -->
     </main>
 
 </body>
