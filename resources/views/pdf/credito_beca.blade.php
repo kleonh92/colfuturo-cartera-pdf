@@ -2175,7 +2175,7 @@
 
         <!-- Inicio Pag 13 -->
         <div class="page" style="page-break-before: always;">
-            <!-- Main layout pag 12 -->
+            <!-- Main layout pag 13 -->
             <table>
                 <tr>
                     <td>
@@ -2183,7 +2183,7 @@
 
                         <p class="mt-20 ml-20 font-roboto font-normal text-sm">Periodo para cumplir 36 meses de permanencia</p>
 
-                        <!-- Fin Tabla 1 , Pag 11 -->
+                        <!-- Fin Tabla 1 , Pag 13 -->
                         <table style="width:auto;" class="mt-20 ml-20 font-roboto-condensed table-stripped table-p-1 text-base">
                             <tbody>
                                 <tr>
@@ -2200,9 +2200,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <!-- Fin Tabla 1 , Pag 11 -->
+                        <!-- Fin Tabla 1 , Pag 13 -->
 
-                        <!-- Inicio Tabla 2, Pag 11 -->
+                        <!-- Inicio Tabla 2, Pag 13 -->
                         <table style="width:auto;" class="mt-20 ml-20 text-base">
                             <tbody>
                                 <tr>
@@ -2230,52 +2230,52 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <!-- Fin Tabla 2, Pag 11 -->
+                        <!-- Fin Tabla 2, Pag 13 -->
 
-                        <!-- Inicio Tabla 3, Pag 11 -->
+                        <!-- Inicio Tabla 3, Pag 13 -->
                         <table style="width:auto;"class="mt-20 ml-20 font-roboto-condensed table-p-1 text-base">
                             <tbody>
-                                <tr class="font-bold bg-neutral-50">
+                                <tr class="font-bold bg-neutral-50 text-center">
                                     <td style="width:198px;"></td>
                                     <td style="width:95px;"></td>
                                     <td style="width:55px;"></td>
                                     <td style="width:26px;"></td>
-                                    <td style="width:131px;">Condonación<br />estimada</td>
+                                    <td style="width:120px;">Condonación<br />estimada</td>
                                     <td style="width:100px;">Saldo por <br />condonar</td>
                                 </tr>
                                 <tr>
                                     <td>Total desembolsos</td>
-                                    <td class="font-roboto-mono">72.000.000</td>
-                                    <td class="font-roboto-mono">50 %</td>
+                                    <td class="font-roboto-mono text-right">72.000.000</td>
+                                    <td class="font-roboto-mono text-right">50 %</td>
                                     <td class="font-roboto-mono text-color-primary">*</td>
-                                    <td class="font-roboto-mono">36.000.000</td>
-                                    <td class="font-roboto-mono">36.000.000</td>
+                                    <td class="font-roboto-mono text-right">36.000.000</td>
+                                    <td class="font-roboto-mono text-right">36.000.000</td>
                                 </tr>
                                 <tr class="bg-gray-2">
                                     <td>Total intereses al 21 jul 2022</td>
-                                    <td class="font-roboto-mono">20.000.000</td>
-                                    <td class="font-roboto-mono">50 %</td>
+                                    <td class="font-roboto-mono text-right">20.000.000</td>
+                                    <td class="font-roboto-mono text-right">50 %</td>
                                     <td class="font-roboto-mono text-color-primary">*</td>
-                                    <td class="font-roboto-mono">10.000.000</td>
-                                    <td class="font-roboto-mono">10.000.000</td>
+                                    <td class="font-roboto-mono text-right">10.000.000</td>
+                                    <td class="font-roboto-mono text-right">10.000.000</td>
                                 </tr>
                                 <tr class="font-bold bg-neutral-50">
                                     <td>Total monto a condonar</td>
-                                    <td class="font-roboto-mono">92.000.000</td>
+                                    <td class="font-roboto-mono text-right">92.000.000</td>
                                     <td class="font-roboto-mono"></td>
                                     <td class="font-roboto-mono"></td>
-                                    <td class="font-roboto-mono">46.000.000</td>
-                                    <td class="font-roboto-mono">46.000.000</td>
+                                    <td class="font-roboto-mono text-right">46.000.000</td>
+                                    <td class="font-roboto-mono text-right">46.000.000</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="mt-10 ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">*</span> Este porcentaje corresponde a 18/36 = 50 % condonación estimada, calculado al 21 jul 2022.</div>
                         <div class="ml-20 font-roboto font-normal text-neutral-80 text-sm"><span class="text-color-primary">**</span> La Condonación Especial Adicional (CEA) requiere el cumplimiento de los 12 meses; si no los puedes cumplir,  tienes la opción de presentar producto de investigación o desarrollo tecnológico.</div>
-                        <!-- Fin Tabla 3, Pag 11 -->
+                        <!-- Fin Tabla 3, Pag 13 -->
                     </td>
                 </tr>
             </table>
-            <!-- End main layout pag 12 -->
+            <!-- End main layout pag 13 -->
         </div>
         <!-- Fin  Pag 13 -->
 
