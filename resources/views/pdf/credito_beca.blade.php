@@ -1537,32 +1537,32 @@
                                 $pagosRealizados = collect($creditos['01']['pagosRealizados']);
                             @endphp
                             @foreach($pagosRealizados as $key => $item)
-                                <tr>
-                                    <td class="font-roboto-mono text-right">{{ $key + 1 }}</td>
-                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
-                                    <td>{{ $item['detail'] }}</td>
-                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountUsd']) }}</td>
-                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['trm']) }}</td>
-                                    <td class="font-roboto-mono text-right {{ $item['advanceFeeApplication'] ? '' : 'text-green-500' }}">{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountCop']) }}</td>
-                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interestArrears']) : '' }}</td>
-                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interest']) : '' }}</td>
-                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['capital']) : '' }}</td>
-                                    <td class="font-roboto-mono text-right">{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['advancePayment']) : '' }}</td>
-                                    <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}</td>
+                                <tr class="font-roboto-mono text-right">
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                    <td class="font-roboto-condensed text-left">{{ $item['detail'] }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountUsd']) }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['trm']) }}</td>
+                                    <td class="{{ $item['advanceFeeApplication'] ? '' : 'text-secondary-main' }}">{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountCop']) }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interestArrears']) : '-' }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interest']) : '-' }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['capital']) : '-' }}</td>
+                                    <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['advancePayment']) : '-' }}</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}</td>
                                 </tr>
                             @endforeach
-                            <tr class="font-bold bg-neutral-50">
+                            <tr class="bg-neutral-50 text-right font-roboto-mono font-medium">
                                 <td></td>
                                 <td></td>
-                                <td class="text-right">TOTAL</td>
-                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountUSD')) }}</td>
+                                <td>TOTAL</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountUsd')) ?: '-' }}</td>
                                 <td></td>
-                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountCOP')) }}</td>
-                                <td class="text-right">-</td>
-                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('interest')) }}</td>
-                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('capital')) }}</td>
-                                <td class="font-roboto-mono text-right">-</td>
-                                <td class="font-roboto-mono text-right">{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->sum('total')) }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountCop')) ?: '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('interestArrears')) ?: '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('interest')) ?: '-' }}</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('capital')) ?: '-' }}</td>
+                                <td>-</td>
+                                <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->sum('total')) ?: '-' }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -2291,29 +2291,26 @@
                                     <td style="width:88px;">Pendientes</td>
                                     <td style="width:63px;">Totales</td>
                                 </tr>
-                                <tr>
-                                    <td>Normales</td>
-                                    <td class="font-roboto-mono font-normal">01 jun 2022</td>
-                                    <td class="font-roboto-mono font-normal">31 may 2027</td>
-                                    <td class="font-roboto-mono font-normal text-right">9</td>
-                                    <td class="font-roboto-mono font-normal text-right">27</td>
-                                    <td class="font-roboto-mono font-normal text-right">66</td>
-                                </tr>
-                                <tr class="bg-gray-2">
-                                    <td>Reducidas</td>
-                                    <td class="font-roboto-mono font-normal">01 jun 2022</td>
-                                    <td class="font-roboto-mono font-normal">31 may 2027</td>
-                                    <td class="font-roboto-mono font-normal text-right">-</td>
-                                    <td class="font-roboto-mono font-normal text-right">12</td>
-                                    <td class="font-roboto-mono font-normal text-right">12</td>
-                                </tr>
+                                @php
+                                    $pagos = collect($creditos['02']['pagos']);
+                                @endphp
+                                @foreach($pagos as $key => $item)
+                                    <tr class="{{ $key & 1 ? 'bg-gray-2' : '' }}">
+                                        <td>{{ $item['detail'] }}</td>
+                                        <td class="font-roboto-mono font-normal">{{ \App\Helpers\GicDataFormatter::formatDate($item['startDate']) }}</td>
+                                        <td class="font-roboto-mono font-normal">{{ \App\Helpers\GicDataFormatter::formatDate($item['endDate']) }}</td>
+                                        <td class="font-roboto-mono font-normal text-right">{{ $item['paid'] ?: '-' }}<</td>
+                                        <td class="font-roboto-mono font-normal text-right">{{ $item['pending'] ?: '-'}}</td>
+                                        <td class="font-roboto-mono font-normal text-right">{{ $item['total'] ?: '-'}}</td>
+                                    </tr>
+                                @endforeach
                                 <tr class="font-roboto-mono font-medium text-right bg-neutral-50">
                                     <td></td>
                                     <td></td>
                                     <td>TOTAL</td>
-                                    <td>9</td>
-                                    <td>39</td>
-                                    <td>48</td>
+                                    <td>{{ $pagos->sum('paid') }}</td>
+                                    <td>{{ $pagos->sum('pending') }}</td>
+                                    <td>{{ $pagos->sum('total') }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2345,148 +2342,36 @@
                                     <td>Cuota anticipada</td>
                                     <td>Total</td>
                                 </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>1</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
-                                    <td class="text-secondary-main">1.000.000</td>
-                                    <td>3.700</td>
-                                    <td class="text-secondary-main">270</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>1.000.000</td>
-                                    <td>10.000.000</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>2</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Interés</td>
-                                    <td>1.000.000</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td class="text-color-primary">(1.000.000)</td>
-                                    <td>231.000</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>3</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
-                                    <td>1.000.000</td>
-                                    <td>3.700</td>
-                                    <td>270</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td class="text-color-primary">(10.000.000)</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>4</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Interés</td>
-                                    <td>1.000.000</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>5</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
-                                    <td>1.000.000</td>
-                                    <td>3.700</td>
-                                    <td>270</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>6</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Interés</td>
-                                    <td>1.000.000</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>7</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
-                                    <td>1.000.000</td>
-                                    <td>3.700</td>
-                                    <td>270</td>
-                                    <td>-</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>8</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Interés</td>
-                                    <td>1.000.000</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>9</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Desembolsos</td>
-                                    <td>1.000.000</td>
-                                    <td>3.700</td>
-                                    <td>270</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr class="font-roboto-mono text-right">
-                                    <td>10</td>
-                                    <td>01 mar 2022</td>
-                                    <td class="font-roboto-condensed text-left">Interés</td>
-                                    <td>1.000.000</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>12.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                    <td>231.000</td>
-                                </tr>
+                                @php
+                                    $pagosRealizados = collect($creditos['02']['pagosRealizados']);
+                                @endphp
+                                @foreach($pagosRealizados as $key => $item)
+                                    <tr class="font-roboto-mono text-right">
+                                        <td>{{ $key + 1 }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatDate($item['date']) }}</td>
+                                        <td class="font-roboto-condensed text-left">{{ $item['detail'] }}</td>
+                                        <td>{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountCop']) }}</td>
+                                        <td>{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['trm']) }}</td>
+                                        <td class="{{ $item['advanceFeeApplication'] ? '' : 'text-secondary-main' }}">{{ $item['advanceFeeApplication'] ? '-' : \App\Helpers\GicDataFormatter::formatNumber($item['amountUsd']) }}</td>
+                                        <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interestArrears']) : '-' }}</td>
+                                        <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['interest']) : '-' }}</td>
+                                        <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['capital']) : '-' }}</td>
+                                        <td>{{ $item['advanceFeeApplication'] ? \App\Helpers\GicDataFormatter::formatNumber($item['advancePayment']) : '-' }}</td>
+                                        <td>{{ \App\Helpers\GicDataFormatter::formatNumber($item['total']) }}/td>
+                                    </tr>
+                                @endforeach
                                 <tr class="bg-neutral-50 text-right font-roboto-mono font-medium">
                                     <td></td>
                                     <td></td>
                                     <td>TOTAL</td>
-                                    <td>8.506.908</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountCop')) ?: '-' }}</td>
                                     <td></td>
-                                    <td>2.205</td>
-                                    <td>12.000</td>
-                                    <td>1.873.757</td>
-                                    <td>6.621.151</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', false)->sum('amountUsd')) ?: '-' }}</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('interestArrears')) ?: '-' }}</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('interest')) ?: '-' }}</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->where('advanceFeeApplication', true)->sum('capital')) ?: '-' }}</td>
                                     <td>-</td>
-                                    <td>8.506.908</td>
+                                    <td>{{ \App\Helpers\GicDataFormatter::formatNumber($pagosRealizados->sum('total')) ?: '-' }}</td>
                                 </tr>
                             </tbody>
                         </table>
